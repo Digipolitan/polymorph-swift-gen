@@ -42,9 +42,14 @@ public class SwiftPlatformGen: PlatformGen {
                 }
                 return PropertyDescription(name: property.name, options: .init(getVisibility: .public), type: type, documentation: property.documentation)
             }))
+
+            if let defaultInitializer = try! DefaultInitializerBuilder().build(modelClass: $0) {
+                classDescription.initializers.append(defaultInitializer)
+            }
+
             fileDescription.classes.append(classDescription)
             let fileStr = FileWriter.default.write(description: fileDescription)
-            return File(path: options.path, name: "\($0.name).swfit", data: fileStr.data(using: .utf8))
+            return File(path: options.path, name: "\($0.name).swift", data: fileStr.data(using: .utf8))
         }
         print("\(files)")
         return files
