@@ -23,7 +23,7 @@ public class SwiftPlatformGen: PlatformGen {
         parts.append(modelClass.name + ".swift")
         parts.append(project.name)
         let author = project.author ?? "Polymorph"
-        parts.append("nCreated by \(author) on \(self.formattedDate())")
+        parts.append("Created by \(author) on \(self.formattedDate())")
         return parts.joined(separator: "\n")
     }
 
@@ -31,7 +31,7 @@ public class SwiftPlatformGen: PlatformGen {
         guard let project = models.project else {
             return []
         }
-        return models.classes.map {
+        let files: [File] = models.classes.map {
             var fileDescription = FileDescription(documentation: self.fileDocumentation(project: project, modelClass: $0))
             var classDescription = ClassDescription(name: $0.name, options: .init(visibility: .public))
 
@@ -44,7 +44,9 @@ public class SwiftPlatformGen: PlatformGen {
             }))
             fileDescription.classes.append(classDescription)
             let fileStr = FileWriter.default.write(description: fileDescription)
-            return File(path: options.path, name: "\($0).swfit", data: fileStr.data(using: .utf8))
+            return File(path: options.path, name: "\($0.name).swfit", data: fileStr.data(using: .utf8))
         }
+        print("\(files)")
+        return files
     }
 }
