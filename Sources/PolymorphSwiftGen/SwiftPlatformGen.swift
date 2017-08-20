@@ -31,11 +31,11 @@ public class SwiftPlatformGen: PlatformGen {
         guard let project = models.project else {
             return []
         }
-        let files: [File] = models.classes.map {
-            var fileDescription = FileDescription(documentation: self.fileDocumentation(project: project, modelClass: $0))
-            var classDescription = ClassDescription(name: $0.name, options: .init(visibility: .public))
+        let files: [File] = try models.classes.map { (modelClass) in
+            var fileDescription = FileDescription(documentation: self.fileDocumentation(project: project, modelClass: modelClass))
+            var classDescription = ClassDescription(name: modelClass.name, options: .init(visibility: .public))
 
-            classDescription.properties.append(contentsOf: $0.properties.map({ (property) in
+            classDescription.properties.append(contentsOf: modelClass.properties.map({ (property) in
                 var type = models.findObject(uuid: property.type)?.name ?? "Any"
                 if !property.isNonnull {
                     type += "?"
@@ -43,13 +43,15 @@ public class SwiftPlatformGen: PlatformGen {
                 return PropertyDescription(name: property.name, options: .init(getVisibility: .public), type: type, documentation: property.documentation)
             }))
 
-            if let defaultInitializer = try! DefaultInitializerBuilder().build(modelClass: $0) {
-                classDescription.initializers.append(defaultInitializer)
+            try ClassInitializerBuilderRegistry.default.builders.forEach { (builder) in
+                if let initializer = try builder.build(element: modelClass) {
+                    classDescription.initializers.append(initializer)
+                }
             }
 
             fileDescription.classes.append(classDescription)
             let fileStr = FileWriter.default.write(description: fileDescription)
-            return File(path: options.path, name: "\($0.name).swift", data: fileStr.data(using: .utf8))
+            return File(path: options.path, name: "\(modelClass.name).swift", data: fileStr.data(using: .utf8))
         }
         print("\(files)")
         return files
