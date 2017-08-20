@@ -33,7 +33,13 @@ public class SwiftPlatformGen: PlatformGen {
         }
         let files: [File] = try models.classes.map { (modelClass) in
             var fileDescription = FileDescription(documentation: self.fileDocumentation(project: project, modelClass: modelClass))
-            var classDescription = ClassDescription(name: modelClass.name, options: .init(visibility: .public))
+
+            var parent: String? = nil
+            if let parentUUID = modelClass.extends,
+                let parentObject = project.models.findObject(uuid: parentUUID)  {
+                parent = parentObject.name
+            }
+            var classDescription = ClassDescription(name: modelClass.name, options: .init(visibility: .public), parent: parent)
 
             classDescription.properties.append(contentsOf: modelClass.properties.map({ (property) in
                 var type = models.findObject(uuid: property.type)?.name ?? "Any"

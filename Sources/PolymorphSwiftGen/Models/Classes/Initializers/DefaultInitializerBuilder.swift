@@ -28,7 +28,7 @@ class DefaultInitializerBuilder: DescriptionBuilder<Class, InitializerDescriptio
                         return nil
                     }
                     arguments.append("\(property.name): \(type.name)")
-                    superArguments.append(property.name)
+                    superArguments.append("\(property.name): \(property.name)")
                 }
             }
             impl.add(line: "super.init(\(superArguments.joined(separator: ", ")))")
