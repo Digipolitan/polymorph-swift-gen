@@ -7,19 +7,11 @@
 
 import PolymorphCore
 import PolymorphGen
-import SwiftCodeWriter
 import Foundation
 
 public class SwiftPlatformGen: PlatformGen {
 
     public override func models(_ models: Models, options: PlatformGen.Options) throws -> [File] {
-        guard let project = models.project else {
-            return []
-        }
-        let files: [File] = try models.classes.map { (modelClass) in
-            return File(path: "", name: "")
-        }
-        print("\(files)")
-        return files
+        return try models.classes.map { try ModelClassFileBuilderManager.default.build(element: $0, options: options) }.reduce([], { return $0 + $1 })
     }
 }
