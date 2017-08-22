@@ -18,6 +18,7 @@ struct DefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
 
         let parentProperties = element.parentProperties()
         var modules = Set<String>()
+        var override = false
         if parentProperties.count > 0 {
             var superArguments: [String] = []
             for property in parentProperties {
@@ -28,6 +29,7 @@ struct DefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
                     superArguments.append("\(property.name): \(property.name)")
                 }
             }
+            override = true
             impl.add(line: "super.init(\(superArguments.joined(separator: ", ")))")
         }
         for property in element.properties {
@@ -38,6 +40,6 @@ struct DefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
                 impl.add(line: "self.\(property.name) = \(property.name)")
             }
         }
-        return InitializerDescription(code: impl, options: .init(visibility: .public), modules: Array(modules), arguments: arguments)
+        return InitializerDescription(code: impl, options: .init(visibility: .public, isOverride: override), modules: Array(modules), arguments: arguments)
     }
 }
