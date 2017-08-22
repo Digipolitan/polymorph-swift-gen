@@ -36,6 +36,6 @@ struct ModelClassDefinitionFileBuilder: ModelClassFileBuilder {
         fileDescription.protocols.append(protocolDescription)
         let fileStr = FileWriter.default.write(description: fileDescription)
 
-        return [File(path: "\(options.path)/Definitions/\(element.package.path(camelcase: true))" , name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
+        return [File(path: ModelClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
     }
 }

@@ -24,9 +24,10 @@ struct ModelClassImplementationFileBuilder: ModelClassFileBuilder {
         var parent: String? = nil
         if let parentUUID = element.extends,
             let parentObject = project.models.findObject(uuid: parentUUID)  {
-            parent = parentObject.name
+            parent = "\(parentObject.name)Model"
         }
         var classDescription = ClassDescription(name: className, options: .init(), parent: parent)
+        classDescription.implements.append(element.name)
 
         classDescription.properties.append(contentsOf: element.properties.map({ (property) in
             var type = project.models.findObject(uuid: property.type)?.name ?? "Any"
@@ -45,6 +46,6 @@ struct ModelClassImplementationFileBuilder: ModelClassFileBuilder {
         fileDescription.classes.append(classDescription)
         let fileStr = FileWriter.default.write(description: fileDescription)
 
-        return [File(path: "\(options.path)/Implementations/Models/\(element.package.path(camelcase: true))" , name: "\(className).swift", data: fileStr.data(using: .utf8))]
+        return [File(path: ModelClassImplementation.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(className).swift", data: fileStr.data(using: .utf8))]
     }
 }

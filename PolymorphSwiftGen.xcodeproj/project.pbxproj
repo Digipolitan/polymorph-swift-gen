@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A37265EA1F4C840600FD7676 /* ModelClassDependencyModuleFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37265E91F4C840600FD7676 /* ModelClassDependencyModuleFileBuilder.swift */; };
+		A37265EC1F4C881800FD7676 /* ModelClassImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37265EB1F4C881800FD7676 /* ModelClassImplementation.swift */; };
+		A37265EE1F4C892700FD7676 /* ModelClassDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37265ED1F4C892700FD7676 /* ModelClassDefinition.swift */; };
 		OBJ_101 /* PolymorphSwiftGenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PolymorphSwiftGenTests.swift */; };
 		OBJ_103 /* PolymorphSwiftGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */; };
 		OBJ_104 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
@@ -209,6 +212,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A37265E91F4C840600FD7676 /* ModelClassDependencyModuleFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassDependencyModuleFileBuilder.swift; sourceTree = "<group>"; };
+		A37265EB1F4C881800FD7676 /* ModelClassImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassImplementation.swift; sourceTree = "<group>"; };
+		A37265ED1F4C892700FD7676 /* ModelClassDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassDefinition.swift; sourceTree = "<group>"; };
 		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* PolymorphSwiftGenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenError.swift; sourceTree = "<group>"; };
 		OBJ_11 /* FileDocumentationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDocumentationBuilder.swift; sourceTree = "<group>"; };
@@ -367,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_16 /* ModelClassDefinitionFileBuilder.swift */,
+				A37265ED1F4C892700FD7676 /* ModelClassDefinition.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -376,6 +383,8 @@
 			children = (
 				OBJ_18 /* Initializers */,
 				OBJ_21 /* ModelClassImplementationFileBuilder.swift */,
+				A37265E91F4C840600FD7676 /* ModelClassDependencyModuleFileBuilder.swift */,
+				A37265EB1F4C881800FD7676 /* ModelClassImplementation.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -580,7 +589,7 @@
 		OBJ_8 /* PolymorphSwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Errors */,
+				OBJ_10 /* PolymorphSwiftGenError.swift */,
 				OBJ_11 /* FileDocumentationBuilder.swift */,
 				OBJ_12 /* Models */,
 				OBJ_24 /* Platform */,
@@ -620,14 +629,6 @@
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_9 /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* PolymorphSwiftGenError.swift */,
-			);
-			path = Errors;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -805,8 +806,11 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_125 /* PolymorphSwiftGenError.swift in Sources */,
+				A37265EA1F4C840600FD7676 /* ModelClassDependencyModuleFileBuilder.swift in Sources */,
+				A37265EC1F4C881800FD7676 /* ModelClassImplementation.swift in Sources */,
 				OBJ_126 /* FileDocumentationBuilder.swift in Sources */,
 				OBJ_127 /* ClassInitializerDescriptionBuilder.swift in Sources */,
+				A37265EE1F4C892700FD7676 /* ModelClassDefinition.swift in Sources */,
 				OBJ_128 /* ModelClassDefinitionFileBuilder.swift in Sources */,
 				OBJ_129 /* ClassInitializerBuilderRegistry.swift in Sources */,
 				OBJ_130 /* DefaultInitializerBuilder.swift in Sources */,
