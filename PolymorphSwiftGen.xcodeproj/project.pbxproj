@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"PolymorphSwiftGen::PolymorphSwiftGenPackageTests::ProductTarget" /* PolymorphSwiftGenPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_190 /* Build configuration list for PBXAggregateTarget "PolymorphSwiftGenPackageTests" */;
+			buildConfigurationList = OBJ_224 /* Build configuration list for PBXAggregateTarget "PolymorphSwiftGenPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_193 /* PBXTargetDependency */,
+				OBJ_227 /* PBXTargetDependency */,
 			);
 			name = PolymorphSwiftGenPackageTests;
 			productName = PolymorphSwiftGenPackageTests;
@@ -21,185 +21,185 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A353656D1F4B21F800FAFA11 /* ClassInitializerDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB61F4B17E4006CB4C6 /* ClassInitializerDescriptionBuilder.swift */; };
-		A353656E1F4B21F800FAFA11 /* ModelClassDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FBA1F4B19B5006CB4C6 /* ModelClassDefinitionFileBuilder.swift */; };
-		A353656F1F4B21F800FAFA11 /* ModelClassImplementationFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB81F4B17E4006CB4C6 /* ModelClassImplementationFileBuilder.swift */; };
-		A35365701F4B21FB00FAFA11 /* ModelClassFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB91F4B17E4006CB4C6 /* ModelClassFileBuilderManager.swift */; };
-		A35365711F4B220000FAFA11 /* ClassInitializerBuilderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB51F4B17E4006CB4C6 /* ClassInitializerBuilderRegistry.swift */; };
-		A35365721F4B220000FAFA11 /* DefaultInitializerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB71F4B17E4006CB4C6 /* DefaultInitializerBuilder.swift */; };
-		A35365731F4B28C100FAFA11 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F691F4746B2006CB4C6 /* Mapping.swift */; };
-		A3777F6B1F4746C8006CB4C6 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F6A1F4746C8006CB4C6 /* Framework.swift */; };
-		A3777F6F1F4747F0006CB4C6 /* UIKitFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F6E1F4747F0006CB4C6 /* UIKitFramework.swift */; };
-		A3777F711F4747F8006CB4C6 /* FoundationFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F701F4747F7006CB4C6 /* FoundationFramework.swift */; };
-		A3777FAA1F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FA91F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift */; };
-		A3777FAC1F4B1459006CB4C6 /* FileDocumentationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FAB1F4B1459006CB4C6 /* FileDocumentationBuilder.swift */; };
-		A3777FBD1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FBC1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift */; };
-		OBJ_104 /* SwiftPlatformGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SwiftPlatformGen.swift */; };
-		OBJ_106 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
-		OBJ_107 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
-		OBJ_108 /* PolymorphGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */; };
-		OBJ_109 /* PolymorphCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */; };
-		OBJ_110 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
-		OBJ_120 /* ClassDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ClassDescription.swift */; };
-		OBJ_121 /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* EnumDescription.swift */; };
-		OBJ_122 /* ExtensionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ExtensionDescription.swift */; };
-		OBJ_123 /* FileDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* FileDescription.swift */; };
-		OBJ_124 /* InitializerDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* InitializerDescription.swift */; };
-		OBJ_125 /* MethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* MethodDescription.swift */; };
-		OBJ_126 /* ModuleDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ModuleDependency.swift */; };
-		OBJ_127 /* PropertyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* PropertyDescription.swift */; };
-		OBJ_128 /* ProtocolDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ProtocolDescription.swift */; };
-		OBJ_129 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Visibility.swift */; };
-		OBJ_130 /* ClassPropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ClassPropertyWriter.swift */; };
-		OBJ_131 /* ClassWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ClassWriter.swift */; };
-		OBJ_132 /* DocumentationWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* DocumentationWriter.swift */; };
-		OBJ_133 /* EnumWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* EnumWriter.swift */; };
-		OBJ_134 /* ExtensionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ExtensionWriter.swift */; };
-		OBJ_135 /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* FileWriter.swift */; };
-		OBJ_136 /* InitializerWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* InitializerWriter.swift */; };
-		OBJ_137 /* MethodWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* MethodWriter.swift */; };
-		OBJ_138 /* ProtocolPropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ProtocolPropertyWriter.swift */; };
-		OBJ_139 /* ProtocolWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ProtocolWriter.swift */; };
+		OBJ_101 /* PolymorphSwiftGenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PolymorphSwiftGenTests.swift */; };
+		OBJ_103 /* PolymorphSwiftGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */; };
+		OBJ_104 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
+		OBJ_105 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
+		OBJ_106 /* PolymorphGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */; };
+		OBJ_107 /* PolymorphCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */; };
+		OBJ_108 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
+		OBJ_125 /* PolymorphSwiftGenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* PolymorphSwiftGenError.swift */; };
+		OBJ_126 /* FileDocumentationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* FileDocumentationBuilder.swift */; };
+		OBJ_127 /* ClassInitializerDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ClassInitializerDescriptionBuilder.swift */; };
+		OBJ_128 /* ModelClassDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* ModelClassDefinitionFileBuilder.swift */; };
+		OBJ_129 /* ClassInitializerBuilderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ClassInitializerBuilderRegistry.swift */; };
+		OBJ_130 /* DefaultInitializerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* DefaultInitializerBuilder.swift */; };
+		OBJ_131 /* ModelClassImplementationFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ModelClassImplementationFileBuilder.swift */; };
+		OBJ_132 /* ModelClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ModelClassFileBuilder.swift */; };
+		OBJ_133 /* ModelClassFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ModelClassFileBuilderManager.swift */; };
+		OBJ_134 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Framework.swift */; };
+		OBJ_135 /* FoundationFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* FoundationFramework.swift */; };
+		OBJ_136 /* UIKitFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* UIKitFramework.swift */; };
+		OBJ_137 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Mapping.swift */; };
+		OBJ_138 /* SwiftPlatformGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* SwiftPlatformGen.swift */; };
+		OBJ_140 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
 		OBJ_141 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
-		OBJ_147 /* CodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CodeBuilder.swift */; };
-		OBJ_148 /* CodeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* CodeWriter.swift */; };
-		OBJ_154 /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Dir.swift */; };
-		OBJ_155 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* File.swift */; };
-		OBJ_156 /* PlatformGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* PlatformGen.swift */; };
-		OBJ_157 /* PolymorphGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* PolymorphGen.swift */; };
-		OBJ_159 /* PolymorphCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */; };
-		OBJ_160 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
-		OBJ_167 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Class.swift */; };
-		OBJ_168 /* Documentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Documentable.swift */; };
-		OBJ_169 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Enum.swift */; };
-		OBJ_170 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Member.swift */; };
-		OBJ_171 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Models.swift */; };
-		OBJ_172 /* Native.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Native.swift */; };
-		OBJ_173 /* NativeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* NativeFactory.swift */; };
-		OBJ_174 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Object.swift */; };
-		OBJ_175 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Package.swift */; };
-		OBJ_176 /* Packageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Packageable.swift */; };
-		OBJ_177 /* PolymorphCoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* PolymorphCoreError.swift */; };
-		OBJ_178 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Project.swift */; };
-		OBJ_179 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Property.swift */; };
-		OBJ_181 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
-		OBJ_187 /* StringCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* StringCase.swift */; };
-		OBJ_80 /* PolymorphSwiftGenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PolymorphSwiftGenTests.swift */; };
-		OBJ_82 /* PolymorphSwiftGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */; };
-		OBJ_83 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
-		OBJ_84 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
-		OBJ_85 /* PolymorphGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */; };
-		OBJ_86 /* PolymorphCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */; };
-		OBJ_87 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
+		OBJ_142 /* PolymorphGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */; };
+		OBJ_143 /* PolymorphCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */; };
+		OBJ_144 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
+		OBJ_154 /* ClassDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ClassDescription.swift */; };
+		OBJ_155 /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* EnumDescription.swift */; };
+		OBJ_156 /* ExtensionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* ExtensionDescription.swift */; };
+		OBJ_157 /* FileDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* FileDescription.swift */; };
+		OBJ_158 /* InitializerDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* InitializerDescription.swift */; };
+		OBJ_159 /* MethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* MethodDescription.swift */; };
+		OBJ_160 /* ModuleDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ModuleDependency.swift */; };
+		OBJ_161 /* PropertyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* PropertyDescription.swift */; };
+		OBJ_162 /* ProtocolDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* ProtocolDescription.swift */; };
+		OBJ_163 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Visibility.swift */; };
+		OBJ_164 /* ClassPropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* ClassPropertyWriter.swift */; };
+		OBJ_165 /* ClassWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ClassWriter.swift */; };
+		OBJ_166 /* DocumentationWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* DocumentationWriter.swift */; };
+		OBJ_167 /* EnumWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* EnumWriter.swift */; };
+		OBJ_168 /* ExtensionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* ExtensionWriter.swift */; };
+		OBJ_169 /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* FileWriter.swift */; };
+		OBJ_170 /* InitializerWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* InitializerWriter.swift */; };
+		OBJ_171 /* MethodWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* MethodWriter.swift */; };
+		OBJ_172 /* ProtocolPropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* ProtocolPropertyWriter.swift */; };
+		OBJ_173 /* ProtocolWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* ProtocolWriter.swift */; };
+		OBJ_175 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
+		OBJ_181 /* CodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* CodeBuilder.swift */; };
+		OBJ_182 /* CodeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* CodeWriter.swift */; };
+		OBJ_188 /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* Dir.swift */; };
+		OBJ_189 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* File.swift */; };
+		OBJ_190 /* PlatformGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* PlatformGen.swift */; };
+		OBJ_191 /* PolymorphGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* PolymorphGen.swift */; };
+		OBJ_193 /* PolymorphCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */; };
+		OBJ_194 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
+		OBJ_201 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Class.swift */; };
+		OBJ_202 /* Documentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Documentable.swift */; };
+		OBJ_203 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Enum.swift */; };
+		OBJ_204 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Member.swift */; };
+		OBJ_205 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Models.swift */; };
+		OBJ_206 /* Native.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Native.swift */; };
+		OBJ_207 /* NativeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* NativeFactory.swift */; };
+		OBJ_208 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Object.swift */; };
+		OBJ_209 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* Package.swift */; };
+		OBJ_210 /* Packageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Packageable.swift */; };
+		OBJ_211 /* PolymorphCoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* PolymorphCoreError.swift */; };
+		OBJ_212 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Project.swift */; };
+		OBJ_213 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Property.swift */; };
+		OBJ_215 /* StringCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "StringCase::StringCase::Product" /* StringCase.framework */; };
+		OBJ_221 /* StringCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* StringCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A3777F241F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265C91F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A3777F251F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265CA1F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3777F261F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265CB1F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3777F271F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265CC1F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphGen::PolymorphGen";
 			remoteInfo = PolymorphGen;
 		};
-		A3777F281F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265CD1F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A3777F291F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265CE1F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3777F2A1F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265CF1F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3777F2B1F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D01F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A3777F2C1F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D11F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3777F2D1F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D21F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphSwiftGen::PolymorphSwiftGen";
 			remoteInfo = PolymorphSwiftGen;
 		};
-		A3777F2E1F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D31F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A3777F2F1F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D41F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3777F301F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D51F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphGen::PolymorphGen";
 			remoteInfo = PolymorphGen;
 		};
-		A3777F311F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D61F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A3777F321F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D71F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3777F331F45FD7D006CB4C6 /* PBXContainerItemProxy */ = {
+		A37265D81F4C79D400FD7676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -209,391 +209,405 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A3777F691F4746B2006CB4C6 /* Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
-		A3777F6A1F4746C8006CB4C6 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
-		A3777F6E1F4747F0006CB4C6 /* UIKitFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitFramework.swift; sourceTree = "<group>"; };
-		A3777F701F4747F7006CB4C6 /* FoundationFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationFramework.swift; sourceTree = "<group>"; };
-		A3777FA91F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenError.swift; sourceTree = "<group>"; };
-		A3777FAB1F4B1459006CB4C6 /* FileDocumentationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDocumentationBuilder.swift; sourceTree = "<group>"; };
-		A3777FB51F4B17E4006CB4C6 /* ClassInitializerBuilderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerBuilderRegistry.swift; sourceTree = "<group>"; };
-		A3777FB61F4B17E4006CB4C6 /* ClassInitializerDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerDescriptionBuilder.swift; sourceTree = "<group>"; };
-		A3777FB71F4B17E4006CB4C6 /* DefaultInitializerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInitializerBuilder.swift; sourceTree = "<group>"; };
-		A3777FB81F4B17E4006CB4C6 /* ModelClassImplementationFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassImplementationFileBuilder.swift; sourceTree = "<group>"; };
-		A3777FB91F4B17E4006CB4C6 /* ModelClassFileBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassFileBuilderManager.swift; sourceTree = "<group>"; };
-		A3777FBA1F4B19B5006CB4C6 /* ModelClassDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassDefinitionFileBuilder.swift; sourceTree = "<group>"; };
-		A3777FBC1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassFileBuilder.swift; sourceTree = "<group>"; };
 		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* PolymorphSwiftGenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenTests.swift; sourceTree = "<group>"; };
-		OBJ_13 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
-		OBJ_18 /* ClassDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDescription.swift; sourceTree = "<group>"; };
-		OBJ_19 /* EnumDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescription.swift; sourceTree = "<group>"; };
-		OBJ_20 /* ExtensionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDescription.swift; sourceTree = "<group>"; };
-		OBJ_21 /* FileDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDescription.swift; sourceTree = "<group>"; };
-		OBJ_22 /* InitializerDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerDescription.swift; sourceTree = "<group>"; };
-		OBJ_23 /* MethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDescription.swift; sourceTree = "<group>"; };
-		OBJ_24 /* ModuleDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDependency.swift; sourceTree = "<group>"; };
-		OBJ_25 /* PropertyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescription.swift; sourceTree = "<group>"; };
-		OBJ_26 /* ProtocolDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescription.swift; sourceTree = "<group>"; };
-		OBJ_27 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
-		OBJ_29 /* ClassPropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPropertyWriter.swift; sourceTree = "<group>"; };
-		OBJ_30 /* ClassWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassWriter.swift; sourceTree = "<group>"; };
-		OBJ_31 /* DocumentationWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationWriter.swift; sourceTree = "<group>"; };
-		OBJ_32 /* EnumWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWriter.swift; sourceTree = "<group>"; };
-		OBJ_33 /* ExtensionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriter.swift; sourceTree = "<group>"; };
-		OBJ_34 /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
-		OBJ_35 /* InitializerWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerWriter.swift; sourceTree = "<group>"; };
-		OBJ_36 /* MethodWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodWriter.swift; sourceTree = "<group>"; };
-		OBJ_37 /* ProtocolPropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPropertyWriter.swift; sourceTree = "<group>"; };
-		OBJ_38 /* ProtocolWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWriter.swift; sourceTree = "<group>"; };
-		OBJ_41 /* CodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBuilder.swift; sourceTree = "<group>"; };
-		OBJ_42 /* CodeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWriter.swift; sourceTree = "<group>"; };
-		OBJ_45 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
-		OBJ_46 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		OBJ_47 /* PlatformGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformGen.swift; sourceTree = "<group>"; };
-		OBJ_48 /* PolymorphGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphGen.swift; sourceTree = "<group>"; };
-		OBJ_51 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
-		OBJ_52 /* Documentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentable.swift; sourceTree = "<group>"; };
-		OBJ_53 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
-		OBJ_54 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		OBJ_55 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		OBJ_56 /* Native.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Native.swift; sourceTree = "<group>"; };
-		OBJ_57 /* NativeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeFactory.swift; sourceTree = "<group>"; };
-		OBJ_58 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
-		OBJ_59 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_10 /* PolymorphSwiftGenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenError.swift; sourceTree = "<group>"; };
+		OBJ_11 /* FileDocumentationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDocumentationBuilder.swift; sourceTree = "<group>"; };
+		OBJ_14 /* ClassInitializerDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_16 /* ModelClassDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassDefinitionFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_19 /* ClassInitializerBuilderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerBuilderRegistry.swift; sourceTree = "<group>"; };
+		OBJ_20 /* DefaultInitializerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInitializerBuilder.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ModelClassImplementationFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassImplementationFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_22 /* ModelClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_23 /* ModelClassFileBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassFileBuilderManager.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
+		OBJ_27 /* FoundationFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationFramework.swift; sourceTree = "<group>"; };
+		OBJ_28 /* UIKitFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitFramework.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
+		OBJ_30 /* SwiftPlatformGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPlatformGen.swift; sourceTree = "<group>"; };
+		OBJ_33 /* PolymorphSwiftGenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenTests.swift; sourceTree = "<group>"; };
+		OBJ_34 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_39 /* ClassDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDescription.swift; sourceTree = "<group>"; };
+		OBJ_40 /* EnumDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescription.swift; sourceTree = "<group>"; };
+		OBJ_41 /* ExtensionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDescription.swift; sourceTree = "<group>"; };
+		OBJ_42 /* FileDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDescription.swift; sourceTree = "<group>"; };
+		OBJ_43 /* InitializerDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerDescription.swift; sourceTree = "<group>"; };
+		OBJ_44 /* MethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDescription.swift; sourceTree = "<group>"; };
+		OBJ_45 /* ModuleDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDependency.swift; sourceTree = "<group>"; };
+		OBJ_46 /* PropertyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescription.swift; sourceTree = "<group>"; };
+		OBJ_47 /* ProtocolDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescription.swift; sourceTree = "<group>"; };
+		OBJ_48 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		OBJ_50 /* ClassPropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPropertyWriter.swift; sourceTree = "<group>"; };
+		OBJ_51 /* ClassWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassWriter.swift; sourceTree = "<group>"; };
+		OBJ_52 /* DocumentationWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationWriter.swift; sourceTree = "<group>"; };
+		OBJ_53 /* EnumWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWriter.swift; sourceTree = "<group>"; };
+		OBJ_54 /* ExtensionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriter.swift; sourceTree = "<group>"; };
+		OBJ_55 /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		OBJ_56 /* InitializerWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerWriter.swift; sourceTree = "<group>"; };
+		OBJ_57 /* MethodWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodWriter.swift; sourceTree = "<group>"; };
+		OBJ_58 /* ProtocolPropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPropertyWriter.swift; sourceTree = "<group>"; };
+		OBJ_59 /* ProtocolWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWriter.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* Packageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packageable.swift; sourceTree = "<group>"; };
-		OBJ_61 /* PolymorphCoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphCoreError.swift; sourceTree = "<group>"; };
-		OBJ_62 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		OBJ_63 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
-		OBJ_66 /* StringCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCase.swift; sourceTree = "<group>"; };
-		OBJ_9 /* SwiftPlatformGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPlatformGen.swift; sourceTree = "<group>"; };
+		OBJ_62 /* CodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBuilder.swift; sourceTree = "<group>"; };
+		OBJ_63 /* CodeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWriter.swift; sourceTree = "<group>"; };
+		OBJ_66 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
+		OBJ_67 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		OBJ_68 /* PlatformGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformGen.swift; sourceTree = "<group>"; };
+		OBJ_69 /* PolymorphGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphGen.swift; sourceTree = "<group>"; };
+		OBJ_72 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		OBJ_73 /* Documentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentable.swift; sourceTree = "<group>"; };
+		OBJ_74 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		OBJ_75 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		OBJ_76 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		OBJ_77 /* Native.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Native.swift; sourceTree = "<group>"; };
+		OBJ_78 /* NativeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeFactory.swift; sourceTree = "<group>"; };
+		OBJ_79 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		OBJ_80 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_81 /* Packageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packageable.swift; sourceTree = "<group>"; };
+		OBJ_82 /* PolymorphCoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphCoreError.swift; sourceTree = "<group>"; };
+		OBJ_83 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		OBJ_84 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		OBJ_87 /* StringCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCase.swift; sourceTree = "<group>"; };
 		"PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphSwiftGen::PolymorphSwiftGenTests::Product" /* PolymorphSwiftGenTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PolymorphSwiftGenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"StringCase::StringCase::Product" /* StringCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_105 /* Frameworks */ = {
+		OBJ_102 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_106 /* SwiftCodeWriter.framework in Frameworks */,
-				OBJ_107 /* CodeWriter.framework in Frameworks */,
-				OBJ_108 /* PolymorphGen.framework in Frameworks */,
-				OBJ_109 /* PolymorphCore.framework in Frameworks */,
-				OBJ_110 /* StringCase.framework in Frameworks */,
+				OBJ_103 /* PolymorphSwiftGen.framework in Frameworks */,
+				OBJ_104 /* SwiftCodeWriter.framework in Frameworks */,
+				OBJ_105 /* CodeWriter.framework in Frameworks */,
+				OBJ_106 /* PolymorphGen.framework in Frameworks */,
+				OBJ_107 /* PolymorphCore.framework in Frameworks */,
+				OBJ_108 /* StringCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_140 /* Frameworks */ = {
+		OBJ_139 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_140 /* SwiftCodeWriter.framework in Frameworks */,
 				OBJ_141 /* CodeWriter.framework in Frameworks */,
+				OBJ_142 /* PolymorphGen.framework in Frameworks */,
+				OBJ_143 /* PolymorphCore.framework in Frameworks */,
+				OBJ_144 /* StringCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_149 /* Frameworks */ = {
+		OBJ_174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_175 /* CodeWriter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_183 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_158 /* Frameworks */ = {
+		OBJ_192 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_159 /* PolymorphCore.framework in Frameworks */,
-				OBJ_160 /* StringCase.framework in Frameworks */,
+				OBJ_193 /* PolymorphCore.framework in Frameworks */,
+				OBJ_194 /* StringCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_180 /* Frameworks */ = {
+		OBJ_214 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_181 /* StringCase.framework in Frameworks */,
+				OBJ_215 /* StringCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_188 /* Frameworks */ = {
+		OBJ_222 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_81 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_82 /* PolymorphSwiftGen.framework in Frameworks */,
-				OBJ_83 /* SwiftCodeWriter.framework in Frameworks */,
-				OBJ_84 /* CodeWriter.framework in Frameworks */,
-				OBJ_85 /* PolymorphGen.framework in Frameworks */,
-				OBJ_86 /* PolymorphCore.framework in Frameworks */,
-				OBJ_87 /* StringCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A3777F531F473A97006CB4C6 /* Models */ = {
+		OBJ_12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A3777FB11F4B17E4006CB4C6 /* Classes */,
+				OBJ_13 /* Classes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A3777F681F4746B2006CB4C6 /* Platform */ = {
+		OBJ_13 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A3777F691F4746B2006CB4C6 /* Mapping.swift */,
-				A3777F6A1F4746C8006CB4C6 /* Framework.swift */,
-				A3777F6D1F4747E2006CB4C6 /* Frameworks */,
-			);
-			path = Platform;
-			sourceTree = "<group>";
-		};
-		A3777F6D1F4747E2006CB4C6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3777F6E1F4747F0006CB4C6 /* UIKitFramework.swift */,
-				A3777F701F4747F7006CB4C6 /* FoundationFramework.swift */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		A3777FA81F4B13B1006CB4C6 /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-				A3777FA91F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift */,
-			);
-			path = Errors;
-			sourceTree = "<group>";
-		};
-		A3777FB11F4B17E4006CB4C6 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A3777FB61F4B17E4006CB4C6 /* ClassInitializerDescriptionBuilder.swift */,
-				A3777FB21F4B17E4006CB4C6 /* Definitions */,
-				A3777FB31F4B17E4006CB4C6 /* Implementations */,
-				A3777FB91F4B17E4006CB4C6 /* ModelClassFileBuilderManager.swift */,
-				A3777FBC1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift */,
+				OBJ_14 /* ClassInitializerDescriptionBuilder.swift */,
+				OBJ_15 /* Definitions */,
+				OBJ_17 /* Implementations */,
+				OBJ_22 /* ModelClassFileBuilder.swift */,
+				OBJ_23 /* ModelClassFileBuilderManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		A3777FB21F4B17E4006CB4C6 /* Definitions */ = {
+		OBJ_15 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				A3777FBA1F4B19B5006CB4C6 /* ModelClassDefinitionFileBuilder.swift */,
+				OBJ_16 /* ModelClassDefinitionFileBuilder.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
 		};
-		A3777FB31F4B17E4006CB4C6 /* Implementations */ = {
+		OBJ_17 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				A3777FB41F4B17E4006CB4C6 /* Initializers */,
-				A3777FB81F4B17E4006CB4C6 /* ModelClassImplementationFileBuilder.swift */,
+				OBJ_18 /* Initializers */,
+				OBJ_21 /* ModelClassImplementationFileBuilder.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
 		};
-		A3777FB41F4B17E4006CB4C6 /* Initializers */ = {
+		OBJ_18 /* Initializers */ = {
 			isa = PBXGroup;
 			children = (
-				A3777FB51F4B17E4006CB4C6 /* ClassInitializerBuilderRegistry.swift */,
-				A3777FB71F4B17E4006CB4C6 /* DefaultInitializerBuilder.swift */,
+				OBJ_19 /* ClassInitializerBuilderRegistry.swift */,
+				OBJ_20 /* DefaultInitializerBuilder.swift */,
 			);
 			path = Initializers;
 			sourceTree = "<group>";
 		};
-		OBJ_10 /* Tests */ = {
+		OBJ_24 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* PolymorphSwiftGenTests */,
+				OBJ_25 /* Framework.swift */,
+				OBJ_26 /* Frameworks */,
+				OBJ_29 /* Mapping.swift */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* FoundationFramework.swift */,
+				OBJ_28 /* UIKitFramework.swift */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* PolymorphSwiftGenTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_11 /* PolymorphSwiftGenTests */ = {
+		OBJ_32 /* PolymorphSwiftGenTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* PolymorphSwiftGenTests.swift */,
+				OBJ_33 /* PolymorphSwiftGenTests.swift */,
 			);
 			name = PolymorphSwiftGenTests;
 			path = Tests/PolymorphSwiftGenTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* Dependencies */ = {
+		OBJ_35 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* SwiftCodeWriter */,
-				OBJ_39 /* CodeWriter */,
-				OBJ_43 /* PolymorphGen */,
-				OBJ_49 /* PolymorphCore */,
-				OBJ_64 /* StringCase */,
+				OBJ_36 /* SwiftCodeWriter */,
+				OBJ_60 /* CodeWriter */,
+				OBJ_64 /* PolymorphGen */,
+				OBJ_70 /* PolymorphCore */,
+				OBJ_85 /* StringCase */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_15 /* SwiftCodeWriter */ = {
+		OBJ_36 /* SwiftCodeWriter */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* SwiftCodeWriter */,
+				OBJ_37 /* SwiftCodeWriter */,
 			);
 			name = SwiftCodeWriter;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_16 /* SwiftCodeWriter */ = {
+		OBJ_37 /* SwiftCodeWriter */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* Descriptions */,
-				OBJ_28 /* Writers */,
+				OBJ_38 /* Descriptions */,
+				OBJ_49 /* Writers */,
 			);
 			name = SwiftCodeWriter;
 			path = ".build/checkouts/swiftcode-writer-swift.git--768518485030415355/Sources/SwiftCodeWriter";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* Descriptions */ = {
+		OBJ_38 /* Descriptions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* ClassDescription.swift */,
-				OBJ_19 /* EnumDescription.swift */,
-				OBJ_20 /* ExtensionDescription.swift */,
-				OBJ_21 /* FileDescription.swift */,
-				OBJ_22 /* InitializerDescription.swift */,
-				OBJ_23 /* MethodDescription.swift */,
-				OBJ_24 /* ModuleDependency.swift */,
-				OBJ_25 /* PropertyDescription.swift */,
-				OBJ_26 /* ProtocolDescription.swift */,
-				OBJ_27 /* Visibility.swift */,
+				OBJ_39 /* ClassDescription.swift */,
+				OBJ_40 /* EnumDescription.swift */,
+				OBJ_41 /* ExtensionDescription.swift */,
+				OBJ_42 /* FileDescription.swift */,
+				OBJ_43 /* InitializerDescription.swift */,
+				OBJ_44 /* MethodDescription.swift */,
+				OBJ_45 /* ModuleDependency.swift */,
+				OBJ_46 /* PropertyDescription.swift */,
+				OBJ_47 /* ProtocolDescription.swift */,
+				OBJ_48 /* Visibility.swift */,
 			);
 			path = Descriptions;
 			sourceTree = "<group>";
 		};
-		OBJ_28 /* Writers */ = {
+		OBJ_49 /* Writers */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_29 /* ClassPropertyWriter.swift */,
-				OBJ_30 /* ClassWriter.swift */,
-				OBJ_31 /* DocumentationWriter.swift */,
-				OBJ_32 /* EnumWriter.swift */,
-				OBJ_33 /* ExtensionWriter.swift */,
-				OBJ_34 /* FileWriter.swift */,
-				OBJ_35 /* InitializerWriter.swift */,
-				OBJ_36 /* MethodWriter.swift */,
-				OBJ_37 /* ProtocolPropertyWriter.swift */,
-				OBJ_38 /* ProtocolWriter.swift */,
+				OBJ_50 /* ClassPropertyWriter.swift */,
+				OBJ_51 /* ClassWriter.swift */,
+				OBJ_52 /* DocumentationWriter.swift */,
+				OBJ_53 /* EnumWriter.swift */,
+				OBJ_54 /* ExtensionWriter.swift */,
+				OBJ_55 /* FileWriter.swift */,
+				OBJ_56 /* InitializerWriter.swift */,
+				OBJ_57 /* MethodWriter.swift */,
+				OBJ_58 /* ProtocolPropertyWriter.swift */,
+				OBJ_59 /* ProtocolWriter.swift */,
 			);
 			path = Writers;
 			sourceTree = "<group>";
 		};
-		OBJ_39 /* CodeWriter */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_40 /* CodeWriter */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_31 /* Tests */,
+				OBJ_34 /* DerivedData */,
+				OBJ_35 /* Dependencies */,
+				OBJ_88 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_60 /* CodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_61 /* CodeWriter */,
 			);
 			name = CodeWriter;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_40 /* CodeWriter */ = {
+		OBJ_61 /* CodeWriter */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_41 /* CodeBuilder.swift */,
-				OBJ_42 /* CodeWriter.swift */,
+				OBJ_62 /* CodeBuilder.swift */,
+				OBJ_63 /* CodeWriter.swift */,
 			);
 			name = CodeWriter;
 			path = ".build/checkouts/code-writer-swift.git-7489791545997514195/Sources/CodeWriter";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_43 /* PolymorphGen */ = {
+		OBJ_64 /* PolymorphGen */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_44 /* PolymorphGen */,
+				OBJ_65 /* PolymorphGen */,
 			);
 			name = PolymorphGen;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_44 /* PolymorphGen */ = {
+		OBJ_65 /* PolymorphGen */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_45 /* Dir.swift */,
-				OBJ_46 /* File.swift */,
-				OBJ_47 /* PlatformGen.swift */,
-				OBJ_48 /* PolymorphGen.swift */,
+				OBJ_66 /* Dir.swift */,
+				OBJ_67 /* File.swift */,
+				OBJ_68 /* PlatformGen.swift */,
+				OBJ_69 /* PolymorphGen.swift */,
 			);
 			name = PolymorphGen;
 			path = ".build/checkouts/polymorph-gen-swift.git-6737302919606681793/Sources/PolymorphGen";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_49 /* PolymorphCore */ = {
+		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_50 /* PolymorphCore */,
+				OBJ_8 /* PolymorphSwiftGen */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_70 /* PolymorphCore */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_71 /* PolymorphCore */,
 			);
 			name = PolymorphCore;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 = {
+		OBJ_71 /* PolymorphCore */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
-				OBJ_10 /* Tests */,
-				OBJ_13 /* DerivedData */,
-				OBJ_14 /* Dependencies */,
-				OBJ_67 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		OBJ_50 /* PolymorphCore */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_51 /* Class.swift */,
-				OBJ_52 /* Documentable.swift */,
-				OBJ_53 /* Enum.swift */,
-				OBJ_54 /* Member.swift */,
-				OBJ_55 /* Models.swift */,
-				OBJ_56 /* Native.swift */,
-				OBJ_57 /* NativeFactory.swift */,
-				OBJ_58 /* Object.swift */,
-				OBJ_59 /* Package.swift */,
-				OBJ_60 /* Packageable.swift */,
-				OBJ_61 /* PolymorphCoreError.swift */,
-				OBJ_62 /* Project.swift */,
-				OBJ_63 /* Property.swift */,
+				OBJ_72 /* Class.swift */,
+				OBJ_73 /* Documentable.swift */,
+				OBJ_74 /* Enum.swift */,
+				OBJ_75 /* Member.swift */,
+				OBJ_76 /* Models.swift */,
+				OBJ_77 /* Native.swift */,
+				OBJ_78 /* NativeFactory.swift */,
+				OBJ_79 /* Object.swift */,
+				OBJ_80 /* Package.swift */,
+				OBJ_81 /* Packageable.swift */,
+				OBJ_82 /* PolymorphCoreError.swift */,
+				OBJ_83 /* Project.swift */,
+				OBJ_84 /* Property.swift */,
 			);
 			name = PolymorphCore;
 			path = ".build/checkouts/polymorph-core-swift.git--9185945078424963471/Sources/PolymorphCore";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_64 /* StringCase */ = {
+		OBJ_8 /* PolymorphSwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_65 /* StringCase */,
+				OBJ_9 /* Errors */,
+				OBJ_11 /* FileDocumentationBuilder.swift */,
+				OBJ_12 /* Models */,
+				OBJ_24 /* Platform */,
+				OBJ_30 /* SwiftPlatformGen.swift */,
+			);
+			name = PolymorphSwiftGen;
+			path = Sources/PolymorphSwiftGen;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_85 /* StringCase */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_86 /* StringCase */,
 			);
 			name = StringCase;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_65 /* StringCase */ = {
+		OBJ_86 /* StringCase */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_66 /* StringCase.swift */,
+				OBJ_87 /* StringCase.swift */,
 			);
 			name = StringCase;
 			path = ".build/checkouts/string-case-swift.git--1212291596022844212/Sources/StringCase";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_67 /* Products */ = {
+		OBJ_88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"PolymorphSwiftGen::PolymorphSwiftGenTests::Product" /* PolymorphSwiftGenTests.xctest */,
@@ -607,36 +621,23 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_7 /* Sources */ = {
+		OBJ_9 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* PolymorphSwiftGen */,
+				OBJ_10 /* PolymorphSwiftGenError.swift */,
 			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_8 /* PolymorphSwiftGen */ = {
-			isa = PBXGroup;
-			children = (
-				A3777FA81F4B13B1006CB4C6 /* Errors */,
-				A3777F681F4746B2006CB4C6 /* Platform */,
-				A3777F531F473A97006CB4C6 /* Models */,
-				OBJ_9 /* SwiftPlatformGen.swift */,
-				A3777FAB1F4B1459006CB4C6 /* FileDocumentationBuilder.swift */,
-			);
-			name = PolymorphSwiftGen;
-			path = Sources/PolymorphSwiftGen;
-			sourceTree = SOURCE_ROOT;
+			path = Errors;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"CodeWriter::CodeWriter" /* CodeWriter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_143 /* Build configuration list for PBXNativeTarget "CodeWriter" */;
+			buildConfigurationList = OBJ_177 /* Build configuration list for PBXNativeTarget "CodeWriter" */;
 			buildPhases = (
-				OBJ_146 /* Sources */,
-				OBJ_149 /* Frameworks */,
+				OBJ_180 /* Sources */,
+				OBJ_183 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -649,15 +650,15 @@
 		};
 		"PolymorphCore::PolymorphCore" /* PolymorphCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_163 /* Build configuration list for PBXNativeTarget "PolymorphCore" */;
+			buildConfigurationList = OBJ_197 /* Build configuration list for PBXNativeTarget "PolymorphCore" */;
 			buildPhases = (
-				OBJ_166 /* Sources */,
-				OBJ_180 /* Frameworks */,
+				OBJ_200 /* Sources */,
+				OBJ_214 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_182 /* PBXTargetDependency */,
+				OBJ_216 /* PBXTargetDependency */,
 			);
 			name = PolymorphCore;
 			productName = PolymorphCore;
@@ -666,16 +667,16 @@
 		};
 		"PolymorphGen::PolymorphGen" /* PolymorphGen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "PolymorphGen" */;
+			buildConfigurationList = OBJ_184 /* Build configuration list for PBXNativeTarget "PolymorphGen" */;
 			buildPhases = (
-				OBJ_153 /* Sources */,
-				OBJ_158 /* Frameworks */,
+				OBJ_187 /* Sources */,
+				OBJ_192 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_161 /* PBXTargetDependency */,
-				OBJ_162 /* PBXTargetDependency */,
+				OBJ_195 /* PBXTargetDependency */,
+				OBJ_196 /* PBXTargetDependency */,
 			);
 			name = PolymorphGen;
 			productName = PolymorphGen;
@@ -684,19 +685,19 @@
 		};
 		"PolymorphSwiftGen::PolymorphSwiftGen" /* PolymorphSwiftGen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_100 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGen" */;
+			buildConfigurationList = OBJ_121 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGen" */;
 			buildPhases = (
-				OBJ_103 /* Sources */,
-				OBJ_105 /* Frameworks */,
+				OBJ_124 /* Sources */,
+				OBJ_139 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_111 /* PBXTargetDependency */,
-				OBJ_112 /* PBXTargetDependency */,
-				OBJ_113 /* PBXTargetDependency */,
-				OBJ_114 /* PBXTargetDependency */,
-				OBJ_115 /* PBXTargetDependency */,
+				OBJ_145 /* PBXTargetDependency */,
+				OBJ_146 /* PBXTargetDependency */,
+				OBJ_147 /* PBXTargetDependency */,
+				OBJ_148 /* PBXTargetDependency */,
+				OBJ_149 /* PBXTargetDependency */,
 			);
 			name = PolymorphSwiftGen;
 			productName = PolymorphSwiftGen;
@@ -705,20 +706,20 @@
 		};
 		"PolymorphSwiftGen::PolymorphSwiftGenTests" /* PolymorphSwiftGenTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_76 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGenTests" */;
+			buildConfigurationList = OBJ_97 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGenTests" */;
 			buildPhases = (
-				OBJ_79 /* Sources */,
-				OBJ_81 /* Frameworks */,
+				OBJ_100 /* Sources */,
+				OBJ_102 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_88 /* PBXTargetDependency */,
-				OBJ_90 /* PBXTargetDependency */,
-				OBJ_92 /* PBXTargetDependency */,
-				OBJ_94 /* PBXTargetDependency */,
-				OBJ_96 /* PBXTargetDependency */,
-				OBJ_98 /* PBXTargetDependency */,
+				OBJ_109 /* PBXTargetDependency */,
+				OBJ_111 /* PBXTargetDependency */,
+				OBJ_113 /* PBXTargetDependency */,
+				OBJ_115 /* PBXTargetDependency */,
+				OBJ_117 /* PBXTargetDependency */,
+				OBJ_119 /* PBXTargetDependency */,
 			);
 			name = PolymorphSwiftGenTests;
 			productName = PolymorphSwiftGenTests;
@@ -727,10 +728,10 @@
 		};
 		"StringCase::StringCase" /* StringCase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_183 /* Build configuration list for PBXNativeTarget "StringCase" */;
+			buildConfigurationList = OBJ_217 /* Build configuration list for PBXNativeTarget "StringCase" */;
 			buildPhases = (
-				OBJ_186 /* Sources */,
-				OBJ_188 /* Frameworks */,
+				OBJ_220 /* Sources */,
+				OBJ_222 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -743,15 +744,15 @@
 		};
 		"SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_116 /* Build configuration list for PBXNativeTarget "SwiftCodeWriter" */;
+			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "SwiftCodeWriter" */;
 			buildPhases = (
-				OBJ_119 /* Sources */,
-				OBJ_140 /* Frameworks */,
+				OBJ_153 /* Sources */,
+				OBJ_174 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_142 /* PBXTargetDependency */,
+				OBJ_176 /* PBXTargetDependency */,
 			);
 			name = SwiftCodeWriter;
 			productName = SwiftCodeWriter;
@@ -773,8 +774,8 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_67 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -791,60 +792,32 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_103 /* Sources */ = {
+		OBJ_100 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				A353656D1F4B21F800FAFA11 /* ClassInitializerDescriptionBuilder.swift in Sources */,
-				A353656E1F4B21F800FAFA11 /* ModelClassDefinitionFileBuilder.swift in Sources */,
-				A35365731F4B28C100FAFA11 /* Mapping.swift in Sources */,
-				A35365711F4B220000FAFA11 /* ClassInitializerBuilderRegistry.swift in Sources */,
-				A3777F6F1F4747F0006CB4C6 /* UIKitFramework.swift in Sources */,
-				A3777F6B1F4746C8006CB4C6 /* Framework.swift in Sources */,
-				A35365721F4B220000FAFA11 /* DefaultInitializerBuilder.swift in Sources */,
-				A3777F711F4747F8006CB4C6 /* FoundationFramework.swift in Sources */,
-				A3777FAC1F4B1459006CB4C6 /* FileDocumentationBuilder.swift in Sources */,
-				A353656F1F4B21F800FAFA11 /* ModelClassImplementationFileBuilder.swift in Sources */,
-				A35365701F4B21FB00FAFA11 /* ModelClassFileBuilderManager.swift in Sources */,
-				A3777FBD1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift in Sources */,
-				A3777FAA1F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift in Sources */,
-				OBJ_104 /* SwiftPlatformGen.swift in Sources */,
+				OBJ_101 /* PolymorphSwiftGenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_119 /* Sources */ = {
+		OBJ_124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_120 /* ClassDescription.swift in Sources */,
-				OBJ_121 /* EnumDescription.swift in Sources */,
-				OBJ_122 /* ExtensionDescription.swift in Sources */,
-				OBJ_123 /* FileDescription.swift in Sources */,
-				OBJ_124 /* InitializerDescription.swift in Sources */,
-				OBJ_125 /* MethodDescription.swift in Sources */,
-				OBJ_126 /* ModuleDependency.swift in Sources */,
-				OBJ_127 /* PropertyDescription.swift in Sources */,
-				OBJ_128 /* ProtocolDescription.swift in Sources */,
-				OBJ_129 /* Visibility.swift in Sources */,
-				OBJ_130 /* ClassPropertyWriter.swift in Sources */,
-				OBJ_131 /* ClassWriter.swift in Sources */,
-				OBJ_132 /* DocumentationWriter.swift in Sources */,
-				OBJ_133 /* EnumWriter.swift in Sources */,
-				OBJ_134 /* ExtensionWriter.swift in Sources */,
-				OBJ_135 /* FileWriter.swift in Sources */,
-				OBJ_136 /* InitializerWriter.swift in Sources */,
-				OBJ_137 /* MethodWriter.swift in Sources */,
-				OBJ_138 /* ProtocolPropertyWriter.swift in Sources */,
-				OBJ_139 /* ProtocolWriter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_146 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_147 /* CodeBuilder.swift in Sources */,
-				OBJ_148 /* CodeWriter.swift in Sources */,
+				OBJ_125 /* PolymorphSwiftGenError.swift in Sources */,
+				OBJ_126 /* FileDocumentationBuilder.swift in Sources */,
+				OBJ_127 /* ClassInitializerDescriptionBuilder.swift in Sources */,
+				OBJ_128 /* ModelClassDefinitionFileBuilder.swift in Sources */,
+				OBJ_129 /* ClassInitializerBuilderRegistry.swift in Sources */,
+				OBJ_130 /* DefaultInitializerBuilder.swift in Sources */,
+				OBJ_131 /* ModelClassImplementationFileBuilder.swift in Sources */,
+				OBJ_132 /* ModelClassFileBuilder.swift in Sources */,
+				OBJ_133 /* ModelClassFileBuilderManager.swift in Sources */,
+				OBJ_134 /* Framework.swift in Sources */,
+				OBJ_135 /* FoundationFramework.swift in Sources */,
+				OBJ_136 /* UIKitFramework.swift in Sources */,
+				OBJ_137 /* Mapping.swift in Sources */,
+				OBJ_138 /* SwiftPlatformGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,136 +825,164 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_154 /* Dir.swift in Sources */,
-				OBJ_155 /* File.swift in Sources */,
-				OBJ_156 /* PlatformGen.swift in Sources */,
-				OBJ_157 /* PolymorphGen.swift in Sources */,
+				OBJ_154 /* ClassDescription.swift in Sources */,
+				OBJ_155 /* EnumDescription.swift in Sources */,
+				OBJ_156 /* ExtensionDescription.swift in Sources */,
+				OBJ_157 /* FileDescription.swift in Sources */,
+				OBJ_158 /* InitializerDescription.swift in Sources */,
+				OBJ_159 /* MethodDescription.swift in Sources */,
+				OBJ_160 /* ModuleDependency.swift in Sources */,
+				OBJ_161 /* PropertyDescription.swift in Sources */,
+				OBJ_162 /* ProtocolDescription.swift in Sources */,
+				OBJ_163 /* Visibility.swift in Sources */,
+				OBJ_164 /* ClassPropertyWriter.swift in Sources */,
+				OBJ_165 /* ClassWriter.swift in Sources */,
+				OBJ_166 /* DocumentationWriter.swift in Sources */,
+				OBJ_167 /* EnumWriter.swift in Sources */,
+				OBJ_168 /* ExtensionWriter.swift in Sources */,
+				OBJ_169 /* FileWriter.swift in Sources */,
+				OBJ_170 /* InitializerWriter.swift in Sources */,
+				OBJ_171 /* MethodWriter.swift in Sources */,
+				OBJ_172 /* ProtocolPropertyWriter.swift in Sources */,
+				OBJ_173 /* ProtocolWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_166 /* Sources */ = {
+		OBJ_180 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_167 /* Class.swift in Sources */,
-				OBJ_168 /* Documentable.swift in Sources */,
-				OBJ_169 /* Enum.swift in Sources */,
-				OBJ_170 /* Member.swift in Sources */,
-				OBJ_171 /* Models.swift in Sources */,
-				OBJ_172 /* Native.swift in Sources */,
-				OBJ_173 /* NativeFactory.swift in Sources */,
-				OBJ_174 /* Object.swift in Sources */,
-				OBJ_175 /* Package.swift in Sources */,
-				OBJ_176 /* Packageable.swift in Sources */,
-				OBJ_177 /* PolymorphCoreError.swift in Sources */,
-				OBJ_178 /* Project.swift in Sources */,
-				OBJ_179 /* Property.swift in Sources */,
+				OBJ_181 /* CodeBuilder.swift in Sources */,
+				OBJ_182 /* CodeWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_186 /* Sources */ = {
+		OBJ_187 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_187 /* StringCase.swift in Sources */,
+				OBJ_188 /* Dir.swift in Sources */,
+				OBJ_189 /* File.swift in Sources */,
+				OBJ_190 /* PlatformGen.swift in Sources */,
+				OBJ_191 /* PolymorphGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_79 /* Sources */ = {
+		OBJ_200 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_80 /* PolymorphSwiftGenTests.swift in Sources */,
+				OBJ_201 /* Class.swift in Sources */,
+				OBJ_202 /* Documentable.swift in Sources */,
+				OBJ_203 /* Enum.swift in Sources */,
+				OBJ_204 /* Member.swift in Sources */,
+				OBJ_205 /* Models.swift in Sources */,
+				OBJ_206 /* Native.swift in Sources */,
+				OBJ_207 /* NativeFactory.swift in Sources */,
+				OBJ_208 /* Object.swift in Sources */,
+				OBJ_209 /* Package.swift in Sources */,
+				OBJ_210 /* Packageable.swift in Sources */,
+				OBJ_211 /* PolymorphCoreError.swift in Sources */,
+				OBJ_212 /* Project.swift in Sources */,
+				OBJ_213 /* Property.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_221 /* StringCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		OBJ_109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PolymorphSwiftGen::PolymorphSwiftGen" /* PolymorphSwiftGen */;
+			targetProxy = A37265D21F4C79D400FD7676 /* PBXContainerItemProxy */;
+		};
 		OBJ_111 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A3777F241F45FD7D006CB4C6 /* PBXContainerItemProxy */;
-		};
-		OBJ_112 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3777F261F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265D31F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
 		OBJ_113 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
-			targetProxy = A3777F271F45FD7D006CB4C6 /* PBXContainerItemProxy */;
-		};
-		OBJ_114 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A3777F2B1F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			target = "CodeWriter::CodeWriter" /* CodeWriter */;
+			targetProxy = A37265D41F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
 		OBJ_115 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3777F2C1F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
+			targetProxy = A37265D51F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_142 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3777F251F45FD7D006CB4C6 /* PBXContainerItemProxy */;
-		};
-		OBJ_161 /* PBXTargetDependency */ = {
+		OBJ_117 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A3777F281F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265D61F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_162 /* PBXTargetDependency */ = {
+		OBJ_119 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3777F2A1F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265D71F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_182 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3777F291F45FD7D006CB4C6 /* PBXContainerItemProxy */;
-		};
-		OBJ_193 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "PolymorphSwiftGen::PolymorphSwiftGenTests" /* PolymorphSwiftGenTests */;
-			targetProxy = A3777F331F45FD7D006CB4C6 /* PBXContainerItemProxy */;
-		};
-		OBJ_88 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "PolymorphSwiftGen::PolymorphSwiftGen" /* PolymorphSwiftGen */;
-			targetProxy = A3777F2D1F45FD7D006CB4C6 /* PBXContainerItemProxy */;
-		};
-		OBJ_90 /* PBXTargetDependency */ = {
+		OBJ_145 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A3777F2E1F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265C91F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_92 /* PBXTargetDependency */ = {
+		OBJ_146 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3777F2F1F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265CB1F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_94 /* PBXTargetDependency */ = {
+		OBJ_147 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
-			targetProxy = A3777F301F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265CC1F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_96 /* PBXTargetDependency */ = {
+		OBJ_148 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A3777F311F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265D01F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
-		OBJ_98 /* PBXTargetDependency */ = {
+		OBJ_149 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3777F321F45FD7D006CB4C6 /* PBXContainerItemProxy */;
+			targetProxy = A37265D11F4C79D400FD7676 /* PBXContainerItemProxy */;
+		};
+		OBJ_176 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodeWriter::CodeWriter" /* CodeWriter */;
+			targetProxy = A37265CA1F4C79D400FD7676 /* PBXContainerItemProxy */;
+		};
+		OBJ_195 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
+			targetProxy = A37265CD1F4C79D400FD7676 /* PBXContainerItemProxy */;
+		};
+		OBJ_196 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "StringCase::StringCase" /* StringCase */;
+			targetProxy = A37265CF1F4C79D400FD7676 /* PBXContainerItemProxy */;
+		};
+		OBJ_216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "StringCase::StringCase" /* StringCase */;
+			targetProxy = A37265CE1F4C79D400FD7676 /* PBXContainerItemProxy */;
+		};
+		OBJ_227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PolymorphSwiftGen::PolymorphSwiftGenTests" /* PolymorphSwiftGenTests */;
+			targetProxy = A37265D81F4C79D400FD7676 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_101 /* Debug */ = {
+		OBJ_122 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1003,7 +1004,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_102 /* Release */ = {
+		OBJ_123 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1022,94 +1023,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGET_NAME = PolymorphSwiftGen;
-			};
-			name = Release;
-		};
-		OBJ_117 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/SwiftCodeWriter_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftCodeWriter;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftCodeWriter;
-			};
-			name = Debug;
-		};
-		OBJ_118 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/SwiftCodeWriter_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftCodeWriter;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = SwiftCodeWriter;
-			};
-			name = Release;
-		};
-		OBJ_144 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/CodeWriter_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = CodeWriter;
-			};
-			name = Debug;
-		};
-		OBJ_145 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/CodeWriter_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = CodeWriter;
 			};
 			name = Release;
 		};
@@ -1122,16 +1035,16 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/PolymorphGen_Info.plist;
+				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/SwiftCodeWriter_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = PolymorphGen;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCodeWriter;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGET_NAME = PolymorphGen;
+				TARGET_NAME = SwiftCodeWriter;
 			};
 			name = Debug;
 		};
@@ -1144,6 +1057,94 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/SwiftCodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCodeWriter;
+			};
+			name = Release;
+		};
+		OBJ_178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/CodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodeWriter;
+			};
+			name = Debug;
+		};
+		OBJ_179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/CodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodeWriter;
+			};
+			name = Release;
+		};
+		OBJ_185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/PolymorphGen_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PolymorphGen;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = PolymorphGen;
+			};
+			name = Debug;
+		};
+		OBJ_186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PolymorphSwiftGen.xcodeproj/PolymorphGen_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1157,7 +1158,7 @@
 			};
 			name = Release;
 		};
-		OBJ_164 /* Debug */ = {
+		OBJ_198 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1179,7 +1180,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_165 /* Release */ = {
+		OBJ_199 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1201,7 +1202,7 @@
 			};
 			name = Release;
 		};
-		OBJ_184 /* Debug */ = {
+		OBJ_218 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1223,7 +1224,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_185 /* Release */ = {
+		OBJ_219 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1245,13 +1246,13 @@
 			};
 			name = Release;
 		};
-		OBJ_191 /* Debug */ = {
+		OBJ_225 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_192 /* Release */ = {
+		OBJ_226 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -1299,7 +1300,7 @@
 			};
 			name = Release;
 		};
-		OBJ_77 /* Debug */ = {
+		OBJ_98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1317,7 +1318,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_78 /* Release */ = {
+		OBJ_99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1338,34 +1339,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_100 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGen" */ = {
+		OBJ_121 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_101 /* Debug */,
-				OBJ_102 /* Release */,
+				OBJ_122 /* Debug */,
+				OBJ_123 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_116 /* Build configuration list for PBXNativeTarget "SwiftCodeWriter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_117 /* Debug */,
-				OBJ_118 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_143 /* Build configuration list for PBXNativeTarget "CodeWriter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_144 /* Debug */,
-				OBJ_145 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_150 /* Build configuration list for PBXNativeTarget "PolymorphGen" */ = {
+		OBJ_150 /* Build configuration list for PBXNativeTarget "SwiftCodeWriter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_151 /* Debug */,
@@ -1374,29 +1357,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_163 /* Build configuration list for PBXNativeTarget "PolymorphCore" */ = {
+		OBJ_177 /* Build configuration list for PBXNativeTarget "CodeWriter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_164 /* Debug */,
-				OBJ_165 /* Release */,
+				OBJ_178 /* Debug */,
+				OBJ_179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_183 /* Build configuration list for PBXNativeTarget "StringCase" */ = {
+		OBJ_184 /* Build configuration list for PBXNativeTarget "PolymorphGen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_184 /* Debug */,
-				OBJ_185 /* Release */,
+				OBJ_185 /* Debug */,
+				OBJ_186 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_190 /* Build configuration list for PBXAggregateTarget "PolymorphSwiftGenPackageTests" */ = {
+		OBJ_197 /* Build configuration list for PBXNativeTarget "PolymorphCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_191 /* Debug */,
-				OBJ_192 /* Release */,
+				OBJ_198 /* Debug */,
+				OBJ_199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -1410,11 +1393,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_76 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGenTests" */ = {
+		OBJ_217 /* Build configuration list for PBXNativeTarget "StringCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_77 /* Debug */,
-				OBJ_78 /* Release */,
+				OBJ_218 /* Debug */,
+				OBJ_219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_224 /* Build configuration list for PBXAggregateTarget "PolymorphSwiftGenPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_225 /* Debug */,
+				OBJ_226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_97 /* Build configuration list for PBXNativeTarget "PolymorphSwiftGenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_98 /* Debug */,
+				OBJ_99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

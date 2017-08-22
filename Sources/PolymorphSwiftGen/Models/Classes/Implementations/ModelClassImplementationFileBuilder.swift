@@ -16,14 +16,17 @@ struct ModelClassImplementationFileBuilder: ModelClassFileBuilder {
         guard let project = element.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
-        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: element.name, project: project))
+
+        let className = "\(element.name)Model"
+
+        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: className, project: project))
 
         var parent: String? = nil
         if let parentUUID = element.extends,
             let parentObject = project.models.findObject(uuid: parentUUID)  {
             parent = parentObject.name
         }
-        var classDescription = ClassDescription(name: element.name, options: .init(visibility: .public), parent: parent)
+        var classDescription = ClassDescription(name: className, options: .init(), parent: parent)
 
         classDescription.properties.append(contentsOf: element.properties.map({ (property) in
             var type = project.models.findObject(uuid: property.type)?.name ?? "Any"
@@ -42,6 +45,6 @@ struct ModelClassImplementationFileBuilder: ModelClassFileBuilder {
         fileDescription.classes.append(classDescription)
         let fileStr = FileWriter.default.write(description: fileDescription)
 
-        return [File(path: "\(options.path)/Implementations/Models/\(element.package.path(camelcase: true))" , name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
+        return [File(path: "\(options.path)/Implementations/Models/\(element.package.path(camelcase: true))" , name: "\(className).swift", data: fileStr.data(using: .utf8))]
     }
 }
