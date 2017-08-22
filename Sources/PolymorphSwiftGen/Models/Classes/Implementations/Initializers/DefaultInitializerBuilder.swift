@@ -10,24 +10,21 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-class DefaultInitializerBuilder: DescriptionBuilder<Class, InitializerDescription> {
+struct DefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
 
-    public override func build(element: Class) throws -> InitializerDescription? {
-        guard let project = element.project else {
-            return nil
-        }
+    public func build(element: Class) throws -> InitializerDescription? {
         var arguments: [String] = []
         let impl = CodeBuilder()
 
         let parentProperties = element.parentProperties()
+        var modules = Set<String>()
         if parentProperties.count > 0 {
             var superArguments: [String] = []
             for property in parentProperties {
                 if property.isNonnull {
-                    guard let type = project.models.findObject(uuid: property.type) else {
-                        return nil
-                    }
-                    arguments.append("\(property.name): \(type.name)")
+                    let type = try Mapping.shared.platformType(with: property)
+                    modules.formUnion(try Mapping.shared.modules(with: property))
+                    arguments.append("\(property.name): \(type)")
                     superArguments.append("\(property.name): \(property.name)")
                 }
             }
@@ -35,13 +32,12 @@ class DefaultInitializerBuilder: DescriptionBuilder<Class, InitializerDescriptio
         }
         for property in element.properties {
             if property.isNonnull {
-                guard let type = project.models.findObject(uuid: property.type) else {
-                    return nil
-                }
-                arguments.append("\(property.name): \(type.name)")
+                let type = try Mapping.shared.platformType(with: property)
+                modules.formUnion(try Mapping.shared.modules(with: property))
+                arguments.append("\(property.name): \(type)")
                 impl.add(line: "self.\(property.name) = \(property.name)")
             }
         }
-        return InitializerDescription(code: impl, options: .init(visibility: .public), arguments: arguments)
+        return InitializerDescription(code: impl, options: .init(visibility: .public), modules: Array(modules), arguments: arguments)
     }
 }

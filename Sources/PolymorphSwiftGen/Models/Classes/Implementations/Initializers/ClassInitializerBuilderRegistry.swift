@@ -11,7 +11,7 @@ import SwiftCodeWriter
 
 class ClassInitializerBuilderRegistry {
 
-    public private(set) var builders: [DescriptionBuilder<Class, InitializerDescription>] = []
+    public private(set) var builders: [ClassInitializerDescriptionBuilder] = []
 
     public static let `default` = ClassInitializerBuilderRegistry()
 

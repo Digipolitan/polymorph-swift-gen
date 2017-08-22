@@ -21,12 +21,19 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A353656D1F4B21F800FAFA11 /* ClassInitializerDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB61F4B17E4006CB4C6 /* ClassInitializerDescriptionBuilder.swift */; };
+		A353656E1F4B21F800FAFA11 /* ModelClassDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FBA1F4B19B5006CB4C6 /* ModelClassDefinitionFileBuilder.swift */; };
+		A353656F1F4B21F800FAFA11 /* ModelClassImplementationFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB81F4B17E4006CB4C6 /* ModelClassImplementationFileBuilder.swift */; };
+		A35365701F4B21FB00FAFA11 /* ModelClassFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB91F4B17E4006CB4C6 /* ModelClassFileBuilderManager.swift */; };
+		A35365711F4B220000FAFA11 /* ClassInitializerBuilderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB51F4B17E4006CB4C6 /* ClassInitializerBuilderRegistry.swift */; };
+		A35365721F4B220000FAFA11 /* DefaultInitializerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FB71F4B17E4006CB4C6 /* DefaultInitializerBuilder.swift */; };
+		A35365731F4B28C100FAFA11 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F691F4746B2006CB4C6 /* Mapping.swift */; };
 		A3777F6B1F4746C8006CB4C6 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F6A1F4746C8006CB4C6 /* Framework.swift */; };
 		A3777F6F1F4747F0006CB4C6 /* UIKitFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F6E1F4747F0006CB4C6 /* UIKitFramework.swift */; };
 		A3777F711F4747F8006CB4C6 /* FoundationFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F701F4747F7006CB4C6 /* FoundationFramework.swift */; };
-		A3777F741F49A530006CB4C6 /* DescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F731F49A530006CB4C6 /* DescriptionBuilder.swift */; };
-		A3777F781F49A624006CB4C6 /* DefaultInitializerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F771F49A5DE006CB4C6 /* DefaultInitializerBuilder.swift */; };
-		A3777F7A1F4A0773006CB4C6 /* ClassInitializerBuilderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F791F4A0773006CB4C6 /* ClassInitializerBuilderRegistry.swift */; };
+		A3777FAA1F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FA91F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift */; };
+		A3777FAC1F4B1459006CB4C6 /* FileDocumentationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FAB1F4B1459006CB4C6 /* FileDocumentationBuilder.swift */; };
+		A3777FBD1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777FBC1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift */; };
 		OBJ_104 /* SwiftPlatformGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SwiftPlatformGen.swift */; };
 		OBJ_106 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
 		OBJ_107 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
@@ -206,9 +213,15 @@
 		A3777F6A1F4746C8006CB4C6 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		A3777F6E1F4747F0006CB4C6 /* UIKitFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitFramework.swift; sourceTree = "<group>"; };
 		A3777F701F4747F7006CB4C6 /* FoundationFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationFramework.swift; sourceTree = "<group>"; };
-		A3777F731F49A530006CB4C6 /* DescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionBuilder.swift; sourceTree = "<group>"; };
-		A3777F771F49A5DE006CB4C6 /* DefaultInitializerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInitializerBuilder.swift; sourceTree = "<group>"; };
-		A3777F791F4A0773006CB4C6 /* ClassInitializerBuilderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerBuilderRegistry.swift; sourceTree = "<group>"; };
+		A3777FA91F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenError.swift; sourceTree = "<group>"; };
+		A3777FAB1F4B1459006CB4C6 /* FileDocumentationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDocumentationBuilder.swift; sourceTree = "<group>"; };
+		A3777FB51F4B17E4006CB4C6 /* ClassInitializerBuilderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerBuilderRegistry.swift; sourceTree = "<group>"; };
+		A3777FB61F4B17E4006CB4C6 /* ClassInitializerDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A3777FB71F4B17E4006CB4C6 /* DefaultInitializerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInitializerBuilder.swift; sourceTree = "<group>"; };
+		A3777FB81F4B17E4006CB4C6 /* ModelClassImplementationFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassImplementationFileBuilder.swift; sourceTree = "<group>"; };
+		A3777FB91F4B17E4006CB4C6 /* ModelClassFileBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassFileBuilderManager.swift; sourceTree = "<group>"; };
+		A3777FBA1F4B19B5006CB4C6 /* ModelClassDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassDefinitionFileBuilder.swift; sourceTree = "<group>"; };
+		A3777FBC1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassFileBuilder.swift; sourceTree = "<group>"; };
 		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* PolymorphSwiftGenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphSwiftGenTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
@@ -333,7 +346,7 @@
 		A3777F531F473A97006CB4C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A3777F751F49A5DE006CB4C6 /* Classes */,
+				A3777FB11F4B17E4006CB4C6 /* Classes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,7 +356,6 @@
 			children = (
 				A3777F691F4746B2006CB4C6 /* Mapping.swift */,
 				A3777F6A1F4746C8006CB4C6 /* Framework.swift */,
-				A3777F731F49A530006CB4C6 /* DescriptionBuilder.swift */,
 				A3777F6D1F4747E2006CB4C6 /* Frameworks */,
 			);
 			path = Platform;
@@ -358,19 +370,48 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		A3777F751F49A5DE006CB4C6 /* Classes */ = {
+		A3777FA81F4B13B1006CB4C6 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				A3777F761F49A5DE006CB4C6 /* Initializers */,
+				A3777FA91F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A3777FB11F4B17E4006CB4C6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A3777FB61F4B17E4006CB4C6 /* ClassInitializerDescriptionBuilder.swift */,
+				A3777FB21F4B17E4006CB4C6 /* Definitions */,
+				A3777FB31F4B17E4006CB4C6 /* Implementations */,
+				A3777FB91F4B17E4006CB4C6 /* ModelClassFileBuilderManager.swift */,
+				A3777FBC1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		A3777F761F49A5DE006CB4C6 /* Initializers */ = {
+		A3777FB21F4B17E4006CB4C6 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				A3777F771F49A5DE006CB4C6 /* DefaultInitializerBuilder.swift */,
-				A3777F791F4A0773006CB4C6 /* ClassInitializerBuilderRegistry.swift */,
+				A3777FBA1F4B19B5006CB4C6 /* ModelClassDefinitionFileBuilder.swift */,
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
+		A3777FB31F4B17E4006CB4C6 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				A3777FB41F4B17E4006CB4C6 /* Initializers */,
+				A3777FB81F4B17E4006CB4C6 /* ModelClassImplementationFileBuilder.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		A3777FB41F4B17E4006CB4C6 /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				A3777FB51F4B17E4006CB4C6 /* ClassInitializerBuilderRegistry.swift */,
+				A3777FB71F4B17E4006CB4C6 /* DefaultInitializerBuilder.swift */,
 			);
 			path = Initializers;
 			sourceTree = "<group>";
@@ -502,7 +543,7 @@
 			name = PolymorphCore;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -512,7 +553,6 @@
 				OBJ_14 /* Dependencies */,
 				OBJ_67 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* PolymorphCore */ = {
@@ -578,9 +618,11 @@
 		OBJ_8 /* PolymorphSwiftGen */ = {
 			isa = PBXGroup;
 			children = (
+				A3777FA81F4B13B1006CB4C6 /* Errors */,
 				A3777F681F4746B2006CB4C6 /* Platform */,
 				A3777F531F473A97006CB4C6 /* Models */,
 				OBJ_9 /* SwiftPlatformGen.swift */,
+				A3777FAB1F4B1459006CB4C6 /* FileDocumentationBuilder.swift */,
 			);
 			name = PolymorphSwiftGen;
 			path = Sources/PolymorphSwiftGen;
@@ -731,7 +773,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -753,12 +795,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				A3777F741F49A530006CB4C6 /* DescriptionBuilder.swift in Sources */,
+				A353656D1F4B21F800FAFA11 /* ClassInitializerDescriptionBuilder.swift in Sources */,
+				A353656E1F4B21F800FAFA11 /* ModelClassDefinitionFileBuilder.swift in Sources */,
+				A35365731F4B28C100FAFA11 /* Mapping.swift in Sources */,
+				A35365711F4B220000FAFA11 /* ClassInitializerBuilderRegistry.swift in Sources */,
 				A3777F6F1F4747F0006CB4C6 /* UIKitFramework.swift in Sources */,
 				A3777F6B1F4746C8006CB4C6 /* Framework.swift in Sources */,
+				A35365721F4B220000FAFA11 /* DefaultInitializerBuilder.swift in Sources */,
 				A3777F711F4747F8006CB4C6 /* FoundationFramework.swift in Sources */,
-				A3777F781F49A624006CB4C6 /* DefaultInitializerBuilder.swift in Sources */,
-				A3777F7A1F4A0773006CB4C6 /* ClassInitializerBuilderRegistry.swift in Sources */,
+				A3777FAC1F4B1459006CB4C6 /* FileDocumentationBuilder.swift in Sources */,
+				A353656F1F4B21F800FAFA11 /* ModelClassImplementationFileBuilder.swift in Sources */,
+				A35365701F4B21FB00FAFA11 /* ModelClassFileBuilderManager.swift in Sources */,
+				A3777FBD1F4B1CDA006CB4C6 /* ModelClassFileBuilder.swift in Sources */,
+				A3777FAA1F4B13EE006CB4C6 /* PolymorphSwiftGenError.swift in Sources */,
 				OBJ_104 /* SwiftPlatformGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
