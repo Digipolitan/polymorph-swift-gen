@@ -1,5 +1,5 @@
 //
-//  ModelClassFileBuilderManager.swift
+//  ClassFileBuilderManager.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 21/08/2017.
@@ -9,15 +9,15 @@ import Foundation
 import PolymorphCore
 import PolymorphGen
 
-struct ModelClassFileBuilderManager: ModelClassFileBuilder {
+struct ClassFileBuilderManager: ClassFileBuilder {
 
-    public static let `default` = ModelClassFileBuilderManager()
+    public static let `default` = ClassFileBuilderManager()
 
-    private var builders: [ModelClassFileBuilder] = []
+    private var builders: [ClassFileBuilder] = []
 
     private init() {
-        self.builders.append(ModelClassDefinitionFileBuilder())
-        self.builders.append(ModelClassImplementationFileBuilder())
+        self.builders.append(ClassDefinitionFileBuilder())
+        self.builders.append(ClassImplementationFileBuilder())
      }
 
     public func build(element: Class, options: PlatformGen.Options) throws -> [File] {

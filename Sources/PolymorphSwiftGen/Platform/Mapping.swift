@@ -47,36 +47,40 @@ class Mapping {
 
 extension Mapping {
 
+    public static func model(with property: Property) throws -> Object {
+        guard let project = property.project else {
+            throw PolymorphSwiftGenError.projectCannotBeNil
+        }
+        return try Mapping.model(with: property.type, project: project)
+    }
+
+    public static func model(with uuid: UUID, project: Project) throws -> Object {
+        guard let type = project.models.findObject(uuid: uuid) else {
+            throw PolymorphSwiftGenError.malformatedProject
+        }
+        return type
+    }
+
     public func platformType(with property: Property) throws -> String {
         guard let project = property.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
-        guard let type = project.models.findObject(uuid: property.type) else {
-            throw PolymorphSwiftGenError.malformatedProject
-        }
-        return platformType(with: type.name, genericTypes: try property.genericTypes?.map {
-            guard let type = project.models.findObject(uuid: $0) else {
-                throw PolymorphSwiftGenError.malformatedProject
-            }
-            return type.name
-        })
+        let type = try Mapping.model(with: property)
+        let gts = try property.genericTypes?.map { return try Mapping.model(with: $0, project: project).name }
+        return self.platformType(with: type.name, genericTypes: gts)
     }
 
     public func modules(with property: Property) throws -> [String] {
         guard let project = property.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
-        guard let type = project.models.findObject(uuid: property.type) else {
-            throw PolymorphSwiftGenError.malformatedProject
-        }
+        let type = try Mapping.model(with: property)
         var modules: [String] = []
         if let module = self.modules[type.name] {
             modules.append(module)
         }
         try property.genericTypes?.forEach {
-            guard let type = project.models.findObject(uuid: $0) else {
-                throw PolymorphSwiftGenError.malformatedProject
-            }
+            let type = try Mapping.model(with: $0, project: project)
             if let module = self.modules[type.name] {
                 modules.append(module)
             }

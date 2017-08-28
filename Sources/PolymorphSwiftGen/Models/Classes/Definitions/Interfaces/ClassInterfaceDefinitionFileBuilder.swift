@@ -1,8 +1,8 @@
 //
-//  ModelClassDefinitionFileBuilder.swift
+//  ClassInterfaceDefinitionFileBuilder.swift
 //  PolymorphSwiftGen
 //
-//  Created by Benoit BRIATTE on 21/08/2017.
+//  Created by Benoit BRIATTE on 28/08/2017.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-struct ModelClassDefinitionFileBuilder: ModelClassFileBuilder {
+struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
 
     func build(element: Class, options: PlatformGen.Options) throws -> [File] {
         guard let project = element.project else {
@@ -23,6 +23,9 @@ struct ModelClassDefinitionFileBuilder: ModelClassFileBuilder {
         if let parentUUID = element.extends,
             let parentObject = project.models.findObject(uuid: parentUUID)  {
             protocolDescription.implements.append(parentObject.name)
+        } else {
+            protocolDescription.implements.append("BaseMappable")
+            protocolDescription.modules.append("ObjectMapper")
         }
 
         protocolDescription.properties.append(contentsOf: element.properties.map({ (property) in
@@ -34,8 +37,9 @@ struct ModelClassDefinitionFileBuilder: ModelClassFileBuilder {
         }))
 
         fileDescription.protocols.append(protocolDescription)
+
         let fileStr = FileWriter.default.write(description: fileDescription)
 
-        return [File(path: ModelClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
+        return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
     }
 }

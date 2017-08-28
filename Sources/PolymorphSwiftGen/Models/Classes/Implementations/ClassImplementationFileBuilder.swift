@@ -1,5 +1,5 @@
 //
-//  ModelClassImplementationFileBuilder.swift
+//  ClassImplementationFileBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 21/08/2017.
@@ -10,7 +10,7 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-struct ModelClassImplementationFileBuilder: ModelClassFileBuilder {
+struct ClassImplementationFileBuilder: ClassFileBuilder {
 
     func build(element: Class, options: PlatformGen.Options) throws -> [File] {
         guard let project = element.project else {
@@ -37,15 +37,11 @@ struct ModelClassImplementationFileBuilder: ModelClassFileBuilder {
             return PropertyDescription(name: property.name, options: .init(getVisibility: .public), type: type, documentation: property.documentation)
         }))
 
-        try ClassInitializerBuilderRegistry.default.builders.forEach { (builder) in
-            if let initializer = try builder.build(element: element) {
-                classDescription.initializers.append(initializer)
-            }
-        }
+        try ClassImplementationInitializerBuilderRegistry.default.build(element: element, to: &classDescription)
 
         fileDescription.classes.append(classDescription)
         let fileStr = FileWriter.default.write(description: fileDescription)
 
-        return [File(path: ModelClassImplementation.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(className).swift", data: fileStr.data(using: .utf8))]
+        return [File(path: ClassImplementation.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(className).swift", data: fileStr.data(using: .utf8))]
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ModelClassDependencyModuleFileBuilder.swift
+//  ClassDependencyModuleFileBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 22/08/2017.
@@ -11,7 +11,7 @@ import PolymorphGen
 import CodeWriter
 import SwiftCodeWriter
 
-class ModelClassDependencyModuleFileBuilder {
+class ClassDependencyModuleFileBuilder {
 
     private var dependencies: [String: String]
 
@@ -40,7 +40,6 @@ class ModelClassDependencyModuleFileBuilder {
         fileDescription.classes.append(classDescription)
 
         let fileStr = FileWriter.default.write(description: fileDescription)
-        return File(path: ModelClassImplementation.absolutePath(parent: options.path) , name: "ModelsModule.swift", data: fileStr.data(using: .utf8))
+        return File(path: ClassImplementation.absolutePath(parent: options.path) , name: "ModelsModule.swift", data: fileStr.data(using: .utf8))
     }
-
 }

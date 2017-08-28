@@ -13,12 +13,12 @@ public class SwiftPlatformGen: PlatformGen {
 
     public override func models(_ models: Models, options: PlatformGen.Options) throws -> [File] {
         var files: [File] = []
-        let modelClassDependencyModuleFileBuilder = ModelClassDependencyModuleFileBuilder()
+        let classDependencyModuleFileBuilder = ClassDependencyModuleFileBuilder()
         try models.classes.forEach {
-            files.append(contentsOf: try ModelClassFileBuilderManager.default.build(element: $0, options: options))
-            modelClassDependencyModuleFileBuilder.bind($0.name, to: "\($0.name)Model")
+            files.append(contentsOf: try ClassFileBuilderManager.default.build(element: $0, options: options))
+            classDependencyModuleFileBuilder.bind($0.name, to: "\($0.name)Model")
         }
-        files.append(try modelClassDependencyModuleFileBuilder.build(models: models, options: options))
+        files.append(try classDependencyModuleFileBuilder.build(models: models, options: options))
         return files
     }
 }

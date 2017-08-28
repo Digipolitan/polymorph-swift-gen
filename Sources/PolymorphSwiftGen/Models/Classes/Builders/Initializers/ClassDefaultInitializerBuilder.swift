@@ -1,5 +1,5 @@
 //
-//  DefaultInitializerBuilder.swift
+//  ClassDefaultInitializerBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 18/08/2017.
@@ -10,7 +10,7 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct DefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
+struct ClassDefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
 
     public func build(element: Class) throws -> InitializerDescription? {
         var arguments: [String] = []
