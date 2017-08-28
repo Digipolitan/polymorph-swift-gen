@@ -25,12 +25,12 @@ struct ClassDefaultDefinitionFileBuilder: ClassFileBuilder {
             classDescription.modules.append("ObjectMapper")
         }
 
-        classDescription.properties.append(contentsOf: element.properties.map({ (property) in
-            var type = project.models.findObject(uuid: property.type)?.name ?? "Any"
+        try classDescription.properties.append(contentsOf: element.properties.map({ (property) in
+            var type = try Mapping.shared.platformType(with: property)
             if !property.isNonnull {
                 type += "?"
             }
-            return PropertyDescription(name: property.name, options: .init(getVisibility: .public), type: type, documentation: property.documentation)
+            return PropertyDescription(name: property.name, options: .init(getVisibility: .public), modules: try Mapping.shared.modules(with: property), type: type, documentation: property.documentation)
         }))
 
         try ClassDefaultDefinitionInitializerBuilderRegistry.default.build(element: element, to: &classDescription)
