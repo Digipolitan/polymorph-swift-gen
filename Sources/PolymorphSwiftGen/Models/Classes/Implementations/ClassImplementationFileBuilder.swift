@@ -16,6 +16,9 @@ struct ClassImplementationFileBuilder: ClassFileBuilder {
         guard let project = element.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
+        guard element.injectable || element.serializable else {
+            return []
+        }
 
         let className = "\(element.name)Model"
 
