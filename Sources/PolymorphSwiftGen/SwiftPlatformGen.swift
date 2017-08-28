@@ -16,9 +16,13 @@ public class SwiftPlatformGen: PlatformGen {
         let classDependencyModuleFileBuilder = ClassDependencyModuleFileBuilder()
         try models.classes.forEach {
             files.append(contentsOf: try ClassFileBuilderManager.default.build(element: $0, options: options))
-            classDependencyModuleFileBuilder.bind($0.name, to: "\($0.name)Model")
+            if $0.injectable || $0.serializable {
+                classDependencyModuleFileBuilder.bind($0.name, to: "\($0.name)Model")
+            }
         }
-        files.append(try classDependencyModuleFileBuilder.build(models: models, options: options))
+        if classDependencyModuleFileBuilder.dependencies.count > 0 {
+            files.append(try classDependencyModuleFileBuilder.build(models: models, options: options))
+        }
         return files
     }
 }

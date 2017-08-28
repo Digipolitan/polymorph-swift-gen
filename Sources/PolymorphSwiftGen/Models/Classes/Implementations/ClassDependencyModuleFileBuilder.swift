@@ -13,7 +13,7 @@ import SwiftCodeWriter
 
 class ClassDependencyModuleFileBuilder {
 
-    private var dependencies: [String: String]
+    public private(set) var dependencies: [String: String]
 
     public init() {
         self.dependencies = [:]
