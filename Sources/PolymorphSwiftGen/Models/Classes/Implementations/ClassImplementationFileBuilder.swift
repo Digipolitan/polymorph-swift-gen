@@ -32,19 +32,18 @@ struct ClassImplementationFileBuilder: ClassFileBuilder {
         var classDescription = ClassDescription(name: className, options: .init(), parent: parent)
         classDescription.implements.append(element.name)
 
-        try classDescription.properties.append(contentsOf: element.properties.map({ (property) in
-            var type = try Mapping.shared.platformType(with: property)
-            if !property.isNonnull {
-                type += "?"
-            }
-            return PropertyDescription(name: property.name, options: .init(getVisibility: .public), modules: try Mapping.shared.modules(with: property), type: type, documentation: property.documentation)
-        }))
-
-        try ClassImplementationInitializerBuilderRegistry.default.build(element: element, to: &classDescription)
-
+        try self.builders().forEach { try $0.build(element: element, to: &classDescription) }
+       
         fileDescription.classes.append(classDescription)
         let fileStr = FileWriter.default.write(description: fileDescription)
 
         return [File(path: ClassImplementation.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(className).swift", data: fileStr.data(using: .utf8))]
+    }
+
+    func builders() -> [ClassDescriptionBuilder] {
+        return [
+            ClassDefaultDescriptionBuilder(),
+            ClassObjectMapperDescriptionBuilder()
+        ]
     }
 }

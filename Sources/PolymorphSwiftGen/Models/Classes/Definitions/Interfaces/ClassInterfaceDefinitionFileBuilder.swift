@@ -21,25 +21,23 @@ struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
         var protocolDescription = ProtocolDescription(name: element.name, options: .init(visibility: .public))
 
         if let parentUUID = element.extends,
-            let parentObject = project.models.findObject(uuid: parentUUID)  {
-            protocolDescription.implements.append(parentObject.name)
-        } else {
-            protocolDescription.implements.append("BaseMappable")
-            protocolDescription.modules.append("ObjectMapper")
+            let object = project.models.findObject(uuid: parentUUID)  {
+            protocolDescription.implements.append(object.name)
         }
 
-        protocolDescription.properties.append(contentsOf: element.properties.map({ (property) in
-            var type = project.models.findObject(uuid: property.type)?.name ?? "Any"
-            if !property.isNonnull {
-                type += "?"
-            }
-            return PropertyDescription(name: property.name, type: type, documentation: property.documentation)
-        }))
+        try self.builders().forEach { try $0.build(element: element, to: &protocolDescription) }
 
         fileDescription.protocols.append(protocolDescription)
 
         let fileStr = FileWriter.default.write(description: fileDescription)
 
         return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
+    }
+
+    func builders() -> [ProtocolDescriptionBuilder] {
+        return [
+            ProtocolDefaultDescriptionBuilder(),
+            ProtocolObjectMapperDescriptionBuilder()
+        ]
     }
 }

@@ -5,11 +5,10 @@
 //  Created by Benoit BRIATTE on 22/08/2017.
 //
 
-import Foundation
 import PolymorphCore
 import PolymorphGen
-import CodeWriter
 import SwiftCodeWriter
+import CodeWriter
 
 class ClassDependencyModuleFileBuilder {
 
@@ -29,7 +28,7 @@ class ClassDependencyModuleFileBuilder {
         }
         var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: "ModelsModule", project: project))
 
-        var classDescription = ClassDescription(name: "ModelsModule", options: .init(visibility: .public), parent: "Module", modules: ["DGDependencyInjector"])
+        var classDescription = ClassDescription(name: "ModelsModule", options: .init(visibility: .public), parent: "Module", modules: ["DependencyInjector"])
 
         let code = CodeBuilder()
         code.add(line: "super.init()")
