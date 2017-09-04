@@ -28,7 +28,7 @@ class ClassDependencyModuleFileBuilder {
         }
         var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: "ModelsModule", project: project))
 
-        var classDescription = ClassDescription(name: "ModelsModule", options: .init(visibility: .public), parent: "Module", modules: ["DependencyInjector"])
+        var classDescription = ClassDescription(name: "ModelsModule", options: .init(visibility: .public), parent: "Module", modules: ["DependencyInjector", "DependencyInjectorObjectMapper"])
 
         let code = CodeBuilder()
         code.add(line: "super.init()")

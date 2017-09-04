@@ -29,6 +29,17 @@ struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
 
         fileDescription.protocols.append(protocolDescription)
 
+        if let customStringConvertibleExtensionDescription = try ClassCustomStringConvertibleExtensionDescriptionBuilder().build(element: element) {
+            fileDescription.extensions.append(customStringConvertibleExtensionDescription)
+        }
+
+        if let equalsMethodDescription = try ClassEqualsMethodDescriptionBuilder().build(element: element) {
+            fileDescription.methods.append(equalsMethodDescription)
+        }
+        if let notEqualsMethodDescription = try ClassNotEqualsMethodDescriptionBuilder().build(element: element) {
+            fileDescription.methods.append(notEqualsMethodDescription)
+        }
+
         let fileStr = FileWriter.default.write(description: fileDescription)
 
         return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]

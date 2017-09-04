@@ -33,6 +33,10 @@
 		A357C06C1F54705F0041290D /* ProtocolDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A357C06B1F54705F0041290D /* ProtocolDescriptionBuilder.swift */; };
 		A357C0711F54722F0041290D /* ClassDefaultPropertyDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A357C0701F54722F0041290D /* ClassDefaultPropertyDescriptionBuilder.swift */; };
 		A3924B9C1F55B08F00CBA3CD /* ClassMappingMethodBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3924B9A1F55B06700CBA3CD /* ClassMappingMethodBuilder.swift */; };
+		A3B5C97F1F5D838C00D388EB /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C97E1F5D838C00D388EB /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift */; };
+		A3B5C9811F5D861200D388EB /* ClassExtensionDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C9801F5D861200D388EB /* ClassExtensionDescriptionBuilder.swift */; };
+		A3B5C9841F5D873A00D388EB /* ClassEqualsMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C9831F5D873A00D388EB /* ClassEqualsMethodDescriptionBuilder.swift */; };
+		A3B5C9861F5D8B5700D388EB /* ClassNotEqualsMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5C9851F5D8B5700D388EB /* ClassNotEqualsMethodDescriptionBuilder.swift */; };
 		A3CE7C071F547761003DA55F /* ClassObjectMapperDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE7C061F547761003DA55F /* ClassObjectMapperDescriptionBuilder.swift */; };
 		A3CE7C091F54786C003DA55F /* ProtocolObjectMapperDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE7C081F54786C003DA55F /* ProtocolObjectMapperDescriptionBuilder.swift */; };
 		A3CE7C0B1F54795E003DA55F /* ClassDefaultDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE7C0A1F54795E003DA55F /* ClassDefaultDescriptionBuilder.swift */; };
@@ -236,6 +240,10 @@
 		A357C06B1F54705F0041290D /* ProtocolDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescriptionBuilder.swift; sourceTree = "<group>"; };
 		A357C0701F54722F0041290D /* ClassDefaultPropertyDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefaultPropertyDescriptionBuilder.swift; sourceTree = "<group>"; };
 		A3924B9A1F55B06700CBA3CD /* ClassMappingMethodBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassMappingMethodBuilder.swift; sourceTree = "<group>"; };
+		A3B5C97E1F5D838C00D388EB /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCustomStringConvertibleExtensionDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A3B5C9801F5D861200D388EB /* ClassExtensionDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtensionDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A3B5C9831F5D873A00D388EB /* ClassEqualsMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEqualsMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A3B5C9851F5D8B5700D388EB /* ClassNotEqualsMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNotEqualsMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
 		A3CE7C061F547761003DA55F /* ClassObjectMapperDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassObjectMapperDescriptionBuilder.swift; sourceTree = "<group>"; };
 		A3CE7C081F54786C003DA55F /* ProtocolObjectMapperDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolObjectMapperDescriptionBuilder.swift; sourceTree = "<group>"; };
 		A3CE7C0A1F54795E003DA55F /* ClassDefaultDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefaultDescriptionBuilder.swift; sourceTree = "<group>"; };
@@ -379,6 +387,7 @@
 				A357C0651F5468360041290D /* ClassMethodDescriptionBuilder.swift */,
 				A357BFFE1F5443300041290D /* ClassInitializerDescriptionBuilder.swift */,
 				A357C0691F546BFF0041290D /* ClassPropertyDescriptionBuilder.swift */,
+				A3B5C9801F5D861200D388EB /* ClassExtensionDescriptionBuilder.swift */,
 				A357C0781F54771A0041290D /* ObjectMapper */,
 				A357BFFF1F5443300041290D /* Default */,
 				A357C0021F5443300041290D /* ClassFileBuilder.swift */,
@@ -391,6 +400,8 @@
 		A357BFFF1F5443300041290D /* Default */ = {
 			isa = PBXGroup;
 			children = (
+				A3B5C9821F5D872E00D388EB /* Methods */,
+				A3B5C97D1F5D837300D388EB /* Extensions */,
 				A3CE7C131F5479D5003DA55F /* Initializers */,
 				A3CE7C121F5479D5003DA55F /* Properties */,
 				A3CE7C0A1F54795E003DA55F /* ClassDefaultDescriptionBuilder.swift */,
@@ -424,6 +435,23 @@
 				A3CE7C081F54786C003DA55F /* ProtocolObjectMapperDescriptionBuilder.swift */,
 			);
 			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		A3B5C97D1F5D837300D388EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5C97E1F5D838C00D388EB /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A3B5C9821F5D872E00D388EB /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5C9831F5D873A00D388EB /* ClassEqualsMethodDescriptionBuilder.swift */,
+				A3B5C9851F5D8B5700D388EB /* ClassNotEqualsMethodDescriptionBuilder.swift */,
+			);
+			path = Methods;
 			sourceTree = "<group>";
 		};
 		A3CE7C0E1F5479B2003DA55F /* Methods */ = {
@@ -916,10 +944,14 @@
 				A357C0071F5443690041290D /* ClassFileBuilder.swift in Sources */,
 				OBJ_136 /* ClassImplementation.swift in Sources */,
 				A357C0041F5443690041290D /* ClassInitializerDescriptionBuilder.swift in Sources */,
+				A3B5C97F1F5D838C00D388EB /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift in Sources */,
 				A3CE7C0B1F54795E003DA55F /* ClassDefaultDescriptionBuilder.swift in Sources */,
 				A3924B9C1F55B08F00CBA3CD /* ClassMappingMethodBuilder.swift in Sources */,
+				A3B5C9811F5D861200D388EB /* ClassExtensionDescriptionBuilder.swift in Sources */,
 				OBJ_137 /* ClassImplementationFileBuilder.swift in Sources */,
+				A3B5C9841F5D873A00D388EB /* ClassEqualsMethodDescriptionBuilder.swift in Sources */,
 				A3CE7C0D1F54796D003DA55F /* ProtocolDefaultDescriptionBuilder.swift in Sources */,
+				A3B5C9861F5D8B5700D388EB /* ClassNotEqualsMethodDescriptionBuilder.swift in Sources */,
 				OBJ_140 /* Framework.swift in Sources */,
 				A3CE7C091F54786C003DA55F /* ProtocolObjectMapperDescriptionBuilder.swift in Sources */,
 				OBJ_141 /* FoundationFramework.swift in Sources */,

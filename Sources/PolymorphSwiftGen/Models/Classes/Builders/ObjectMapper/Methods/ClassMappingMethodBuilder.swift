@@ -20,6 +20,11 @@ struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
         let impl = CodeBuilder()
         var modules = Set<String>()
         modules.insert("ObjectMapper")
+
+        if element.extends != nil {
+            impl.add(line: "super.mapping(map: map)")
+        }
+
         for property in element.properties {
             if property.isNonnull {
                 impl.add(line: "self.\(property.name) >>> \(try self.mapProperty(property, project: project))")
