@@ -20,7 +20,7 @@ struct ClassArrayEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
         impl.add(line: "if lhs[i] != rhs[i] {").rightTab()
         impl.add(line: "return false").leftTab()
         impl.add(line: "}").leftTab()
-        impl.add(line: "}").leftTab()
+        impl.add(line: "}")
         impl.add(line: "return true").leftTab()
         impl.add(line: "}")
         impl.add(line: "return false")

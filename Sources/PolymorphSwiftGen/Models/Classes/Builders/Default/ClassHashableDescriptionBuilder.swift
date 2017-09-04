@@ -28,6 +28,7 @@ fileprivate struct ClassHashablePropertyBuilder: ClassPropertyDescriptionBuilder
         let impl = CodeBuilder()
         let primaryProperties = element.properties.filter { $0.isPrimary }
         let parentPrimaryProperties = element.parentProperties().filter { $0.isPrimary }
+        let hasParent = element.extends != nil
         var comparisons: [String] = []
         if parentPrimaryProperties.count > 0 {
             comparisons.append("super.hashValue")
@@ -37,12 +38,14 @@ fileprivate struct ClassHashablePropertyBuilder: ClassPropertyDescriptionBuilder
         } else if primaryProperties.count > 0 {
             comparisons.append(contentsOf: primaryProperties.map { "self.\($0.name)" })
         } else {
-            comparisons.append("super.hashValue")
+            if hasParent {
+                comparisons.append("super.hashValue")
+            }
             comparisons.append(contentsOf: element.properties.map { "self.\($0.name)" })
         }
-        impl.add(line: comparisons.joined(separator: "\n^ "))
+        impl.add(line: "return \(comparisons.joined(separator: "\n^ "))")
         return [
-            PropertyDescription(name: "hashValue", options: .init(getVisibility: .public, isOverride: element.extends != nil), type: "Int", compute: .init(get: impl))
+            PropertyDescription(name: "hashValue", options: .init(getVisibility: .public, isOverride: hasParent), type: "Int", compute: .init(get: impl))
         ]
     }
 }
