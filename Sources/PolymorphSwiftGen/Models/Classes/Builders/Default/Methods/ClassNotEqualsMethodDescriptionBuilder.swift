@@ -14,7 +14,7 @@ struct ClassNotEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
     func build(element: Class) throws -> MethodDescription? {
         let impl = CodeBuilder()
-        impl.add(line: "!(lhs == rhs)")
+        impl.add(line: "return !(lhs == rhs)")
         return MethodDescription(name: "!=", code: impl, options: .init(visibility: .public), arguments: ["lhs: \(element.name)", "rhs: \(element.name)"], returnType: "Bool")
     }
 }

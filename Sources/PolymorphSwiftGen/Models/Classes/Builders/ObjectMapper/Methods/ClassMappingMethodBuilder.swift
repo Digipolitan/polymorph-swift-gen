@@ -50,6 +50,6 @@ struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
                 }
             }
         }
-        return " map[\"\(property.key ?? property.name)\"]"
+        return "map[\"\(property.key ?? property.name)\"]"
     }
 }

@@ -19,25 +19,27 @@ struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
         var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: element.name, project: project))
 
         var protocolDescription = ProtocolDescription(name: element.name, options: .init(visibility: .public))
+        protocolDescription.implements.append("CustomStringConvertible")
 
         if let parentUUID = element.extends,
             let object = project.models.findObject(uuid: parentUUID)  {
             protocolDescription.implements.append(object.name)
         }
 
-        try self.builders().forEach { try $0.build(element: element, to: &protocolDescription) }
+        try self.protocolBuilders().forEach { try $0.build(element: element, to: &protocolDescription) }
 
         fileDescription.protocols.append(protocolDescription)
 
-        if let customStringConvertibleExtensionDescription = try ClassCustomStringConvertibleExtensionDescriptionBuilder().build(element: element) {
-            fileDescription.extensions.append(customStringConvertibleExtensionDescription)
+        try self.extensionBuilders().forEach {
+            if let ext = try $0.build(element: element) {
+                fileDescription.extensions.append(ext)
+            }
         }
 
-        if let equalsMethodDescription = try ClassEqualsMethodDescriptionBuilder().build(element: element) {
-            fileDescription.methods.append(equalsMethodDescription)
-        }
-        if let notEqualsMethodDescription = try ClassNotEqualsMethodDescriptionBuilder().build(element: element) {
-            fileDescription.methods.append(notEqualsMethodDescription)
+        try self.globalScopeMethodBuilders().forEach {
+            if let method = try $0.build(element: element) {
+                fileDescription.methods.append(method)
+            }
         }
 
         let fileStr = FileWriter.default.write(description: fileDescription)
@@ -45,10 +47,24 @@ struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
         return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
     }
 
-    func builders() -> [ProtocolDescriptionBuilder] {
+    func protocolBuilders() -> [ProtocolDescriptionBuilder] {
         return [
             ProtocolDefaultDescriptionBuilder(),
             ProtocolObjectMapperDescriptionBuilder()
+        ]
+    }
+
+    func globalScopeMethodBuilders() -> [ClassMethodDescriptionBuilder] {
+        return [
+            ClassEqualsMethodDescriptionBuilder(),
+            ClassNotEqualsMethodDescriptionBuilder(),
+            ClassArrayEqualsMethodDescriptionBuilder(),
+        ]
+    }
+
+    func extensionBuilders() -> [ClassExtensionDescriptionBuilder] {
+        return [
+            ClassCustomStringConvertibleExtensionDescriptionBuilder()
         ]
     }
 }

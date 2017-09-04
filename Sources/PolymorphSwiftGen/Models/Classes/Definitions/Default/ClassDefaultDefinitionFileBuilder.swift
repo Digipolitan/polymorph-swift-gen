@@ -19,8 +19,21 @@ struct ClassDefaultDefinitionFileBuilder: ClassFileBuilder {
         var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: element.name, project: project))
 
         var classDescription = ClassDescription(name: element.name, options: .init(visibility: .public))
+        classDescription.implements.append("CustomStringConvertible")
 
-        try self.builders().forEach { try $0.build(element: element, to: &classDescription) }
+        try self.classBuilders().forEach { try $0.build(element: element, to: &classDescription) }
+
+        try self.extensionBuilders().forEach {
+            if let ext = try $0.build(element: element) {
+                fileDescription.extensions.append(ext)
+            }
+        }
+
+        try self.globalScopeMethodBuilders().forEach {
+            if let method = try $0.build(element: element) {
+                fileDescription.methods.append(method)
+            }
+        }
         
         fileDescription.classes.append(classDescription)
 
@@ -29,10 +42,25 @@ struct ClassDefaultDefinitionFileBuilder: ClassFileBuilder {
         return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
     }
 
-    func builders() -> [ClassDescriptionBuilder] {
+    func classBuilders() -> [ClassDescriptionBuilder] {
         return [
             ClassDefaultDescriptionBuilder(),
-            ClassObjectMapperDescriptionBuilder()
+            ClassObjectMapperDescriptionBuilder(),
+            ClassHashableDescriptionBuilder()
+        ]
+    }
+
+    func globalScopeMethodBuilders() -> [ClassMethodDescriptionBuilder] {
+        return [
+            ClassEqualsMethodDescriptionBuilder(),
+            ClassNotEqualsMethodDescriptionBuilder(),
+            ClassArrayEqualsMethodDescriptionBuilder(),
+        ]
+    }
+    
+    func extensionBuilders() -> [ClassExtensionDescriptionBuilder] {
+        return [
+            ClassCustomStringConvertibleExtensionDescriptionBuilder()
         ]
     }
 }

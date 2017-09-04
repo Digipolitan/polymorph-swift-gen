@@ -17,7 +17,7 @@ struct ClassEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
         let primaryProperties = allProperties.filter { $0.isPrimary }
         let impl = CodeBuilder()
         let comparisons = primaryProperties.count > 0 ? primaryProperties.map { "lhs.\($0.name) == rhs.\($0.name)" } : allProperties.map { "lhs.\($0.name) == rhs.\($0.name)" }
-        impl.add(line: comparisons.joined(separator: "\n&& "))
+        impl.add(line: "return \(comparisons.joined(separator: "\n&& "))")
         return MethodDescription(name: "==", code: impl, options: .init(visibility: .public), arguments: ["lhs: \(element.name)", "rhs: \(element.name)"], returnType: "Bool")
     }
 }
