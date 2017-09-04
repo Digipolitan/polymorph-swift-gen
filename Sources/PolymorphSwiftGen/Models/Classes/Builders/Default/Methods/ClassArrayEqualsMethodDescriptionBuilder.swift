@@ -16,7 +16,7 @@ struct ClassArrayEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
         let impl = CodeBuilder()
         impl.add(line: "let count = lhs.count")
         impl.add(line: "if count == rhs.count {").rightTab()
-        impl.add(line: "for var i in 0...<count {").rightTab()
+        impl.add(line: "for var i in 0..<count {").rightTab()
         impl.add(line: "if lhs[i] != rhs[i] {").rightTab()
         impl.add(line: "return false").leftTab()
         impl.add(line: "}").leftTab()

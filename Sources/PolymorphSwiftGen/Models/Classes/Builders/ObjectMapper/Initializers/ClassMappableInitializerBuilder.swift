@@ -30,9 +30,17 @@ struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
                 assigns.append(map.1)
             }
         }
-        if guards.count > 0 {
+        let count = guards.count
+        if  count > 0 {
             impl.add(line: "guard").rightTab()
-            guards.forEach { impl.add(line: $0) }
+            let last = count - 1
+            for i in 0...last {
+                var line = guards[0]
+                if i != last {
+                    line += ","
+                }
+                impl.add(line: line)
+            }
             impl.add(line: "else {").rightTab().add(line: "return nil").leftTab().leftTab().add(line: "}")
         }
         assigns.forEach { impl.add(line: $0) }
