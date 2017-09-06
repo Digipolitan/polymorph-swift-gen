@@ -11,8 +11,12 @@ import SwiftCodeWriter
 
 struct ProtocolDefaultDescriptionBuilder: ProtocolDescriptionBuilder {
 
+    public static let `default` = ProtocolDefaultDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class, to description: inout ProtocolDescription) throws {
-        description.properties.append(contentsOf: try ClassDefaultPropertyDescriptionBuilder().build(element: element))
+        description.properties.append(contentsOf: try ClassDefaultPropertyDescriptionBuilder.default.build(element: element))
     }
 }
 

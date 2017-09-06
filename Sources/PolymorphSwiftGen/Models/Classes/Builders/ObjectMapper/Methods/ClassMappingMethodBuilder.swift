@@ -13,6 +13,10 @@ import SwiftCodeWriter
 
 struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
 
+    public static let `default` = ClassMappingMethodBuilder()
+
+    private init() { }
+
     func build(element: Class) throws -> MethodDescription? {
         guard let project = element.project else {
             return nil

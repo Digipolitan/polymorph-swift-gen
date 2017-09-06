@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
+    public static let `default` = ClassEqualsMethodDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class) throws -> MethodDescription? {
         let allProperties = element.properties + element.parentProperties()
         let primaryProperties = allProperties.filter { $0.isPrimary }

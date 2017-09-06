@@ -11,6 +11,10 @@ import SwiftCodeWriter
 
 struct ClassDefaultPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
 
+    public static let `default` = ClassDefaultPropertyDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class) throws -> [PropertyDescription] {
         return try element.properties.map({ (property) in
             var type = try Mapping.shared.platformType(with: property)

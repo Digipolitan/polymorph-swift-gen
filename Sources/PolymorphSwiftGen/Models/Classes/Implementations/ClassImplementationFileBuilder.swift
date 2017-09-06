@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassImplementationFileBuilder: ClassFileBuilder {
 
+    public static let `default` = ClassImplementationFileBuilder()
+
+    private init() { }
+
     func build(element: Class, options: PlatformGen.Options) throws -> [File] {
         guard let project = element.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
@@ -42,8 +46,8 @@ struct ClassImplementationFileBuilder: ClassFileBuilder {
 
     func builders() -> [ClassDescriptionBuilder] {
         return [
-            ClassDefaultDescriptionBuilder(),
-            ClassObjectMapperDescriptionBuilder()
+            ClassDefaultDescriptionBuilder.default,
+            ClassObjectMapperDescriptionBuilder.default
         ]
     }
 }

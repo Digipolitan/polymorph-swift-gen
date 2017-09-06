@@ -11,6 +11,10 @@ import SwiftCodeWriter
 
 struct ProtocolObjectMapperDescriptionBuilder: ProtocolDescriptionBuilder {
 
+    public static let `default` = ProtocolObjectMapperDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class, to description: inout ProtocolDescription) throws {
         if element.extends == nil {
             description.implements.append("BaseMappable")

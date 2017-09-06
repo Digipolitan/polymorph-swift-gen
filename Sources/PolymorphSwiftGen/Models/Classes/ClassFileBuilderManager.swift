@@ -16,8 +16,8 @@ struct ClassFileBuilderManager: ClassFileBuilder {
     private var builders: [ClassFileBuilder] = []
 
     private init() {
-        self.builders.append(ClassDefinitionFileBuilder())
-        self.builders.append(ClassImplementationFileBuilder())
+        self.builders.append(ClassDefinitionFileBuilder.default)
+        self.builders.append(ClassImplementationFileBuilder.default)
      }
 
     public func build(element: Class, options: PlatformGen.Options) throws -> [File] {

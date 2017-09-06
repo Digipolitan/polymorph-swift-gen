@@ -311,7 +311,7 @@
 		OBJ_99 /* PolymorphGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphGen.swift; sourceTree = "<group>"; };
 		"PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphSwiftGen::PolymorphSwiftGenTests::Product" /* PolymorphSwiftGenTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PolymorphSwiftGenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"StringCase::StringCase::Product" /* StringCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -592,7 +592,7 @@
 			path = Implementations;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -602,7 +602,6 @@
 				OBJ_65 /* Dependencies */,
 				OBJ_118 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_53 /* Platform */ = {
@@ -909,7 +908,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_118 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

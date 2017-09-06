@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
 
+    public static let `default` = ClassInterfaceDefinitionFileBuilder()
+
+    private init() { }
+
     func build(element: Class, options: PlatformGen.Options) throws -> [File] {
         guard let project = element.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
@@ -49,22 +53,22 @@ struct ClassInterfaceDefinitionFileBuilder: ClassFileBuilder {
 
     func protocolBuilders() -> [ProtocolDescriptionBuilder] {
         return [
-            ProtocolDefaultDescriptionBuilder(),
-            ProtocolObjectMapperDescriptionBuilder()
+            ProtocolDefaultDescriptionBuilder.default,
+            ProtocolObjectMapperDescriptionBuilder.default
         ]
     }
 
     func globalScopeMethodBuilders() -> [ClassMethodDescriptionBuilder] {
         return [
-            ClassEqualsMethodDescriptionBuilder(),
-            ClassNotEqualsMethodDescriptionBuilder(),
-            ClassArrayEqualsMethodDescriptionBuilder(),
+            ClassEqualsMethodDescriptionBuilder.default,
+            ClassNotEqualsMethodDescriptionBuilder.default,
+            ClassArrayEqualsMethodDescriptionBuilder.default,
         ]
     }
 
     func extensionBuilders() -> [ClassExtensionDescriptionBuilder] {
         return [
-            ClassCustomStringConvertibleExtensionDescriptionBuilder()
+            ClassCustomStringConvertibleExtensionDescriptionBuilder.default
         ]
     }
 }

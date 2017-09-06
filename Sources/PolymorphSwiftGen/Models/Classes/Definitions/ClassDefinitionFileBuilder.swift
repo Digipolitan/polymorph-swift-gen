@@ -12,10 +12,14 @@ import SwiftCodeWriter
 
 struct ClassDefinitionFileBuilder: ClassFileBuilder {
 
+    public static let `default` = ClassDefinitionFileBuilder()
+
+    private init() { }
+
     func build(element: Class, options: PlatformGen.Options) throws -> [File] {
         if element.injectable || element.serializable {
-            return try ClassInterfaceDefinitionFileBuilder().build(element: element, options: options)
+            return try ClassInterfaceDefinitionFileBuilder.default.build(element: element, options: options)
         }
-        return try ClassDefaultDefinitionFileBuilder().build(element: element, options: options)
+        return try ClassDefaultDefinitionFileBuilder.default.build(element: element, options: options)
     }
 }

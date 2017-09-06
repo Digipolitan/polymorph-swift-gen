@@ -12,17 +12,25 @@ import SwiftCodeWriter
 
 struct ClassHashableDescriptionBuilder: ClassDescriptionBuilder {
 
+    public static let `default` = ClassHashableDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class, to description: inout ClassDescription) throws {
 
         if element.extends == nil {
             description.implements.append("Hashable")
         }
-        let properties = try ClassHashablePropertyBuilder().build(element: element)
+        let properties = try ClassHashablePropertyBuilder.default.build(element: element)
         description.properties.append(contentsOf: properties)
     }
 }
 
 fileprivate struct ClassHashablePropertyBuilder: ClassPropertyDescriptionBuilder {
+
+    fileprivate static let `default` = ClassHashablePropertyBuilder()
+
+    private init() { }
 
     func build(element: Class) throws -> [PropertyDescription] {
         let impl = CodeBuilder()

@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassDefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
 
+    public static let `default` = ClassDefaultInitializerBuilder()
+
+    private init() { }
+
     public func build(element: Class) throws -> InitializerDescription? {
         var arguments: [String] = []
         let impl = CodeBuilder()

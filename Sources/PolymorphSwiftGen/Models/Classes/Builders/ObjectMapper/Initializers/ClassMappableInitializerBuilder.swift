@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
 
+    public static let `default` = ClassMappableInitializerBuilder()
+
+    private init() { }
+
     public func build(element: Class) throws -> InitializerDescription? {
         guard let project = element.project else {
             return nil
@@ -35,7 +39,7 @@ struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
             impl.add(line: "guard").rightTab()
             let last = count - 1
             for i in 0...last {
-                var line = guards[0]
+                var line = guards[i]
                 if i != last {
                     line += ","
                 }

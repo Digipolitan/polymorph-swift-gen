@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassNotEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
+    public static let `default` = ClassNotEqualsMethodDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class) throws -> MethodDescription? {
         let impl = CodeBuilder()
         impl.add(line: "return !(lhs == rhs)")

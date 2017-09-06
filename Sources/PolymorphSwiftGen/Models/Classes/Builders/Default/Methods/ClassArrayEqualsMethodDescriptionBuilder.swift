@@ -12,6 +12,10 @@ import SwiftCodeWriter
 
 struct ClassArrayEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
+    public static let `default` = ClassArrayEqualsMethodDescriptionBuilder()
+
+    private init() { }
+
     func build(element: Class) throws -> MethodDescription? {
         let impl = CodeBuilder()
         impl.add(line: "let count = lhs.count")
