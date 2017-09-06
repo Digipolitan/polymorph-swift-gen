@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import PolymorphGen
 
 public enum ClassDefinition {
     public static let path: String = "Definitions"
 
     public static func absolutePath(parent: String, child: String? = nil) -> String {
-        var cur = "\(parent)/\(path)"
+        var children = [path]
         if let unwrap = child {
-            cur += "/\(unwrap)"
+            children.append(unwrap)
         }
-        return cur
+        return Dir.cd(parent: parent, children: children)
     }
 }
