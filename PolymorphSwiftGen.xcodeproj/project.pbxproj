@@ -115,112 +115,112 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A385C00B1F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1261F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A385C00C1F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1271F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A385C00D1F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1281F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A385C00E1F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1291F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphGen::PolymorphGen";
 			remoteInfo = PolymorphGen;
 		};
-		A385C00F1F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF12A1F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A385C0101F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF12B1F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A385C0111F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF12C1F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A385C0121F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF12D1F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A385C0131F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF12E1F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A385C0141F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF12F1F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphSwiftGen::PolymorphSwiftGen";
 			remoteInfo = PolymorphSwiftGen;
 		};
-		A385C0151F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1301F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A385C0161F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1311F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A385C0171F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1321F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphGen::PolymorphGen";
 			remoteInfo = PolymorphGen;
 		};
-		A385C0181F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1331F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A385C0191F5DAB4F00183BCA /* PBXContainerItemProxy */ = {
+		A32AF1341F617E1700B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A385C01A1F5DAB5000183BCA /* PBXContainerItemProxy */ = {
+		A32AF1351F617E1800B2BD55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -311,7 +311,7 @@
 		OBJ_99 /* PolymorphGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphGen.swift; sourceTree = "<group>"; };
 		"PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphSwiftGen::PolymorphSwiftGenTests::Product" /* PolymorphSwiftGenTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PolymorphSwiftGenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"StringCase::StringCase::Product" /* StringCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -592,7 +592,7 @@
 			path = Implementations;
 			sourceTree = "<group>";
 		};
-		OBJ_5 = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -602,6 +602,7 @@
 				OBJ_65 /* Dependencies */,
 				OBJ_118 /* Products */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_53 /* Platform */ = {
@@ -908,7 +909,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
+			mainGroup = OBJ_5 /*  */;
 			productRefGroup = OBJ_118 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1057,82 +1058,82 @@
 		OBJ_139 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphSwiftGen::PolymorphSwiftGen" /* PolymorphSwiftGen */;
-			targetProxy = A385C0141F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF12F1F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_141 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A385C0151F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1301F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_143 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A385C0161F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1311F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_145 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
-			targetProxy = A385C0171F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1321F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_147 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A385C0181F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1331F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_149 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A385C0191F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1341F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_196 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A385C00B1F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1261F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_197 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A385C00D1F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1281F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_198 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
-			targetProxy = A385C00E1F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1291F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_199 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A385C0121F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF12D1F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_200 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A385C0131F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF12E1F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_227 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A385C00C1F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1271F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_246 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A385C00F1F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF12A1F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_247 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A385C0111F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF12C1F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_267 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A385C0101F5DAB4F00183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF12B1F617E1700B2BD55 /* PBXContainerItemProxy */;
 		};
 		OBJ_278 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphSwiftGen::PolymorphSwiftGenTests" /* PolymorphSwiftGenTests */;
-			targetProxy = A385C01A1F5DAB5000183BCA /* PBXContainerItemProxy */;
+			targetProxy = A32AF1351F617E1800B2BD55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

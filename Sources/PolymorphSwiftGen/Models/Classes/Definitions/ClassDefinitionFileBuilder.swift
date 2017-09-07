@@ -16,7 +16,7 @@ struct ClassDefinitionFileBuilder: ClassFileBuilder {
 
     private init() { }
 
-    func build(element: Class, options: PlatformGen.Options) throws -> [File] {
+    func build(element: Class, options: PolymorphGen.Options) throws -> [File] {
         if element.injectable || element.serializable {
             return try ClassInterfaceDefinitionFileBuilder.default.build(element: element, options: options)
         }

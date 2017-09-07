@@ -20,7 +20,7 @@ struct ClassFileBuilderManager: ClassFileBuilder {
         self.builders.append(ClassImplementationFileBuilder.default)
      }
 
-    public func build(element: Class, options: PlatformGen.Options) throws -> [File] {
+    public func build(element: Class, options: PolymorphGen.Options) throws -> [File] {
         return try self.builders.map { try $0.build(element: element, options: options) }.reduce([], { return $0 + $1 })
     }
 }

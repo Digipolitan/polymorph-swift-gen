@@ -22,7 +22,7 @@ class ClassDependencyModuleFileBuilder {
         self.dependencies[type] = target
     }
 
-    public func build(models: Models, options: PlatformGen.Options) throws -> File {
+    public func build(models: Models, options: PolymorphGen.Options) throws -> File {
         guard let project = models.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }

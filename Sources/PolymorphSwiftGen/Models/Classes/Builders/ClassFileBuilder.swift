@@ -10,5 +10,5 @@ import PolymorphCore
 import PolymorphGen
 
 public protocol ClassFileBuilder {
-    func build(element: Class, options: PlatformGen.Options) throws -> [File]
+    func build(element: Class, options: PolymorphGen.Options) throws -> [File]
 }

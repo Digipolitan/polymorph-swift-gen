@@ -11,18 +11,29 @@ import Foundation
 
 public class SwiftPlatformGen: PlatformGen {
 
-    public override func models(_ models: Models, options: PlatformGen.Options) throws -> [File] {
+    public static let shared: PlatformGen = SwiftPlatformGen()
+
+    public static var name: String {
+        return "Swift"
+    }
+
+    public func generate(_ project: Project, options: PolymorphGen.Options) throws -> [File] {
         var files: [File] = []
-        let childOptions = PlatformGen.Options(path: Dir.cd(parent: options.path, children: ["Swift"]))
+        files.append(contentsOf: try self.models(project.models, options: options))
+        return files
+    }
+
+    public func models(_ models: Models, options: PolymorphGen.Options) throws -> [File] {
+        var files: [File] = []
         let classDependencyModuleFileBuilder = ClassDependencyModuleFileBuilder()
         try models.classes.forEach {
-            files.append(contentsOf: try ClassFileBuilderManager.default.build(element: $0, options: childOptions))
+            files.append(contentsOf: try ClassFileBuilderManager.default.build(element: $0, options: options))
             if $0.injectable || $0.serializable {
                 classDependencyModuleFileBuilder.bind($0.name, to: "\($0.name)Model")
             }
         }
         if classDependencyModuleFileBuilder.dependencies.count > 0 {
-            files.append(try classDependencyModuleFileBuilder.build(models: models, options: childOptions))
+            files.append(try classDependencyModuleFileBuilder.build(models: models, options: options))
         }
         return files
     }

@@ -16,7 +16,7 @@ struct ClassImplementationFileBuilder: ClassFileBuilder {
 
     private init() { }
 
-    func build(element: Class, options: PlatformGen.Options) throws -> [File] {
+    func build(element: Class, options: PolymorphGen.Options) throws -> [File] {
         guard let project = element.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
