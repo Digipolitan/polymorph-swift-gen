@@ -38,18 +38,24 @@ fileprivate struct ClassHashablePropertyBuilder: ClassPropertyDescriptionBuilder
         let parentPrimaryProperties = element.parentProperties().filter { $0.isPrimary }
         let hasParent = element.extends != nil
         var comparisons: [String] = []
+        let propertyToHash = { (p: Property) -> String in
+            if p.isNonnull {
+                return "self.\(p.name).hashValue"
+            }
+            return "(self.\(p.name)?.hashValue ?? 0)"
+        }
         if parentPrimaryProperties.count > 0 {
             comparisons.append("super.hashValue")
             if primaryProperties.count > 0 {
-                comparisons.append(contentsOf: primaryProperties.map { "self.\($0.name)" })
+                comparisons.append(contentsOf: primaryProperties.map(propertyToHash))
             }
         } else if primaryProperties.count > 0 {
-            comparisons.append(contentsOf: primaryProperties.map { "self.\($0.name)" })
+            comparisons.append(contentsOf: primaryProperties.map(propertyToHash))
         } else {
             if hasParent {
                 comparisons.append("super.hashValue")
             }
-            comparisons.append(contentsOf: element.properties.map { "self.\($0.name)" })
+            comparisons.append(contentsOf: element.properties.map(propertyToHash))
         }
         impl.add(line: "return \(comparisons.joined(separator: "\n^ "))")
         return [
