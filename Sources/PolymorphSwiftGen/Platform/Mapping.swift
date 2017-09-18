@@ -16,6 +16,8 @@ class Mapping {
 
     private init() {
         self.modules = [:]
+        self.register(framework: FoundationFramework.default)
+        self.register(framework: UIKitFramework.default)
     }
 
     public func platformType(with type: String, genericTypes: [String]? = nil) -> String {

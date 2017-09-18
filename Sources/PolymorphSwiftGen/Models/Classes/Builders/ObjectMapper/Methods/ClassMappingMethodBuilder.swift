@@ -44,16 +44,25 @@ struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
         let type = try Mapping.model(with: property)
         if let c = type as? Class {
             if c.injectable || c.serializable {
-                return "map.inject(\"\(property.key ?? property.name)\", type: \(c.name).self)"
+                return self.mapProperty(property, injectedClass: c)
             }
         } else if type.name == Native.DataType.array.rawValue, let gts = property.genericTypes, gts.count > 0 {
             let genericType = try Mapping.model(with: gts[0], project: project)
             if let c = genericType as? Class {
                 if c.injectable || c.serializable {
-                    return "map.inject(\"\(property.key ?? property.name)\", type: \(c.name).self)"
+                    return self.mapProperty(property, injectedClass: c)
                 }
             }
         }
-        return "map[\"\(property.key ?? property.name)\"]"
+        return self.mapProperty(property)
     }
+
+    private func mapProperty(_ property: Property, injectedClass: Class) -> String {
+        return "map.inject(\"\(property.mapping?.key ?? property.name)\", type: \(injectedClass.name).self)"
+    }
+
+    private func mapProperty(_ property: Property) -> String {
+        return "map[\"\(property.mapping?.key ?? property.name)\"]"
+    }
+    
 }

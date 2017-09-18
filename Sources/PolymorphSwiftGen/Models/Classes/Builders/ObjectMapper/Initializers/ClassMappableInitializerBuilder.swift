@@ -60,16 +60,24 @@ struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
         let type = try Mapping.model(with: property)
         if let c = type as? Class {
             if c.injectable || c.serializable {
-                return ("let \(property.name): \(platformType) = try? map.injectedValue(\"\(property.key ?? property.name)\", type: \(c.name).self)", assign)
+                return (self.valueMapping(property, platformType: platformType, injectedClass: c), assign)
             }
         } else if type.name == Native.DataType.array.rawValue, let gts = property.genericTypes, gts.count > 0 {
             let genericType = try Mapping.model(with: gts[0], project: project)
             if let c = genericType as? Class {
                 if c.injectable || c.serializable {
-                    return ("let \(property.name): \(platformType) = try? map.injectedValue(\"\(property.key ?? property.name)\", type: \(c.name).self)", assign)
+                    return (self.valueMapping(property, platformType: platformType, injectedClass: c), assign)
                 }
             }
         }
-        return ("let \(property.name): \(platformType) = try? map.value(\"\(property.key ?? property.name)\")", assign)
+        return (self.valueMapping(property, platformType: platformType), assign)
+    }
+
+    private func valueMapping(_ property: Property, platformType: String, injectedClass: Class) -> String {
+        return "let \(property.name): \(platformType) = try? map.injectedValue(\"\(property.mapping?.key ?? property.name)\", type: \(injectedClass.name).self)"
+    }
+
+    private func valueMapping(_ property: Property, platformType: String) -> String {
+        return "let \(property.name): \(platformType) = try? map.value(\"\(property.mapping?.key ?? property.name)\")"
     }
 }

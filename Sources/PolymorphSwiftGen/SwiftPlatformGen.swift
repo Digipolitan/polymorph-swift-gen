@@ -26,7 +26,7 @@ public class SwiftPlatformGen: PlatformGen {
     public func models(_ models: Models, options: PolymorphGen.Options) throws -> [File] {
         var files: [File] = []
         let classDependencyModuleFileBuilder = ClassDependencyModuleFileBuilder()
-        try models.classes.forEach {
+        try models.classes.values.forEach {
             files.append(contentsOf: try ClassFileBuilderManager.default.build(element: $0, options: options))
             if $0.injectable || $0.serializable {
                 classDependencyModuleFileBuilder.bind($0.name, to: "\($0.name)Model")

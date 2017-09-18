@@ -9,8 +9,10 @@ import Foundation
 
 public class UIKitFramework: Framework {
 
+    public static let `default` = UIKitFramework()
+
     public init() {
-        super.init(name: "UIkit", classes: [
+        super.init(name: "UIKit", classes: [
             "UIView"
         ])
     }
