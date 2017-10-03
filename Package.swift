@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Digipolitan/polymorph-gen.git", .branch("master")),
+        .package(url: "https://github.com/Digipolitan/polymorph-gen.git", .branch("develop")),
         .package(url: "https://github.com/Digipolitan/swift-code-writer.git", .branch("master")),
     ],
     targets: [
