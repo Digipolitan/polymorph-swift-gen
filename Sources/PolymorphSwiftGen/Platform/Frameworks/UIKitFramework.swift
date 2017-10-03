@@ -11,8 +11,10 @@ public class UIKitFramework: Framework {
 
     public static let `default` = UIKitFramework()
 
-    public init() {
-        super.init(name: "UIKit", classes: [
+    public static let name = "UIKit"
+
+    private init() {
+        super.init(name: UIKitFramework.name, classes: [
             "UIView"
         ])
     }

@@ -13,8 +13,8 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Digipolitan/polymorph-gen-swift.git", .branch("develop")),
-        .package(url: "https://github.com/Digipolitan/swiftcode-writer-swift.git", .branch("develop")),
+        .package(url: "https://github.com/Digipolitan/polymorph-gen.git", .branch("master")),
+        .package(url: "https://github.com/Digipolitan/swift-code-writer.git", .branch("master")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

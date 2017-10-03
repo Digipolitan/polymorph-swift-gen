@@ -10,9 +10,11 @@ import Foundation
 public class FoundationFramework: Framework {
 
     public static let `default` = FoundationFramework()
+
+    public static let name = "Foundation"
     
-    public init() {
-        super.init(name: "Foundation", classes: [
+    private init() {
+        super.init(name: FoundationFramework.name, classes: [
             "Date",
             "NSString"
         ])
