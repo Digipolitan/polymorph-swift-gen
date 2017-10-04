@@ -49,15 +49,15 @@ class Mapping {
 
 extension Mapping {
 
-    public static func model(with property: Property) throws -> Object {
+    public static func model(with property: Property) throws -> Member {
         guard let project = property.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
         return try Mapping.model(with: property.type, project: project)
     }
 
-    public static func model(with uuid: UUID, project: Project) throws -> Object {
-        guard let type = project.models.findObject(uuid: uuid) else {
+    public static func model(with uuid: UUID, project: Project) throws -> Member {
+        guard let type: Member = project.natives[uuid] ?? project.models.findObject(uuid: uuid) else {
             throw PolymorphSwiftGenError.malformatedProject
         }
         return type
