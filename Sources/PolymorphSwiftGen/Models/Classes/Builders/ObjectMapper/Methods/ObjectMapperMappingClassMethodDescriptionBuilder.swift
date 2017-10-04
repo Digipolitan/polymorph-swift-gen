@@ -29,10 +29,8 @@ class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBu
             impl.add(line: "super.mapping(map: map)")
         }
         let availableProperties = element.properties.filter {
-            if let mapping = $0.mapping {
-                if mapping.isIgnored {
-                    return false
-                }
+            if let mapping = $0.mapping, mapping.isIgnored {
+                return false
             }
             return true
         }
