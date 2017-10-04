@@ -10,16 +10,16 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-struct ClassDefinitionFileBuilder: ClassFileBuilder {
+class ClassDefinitionFileBuilder: ClassFileBuilder {
 
-    public static let `default` = ClassDefinitionFileBuilder()
+    public static let shared = ClassDefinitionFileBuilder()
 
     private init() { }
 
     func build(element: Class, options: PolymorphGen.Options) throws -> [File] {
         if element.injectable || element.serializable {
-            return try ClassInterfaceDefinitionFileBuilder.default.build(element: element, options: options)
+            return try InterfaceDefinitionClassFileBuilder.shared.build(element: element, options: options)
         }
-        return try ClassDefaultDefinitionFileBuilder.default.build(element: element, options: options)
+        return try DefaultDefinitionClassFileBuilder.shared.build(element: element, options: options)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ClassMappingMethodBuilder.swift
+//  ObjectMapperMappingClassMethodDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 29/08/2017.
@@ -11,9 +11,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
+class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
-    public static let `default` = ClassMappingMethodBuilder()
+    public static let shared = ObjectMapperMappingClassMethodDescriptionBuilder()
 
     private init() { }
 
@@ -28,14 +28,30 @@ struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
         if element.extends != nil {
             impl.add(line: "super.mapping(map: map)")
         }
-
-        for property in element.properties {
+        let availableProperties = element.properties.filter {
+            if let mapping = $0.mapping, mapping.isIgnored {
+                return false
+            }
+            return true
+        }
+        var lines: [String] = []
+        var hasTransformers = false
+        for property in availableProperties {
+            if property.mapping?.transformer != nil {
+                hasTransformers = true
+            }
             if property.isNonnull {
-                impl.add(line: "self.\(property.name) >>> \(try self.mapProperty(property, project: project))")
+                lines.append("self.\(property.name) >>> \(try self.mapProperty(property, project: project))")
             } else {
-                impl.add(line: "self.\(property.name) <- \(try self.mapProperty(property, project: project))")
+                lines.append("self.\(property.name) <- \(try self.mapProperty(property, project: project))")
             }
             modules.formUnion(try Mapping.shared.modules(with: property))
+        }
+        if hasTransformers {
+            impl.add(line: "let selfClass = type(of: self)")
+        }
+        lines.forEach {
+            impl.add(line: $0)
         }
         return MethodDescription(name: "mapping", code: impl, options: .init(visibility: .public), modules: Array(modules), arguments: ["map: Map"])
     }
@@ -62,7 +78,11 @@ struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
     }
 
     private func mapProperty(_ property: Property) -> String {
-        return "map[\"\(property.mapping?.key ?? property.name)\"]"
+        var mapping = "map[\"\(property.mapping?.key ?? property.name)\"]"
+        if property.mapping?.transformer != nil {
+            mapping = "(\(mapping), selfClass.\(property.name)Transformer)"
+        }
+        return mapping
     }
     
 }

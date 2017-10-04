@@ -1,5 +1,5 @@
 //
-//  ClassCustomStringConvertibleExtensionDescriptionBuilder.swift
+//  CustomStringConvertibleClassExtensionDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 04/09/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassCustomStringConvertibleExtensionDescriptionBuilder: ClassExtensionDescriptionBuilder {
+class CustomStringConvertibleClassExtensionDescriptionBuilder: ClassExtensionDescriptionBuilder {
 
-    public static let `default` = ClassCustomStringConvertibleExtensionDescriptionBuilder()
+    public static let shared = CustomStringConvertibleClassExtensionDescriptionBuilder()
 
     private init() { }
 

@@ -1,5 +1,5 @@
 //
-//  ClassMappableInitializerBuilder.swift
+//  ClassInitializerDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 24/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
+class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuilder {
 
-    public static let `default` = ClassMappableInitializerBuilder()
+    public static let shared = ObjectMapperClassInitializerDescriptionBuilder()
 
     private init() { }
 
@@ -26,16 +26,28 @@ struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
 
         var guards: [String] = []
         var assigns: [String] = []
-        for property in element.properties {
-            if property.isNonnull {
-                let map = try self.mapNonnullProperty(property, project: project)
-                modules.formUnion(try Mapping.shared.modules(with: property))
-                guards.append(map.0)
-                assigns.append(map.1)
+        var hasTransformers = false
+        let availableProperties = element.properties.filter {
+            if let mapping = $0.mapping, mapping.isIgnored {
+                return false
             }
+            return $0.isNonnull
+        }
+        for property in availableProperties {
+            if property.mapping?.transformer != nil {
+                hasTransformers = true
+            }
+            let map = try self.mapNonnullProperty(property, project: project)
+            modules.formUnion(try Mapping.shared.modules(with: property))
+            guards.append(map.0)
+            assigns.append(map.1)
+
         }
         let count = guards.count
-        if  count > 0 {
+        if count > 0 {
+            if hasTransformers {
+                impl.add(line: "let selfClass = type(of: self)")
+            }
             impl.add(line: "guard").rightTab()
             let last = count - 1
             for i in 0...last {
@@ -78,6 +90,11 @@ struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
     }
 
     private func valueMapping(_ property: Property, platformType: String) -> String {
-        return "let \(property.name): \(platformType) = try? map.value(\"\(property.mapping?.key ?? property.name)\")"
+        var value = "let \(property.name): \(platformType) = try? map.value(\"\(property.mapping?.key ?? property.name)\""
+        if property.mapping?.transformer != nil {
+            value += ", using: selfClass.\(property.name)Transformer"
+        }
+        value += ")"
+        return value
     }
 }

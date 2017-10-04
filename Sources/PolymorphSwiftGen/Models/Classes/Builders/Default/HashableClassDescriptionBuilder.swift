@@ -1,5 +1,5 @@
 //
-//  ClassHashableDescriptionBuilder.swift
+//  HashableClassDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 04/09/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassHashableDescriptionBuilder: ClassDescriptionBuilder {
+class HashableClassDescriptionBuilder: ClassDescriptionBuilder {
 
-    public static let `default` = ClassHashableDescriptionBuilder()
+    public static let shared = HashableClassDescriptionBuilder()
 
     private init() { }
 
@@ -21,14 +21,14 @@ struct ClassHashableDescriptionBuilder: ClassDescriptionBuilder {
         if element.extends == nil {
             description.implements.append("Hashable")
         }
-        let properties = try ClassHashablePropertyBuilder.default.build(element: element)
+        let properties = try HashableClassPropertyDescriptionBuilder.shared.build(element: element)
         description.properties.append(contentsOf: properties)
     }
 }
 
-fileprivate struct ClassHashablePropertyBuilder: ClassPropertyDescriptionBuilder {
+fileprivate class HashableClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
 
-    fileprivate static let `default` = ClassHashablePropertyBuilder()
+    fileprivate static let shared = HashableClassPropertyDescriptionBuilder()
 
     private init() { }
 

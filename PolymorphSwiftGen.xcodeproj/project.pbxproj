@@ -21,6 +21,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A37968261F8556FA00B82661 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37968251F8556FA00B82661 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift */; };
+		A3F3419F1F85929F003180FA /* DefaultProtocolDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3419E1F85929F003180FA /* DefaultProtocolDescriptionBuilder.swift */; };
+		A3F341A11F859337003180FA /* ObjectMapperTransformerClassPropertyDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F341A01F859337003180FA /* ObjectMapperTransformerClassPropertyDescriptionBuilder.swift */; };
+		A3F341A31F8593C0003180FA /* ObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F341A21F8593C0003180FA /* ObjectMapperTransformerMethodInfoBuilder.swift */; };
+		A3F341A51F859452003180FA /* ObjectMapperTransformerMethodInfoBuilderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F341A41F859452003180FA /* ObjectMapperTransformerMethodInfoBuilderRegistry.swift */; };
+		A3F341A81F859493003180FA /* DateObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F341A61F85948D003180FA /* DateObjectMapperTransformerMethodInfoBuilder.swift */; };
+		A3F341AA1F8598C5003180FA /* InterfaceDefinitionClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F341A91F8597E4003180FA /* InterfaceDefinitionClassFileBuilder.swift */; };
 		OBJ_139 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_145 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Package.swift */; };
 		OBJ_151 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* Package.swift */; };
@@ -40,27 +47,25 @@
 		OBJ_202 /* ClassInitializerDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ClassInitializerDescriptionBuilder.swift */; };
 		OBJ_203 /* ClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* ClassMethodDescriptionBuilder.swift */; };
 		OBJ_204 /* ClassPropertyDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ClassPropertyDescriptionBuilder.swift */; };
-		OBJ_205 /* ClassDefaultDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ClassDefaultDescriptionBuilder.swift */; };
-		OBJ_206 /* ClassHashableDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ClassHashableDescriptionBuilder.swift */; };
-		OBJ_207 /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift */; };
-		OBJ_208 /* ClassDefaultInitializerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ClassDefaultInitializerBuilder.swift */; };
-		OBJ_209 /* ClassArrayEqualsMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ClassArrayEqualsMethodDescriptionBuilder.swift */; };
-		OBJ_210 /* ClassEqualsMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* ClassEqualsMethodDescriptionBuilder.swift */; };
-		OBJ_211 /* ClassNotEqualsMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ClassNotEqualsMethodDescriptionBuilder.swift */; };
-		OBJ_212 /* ClassDefaultPropertyDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ClassDefaultPropertyDescriptionBuilder.swift */; };
-		OBJ_213 /* ProtocolDefaultDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* ProtocolDefaultDescriptionBuilder.swift */; };
-		OBJ_214 /* ClassObjectMapperDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ClassObjectMapperDescriptionBuilder.swift */; };
-		OBJ_215 /* ClassMappableInitializerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ClassMappableInitializerBuilder.swift */; };
-		OBJ_216 /* ClassMappingMethodBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ClassMappingMethodBuilder.swift */; };
-		OBJ_217 /* ProtocolObjectMapperDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ProtocolObjectMapperDescriptionBuilder.swift */; };
+		OBJ_205 /* DefaultClassDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* DefaultClassDescriptionBuilder.swift */; };
+		OBJ_206 /* HashableClassDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* HashableClassDescriptionBuilder.swift */; };
+		OBJ_207 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift */; };
+		OBJ_208 /* DefaultClassInitializerDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* DefaultClassInitializerDescriptionBuilder.swift */; };
+		OBJ_209 /* ArrayEqualsClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ArrayEqualsClassMethodDescriptionBuilder.swift */; };
+		OBJ_210 /* EqualsClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* EqualsClassMethodDescriptionBuilder.swift */; };
+		OBJ_211 /* NotEqualsClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* NotEqualsClassMethodDescriptionBuilder.swift */; };
+		OBJ_212 /* DefaultClassPropertyDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* DefaultClassPropertyDescriptionBuilder.swift */; };
+		OBJ_214 /* ObjectMapperClassDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ObjectMapperClassDescriptionBuilder.swift */; };
+		OBJ_215 /* ObjectMapperClassInitializerDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ObjectMapperClassInitializerDescriptionBuilder.swift */; };
+		OBJ_216 /* ObjectMapperMappingClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ObjectMapperMappingClassMethodDescriptionBuilder.swift */; };
+		OBJ_217 /* ObjectMapperProtocolDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ObjectMapperProtocolDescriptionBuilder.swift */; };
 		OBJ_218 /* ProtocolDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ProtocolDescriptionBuilder.swift */; };
 		OBJ_219 /* ClassDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* ClassDefinition.swift */; };
 		OBJ_220 /* ClassDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ClassDefinitionFileBuilder.swift */; };
-		OBJ_221 /* ClassDefaultDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* ClassDefaultDefinitionFileBuilder.swift */; };
-		OBJ_222 /* ClassInterfaceDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ClassInterfaceDefinitionFileBuilder.swift */; };
-		OBJ_223 /* ClassDependencyModuleFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* ClassDependencyModuleFileBuilder.swift */; };
+		OBJ_221 /* DefaultDefinitionClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* DefaultDefinitionClassFileBuilder.swift */; };
+		OBJ_223 /* DependencyModuleClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* DependencyModuleClassFileBuilder.swift */; };
 		OBJ_224 /* ClassImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ClassImplementation.swift */; };
-		OBJ_225 /* ClassImplementationFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* ClassImplementationFileBuilder.swift */; };
+		OBJ_225 /* ImplementationClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* ImplementationClassFileBuilder.swift */; };
 		OBJ_226 /* SwiftClassFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* SwiftClassFileBuilderManager.swift */; };
 		OBJ_227 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Framework.swift */; };
 		OBJ_228 /* FoundationFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* FoundationFramework.swift */; };
@@ -124,112 +129,112 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A3C6CE731F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968091F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A3C6CE741F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A379680A1F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3C6CE751F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A379680B1F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3C6CE761F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A379680C1F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphGen::PolymorphGen";
 			remoteInfo = PolymorphGen;
 		};
-		A3C6CE771F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A379680D1F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A3C6CE781F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A379680E1F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3C6CE791F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A379680F1F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3C6CE7A1F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968101F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A3C6CE7B1F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968111F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3C6CE7C1F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968121F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphSwiftGen::PolymorphSwiftGen";
 			remoteInfo = PolymorphSwiftGen;
 		};
-		A3C6CE7D1F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968131F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A3C6CE7E1F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968141F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3C6CE7F1F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968151F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphGen::PolymorphGen";
 			remoteInfo = PolymorphGen;
 		};
-		A3C6CE801F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968161F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PolymorphCore::PolymorphCore";
 			remoteInfo = PolymorphCore;
 		};
-		A3C6CE811F83D1EA00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968171F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StringCase::StringCase";
 			remoteInfo = StringCase;
 		};
-		A3C6CE821F83D1EB00FC1E60 /* PBXContainerItemProxy */ = {
+		A37968181F85365200B82661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -239,6 +244,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A37968251F8556FA00B82661 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
+		A3F3419E1F85929F003180FA /* DefaultProtocolDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProtocolDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A3F341A01F859337003180FA /* ObjectMapperTransformerClassPropertyDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperTransformerClassPropertyDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A3F341A21F8593C0003180FA /* ObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
+		A3F341A41F859452003180FA /* ObjectMapperTransformerMethodInfoBuilderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperTransformerMethodInfoBuilderRegistry.swift; sourceTree = "<group>"; };
+		A3F341A61F85948D003180FA /* DateObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
+		A3F341A91F8597E4003180FA /* InterfaceDefinitionClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDefinitionClassFileBuilder.swift; sourceTree = "<group>"; };
 		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* PlatformGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformGen.swift; sourceTree = "<group>"; };
 		OBJ_101 /* PolymorphGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphGen.swift; sourceTree = "<group>"; };
@@ -267,27 +279,25 @@
 		OBJ_15 /* ClassInitializerDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInitializerDescriptionBuilder.swift; sourceTree = "<group>"; };
 		OBJ_16 /* ClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
 		OBJ_17 /* ClassPropertyDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPropertyDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_19 /* ClassDefaultDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefaultDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_20 /* ClassHashableDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassHashableDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_22 /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCustomStringConvertibleExtensionDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_24 /* ClassDefaultInitializerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefaultInitializerBuilder.swift; sourceTree = "<group>"; };
-		OBJ_26 /* ClassArrayEqualsMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassArrayEqualsMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_27 /* ClassEqualsMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEqualsMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_28 /* ClassNotEqualsMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNotEqualsMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_30 /* ClassDefaultPropertyDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefaultPropertyDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_31 /* ProtocolDefaultDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDefaultDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_33 /* ClassObjectMapperDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassObjectMapperDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_35 /* ClassMappableInitializerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMappableInitializerBuilder.swift; sourceTree = "<group>"; };
-		OBJ_37 /* ClassMappingMethodBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMappingMethodBuilder.swift; sourceTree = "<group>"; };
-		OBJ_38 /* ProtocolObjectMapperDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolObjectMapperDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_19 /* DefaultClassDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultClassDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_20 /* HashableClassDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableClassDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_22 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertibleClassExtensionDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_24 /* DefaultClassInitializerDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultClassInitializerDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_26 /* ArrayEqualsClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEqualsClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_27 /* EqualsClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualsClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_28 /* NotEqualsClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEqualsClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_30 /* DefaultClassPropertyDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultClassPropertyDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_33 /* ObjectMapperClassDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperClassDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_35 /* ObjectMapperClassInitializerDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperClassInitializerDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_37 /* ObjectMapperMappingClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperMappingClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_38 /* ObjectMapperProtocolDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperProtocolDescriptionBuilder.swift; sourceTree = "<group>"; };
 		OBJ_39 /* ProtocolDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescriptionBuilder.swift; sourceTree = "<group>"; };
 		OBJ_41 /* ClassDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefinition.swift; sourceTree = "<group>"; };
 		OBJ_42 /* ClassDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefinitionFileBuilder.swift; sourceTree = "<group>"; };
-		OBJ_44 /* ClassDefaultDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefaultDefinitionFileBuilder.swift; sourceTree = "<group>"; };
-		OBJ_46 /* ClassInterfaceDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInterfaceDefinitionFileBuilder.swift; sourceTree = "<group>"; };
-		OBJ_48 /* ClassDependencyModuleFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDependencyModuleFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_44 /* DefaultDefinitionClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDefinitionClassFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_48 /* DependencyModuleClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyModuleClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_49 /* ClassImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassImplementation.swift; sourceTree = "<group>"; };
-		OBJ_50 /* ClassImplementationFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassImplementationFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_50 /* ImplementationClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplementationClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_51 /* SwiftClassFileBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassFileBuilderManager.swift; sourceTree = "<group>"; };
 		OBJ_53 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		OBJ_55 /* FoundationFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationFramework.swift; sourceTree = "<group>"; };
@@ -328,7 +338,7 @@
 		OBJ_99 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		"PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphSwiftGen::PolymorphSwiftGenTests::Product" /* PolymorphSwiftGenTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PolymorphSwiftGenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"StringCase::StringCase::Product" /* StringCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,6 +412,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A379681D1F8543C800B82661 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				A3F341A01F859337003180FA /* ObjectMapperTransformerClassPropertyDescriptionBuilder.swift */,
+				A3F341A21F8593C0003180FA /* ObjectMapperTransformerMethodInfoBuilder.swift */,
+				A3F341A41F859452003180FA /* ObjectMapperTransformerMethodInfoBuilderRegistry.swift */,
+				A37968201F8544E900B82661 /* Transformers */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		A37968201F8544E900B82661 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				A37968251F8556FA00B82661 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift */,
+				A3F341A61F85948D003180FA /* DateObjectMapperTransformerMethodInfoBuilder.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,13 +534,13 @@
 		OBJ_18 /* Default */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* ClassDefaultDescriptionBuilder.swift */,
-				OBJ_20 /* ClassHashableDescriptionBuilder.swift */,
+				OBJ_19 /* DefaultClassDescriptionBuilder.swift */,
+				A3F3419E1F85929F003180FA /* DefaultProtocolDescriptionBuilder.swift */,
+				OBJ_20 /* HashableClassDescriptionBuilder.swift */,
 				OBJ_21 /* Extensions */,
 				OBJ_23 /* Initializers */,
 				OBJ_25 /* Methods */,
 				OBJ_29 /* Properties */,
-				OBJ_31 /* ProtocolDefaultDescriptionBuilder.swift */,
 			);
 			path = Default;
 			sourceTree = "<group>";
@@ -518,7 +548,7 @@
 		OBJ_21 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift */,
+				OBJ_22 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,7 +556,7 @@
 		OBJ_23 /* Initializers */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* ClassDefaultInitializerBuilder.swift */,
+				OBJ_24 /* DefaultClassInitializerDescriptionBuilder.swift */,
 			);
 			path = Initializers;
 			sourceTree = "<group>";
@@ -534,9 +564,9 @@
 		OBJ_25 /* Methods */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_26 /* ClassArrayEqualsMethodDescriptionBuilder.swift */,
-				OBJ_27 /* ClassEqualsMethodDescriptionBuilder.swift */,
-				OBJ_28 /* ClassNotEqualsMethodDescriptionBuilder.swift */,
+				OBJ_26 /* ArrayEqualsClassMethodDescriptionBuilder.swift */,
+				OBJ_27 /* EqualsClassMethodDescriptionBuilder.swift */,
+				OBJ_28 /* NotEqualsClassMethodDescriptionBuilder.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -544,7 +574,7 @@
 		OBJ_29 /* Properties */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_30 /* ClassDefaultPropertyDescriptionBuilder.swift */,
+				OBJ_30 /* DefaultClassPropertyDescriptionBuilder.swift */,
 			);
 			path = Properties;
 			sourceTree = "<group>";
@@ -552,10 +582,11 @@
 		OBJ_32 /* ObjectMapper */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_33 /* ClassObjectMapperDescriptionBuilder.swift */,
+				OBJ_33 /* ObjectMapperClassDescriptionBuilder.swift */,
+				A379681D1F8543C800B82661 /* Properties */,
 				OBJ_34 /* Initializers */,
 				OBJ_36 /* Methods */,
-				OBJ_38 /* ProtocolObjectMapperDescriptionBuilder.swift */,
+				OBJ_38 /* ObjectMapperProtocolDescriptionBuilder.swift */,
 			);
 			path = ObjectMapper;
 			sourceTree = "<group>";
@@ -563,7 +594,7 @@
 		OBJ_34 /* Initializers */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_35 /* ClassMappableInitializerBuilder.swift */,
+				OBJ_35 /* ObjectMapperClassInitializerDescriptionBuilder.swift */,
 			);
 			path = Initializers;
 			sourceTree = "<group>";
@@ -571,7 +602,7 @@
 		OBJ_36 /* Methods */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_37 /* ClassMappingMethodBuilder.swift */,
+				OBJ_37 /* ObjectMapperMappingClassMethodDescriptionBuilder.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -590,7 +621,7 @@
 		OBJ_43 /* Default */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_44 /* ClassDefaultDefinitionFileBuilder.swift */,
+				OBJ_44 /* DefaultDefinitionClassFileBuilder.swift */,
 			);
 			path = Default;
 			sourceTree = "<group>";
@@ -598,7 +629,7 @@
 		OBJ_45 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_46 /* ClassInterfaceDefinitionFileBuilder.swift */,
+				A3F341A91F8597E4003180FA /* InterfaceDefinitionClassFileBuilder.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -606,14 +637,14 @@
 		OBJ_47 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_48 /* ClassDependencyModuleFileBuilder.swift */,
+				OBJ_48 /* DependencyModuleClassFileBuilder.swift */,
 				OBJ_49 /* ClassImplementation.swift */,
-				OBJ_50 /* ClassImplementationFileBuilder.swift */,
+				OBJ_50 /* ImplementationClassFileBuilder.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -623,7 +654,6 @@
 				OBJ_64 /* Dependencies */,
 				OBJ_126 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_52 /* Platform */ = {
@@ -1018,7 +1048,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1104,38 +1134,43 @@
 			files = (
 				OBJ_199 /* FileDocumentationBuilder.swift in Sources */,
 				OBJ_200 /* ClassDescriptionBuilder.swift in Sources */,
+				A3F341AA1F8598C5003180FA /* InterfaceDefinitionClassFileBuilder.swift in Sources */,
 				OBJ_201 /* ClassExtensionDescriptionBuilder.swift in Sources */,
 				OBJ_202 /* ClassInitializerDescriptionBuilder.swift in Sources */,
 				OBJ_203 /* ClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_204 /* ClassPropertyDescriptionBuilder.swift in Sources */,
-				OBJ_205 /* ClassDefaultDescriptionBuilder.swift in Sources */,
-				OBJ_206 /* ClassHashableDescriptionBuilder.swift in Sources */,
-				OBJ_207 /* ClassCustomStringConvertibleExtensionDescriptionBuilder.swift in Sources */,
-				OBJ_208 /* ClassDefaultInitializerBuilder.swift in Sources */,
-				OBJ_209 /* ClassArrayEqualsMethodDescriptionBuilder.swift in Sources */,
-				OBJ_210 /* ClassEqualsMethodDescriptionBuilder.swift in Sources */,
-				OBJ_211 /* ClassNotEqualsMethodDescriptionBuilder.swift in Sources */,
-				OBJ_212 /* ClassDefaultPropertyDescriptionBuilder.swift in Sources */,
-				OBJ_213 /* ProtocolDefaultDescriptionBuilder.swift in Sources */,
-				OBJ_214 /* ClassObjectMapperDescriptionBuilder.swift in Sources */,
-				OBJ_215 /* ClassMappableInitializerBuilder.swift in Sources */,
-				OBJ_216 /* ClassMappingMethodBuilder.swift in Sources */,
-				OBJ_217 /* ProtocolObjectMapperDescriptionBuilder.swift in Sources */,
+				OBJ_205 /* DefaultClassDescriptionBuilder.swift in Sources */,
+				OBJ_206 /* HashableClassDescriptionBuilder.swift in Sources */,
+				OBJ_207 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift in Sources */,
+				OBJ_208 /* DefaultClassInitializerDescriptionBuilder.swift in Sources */,
+				A3F341A81F859493003180FA /* DateObjectMapperTransformerMethodInfoBuilder.swift in Sources */,
+				OBJ_209 /* ArrayEqualsClassMethodDescriptionBuilder.swift in Sources */,
+				OBJ_210 /* EqualsClassMethodDescriptionBuilder.swift in Sources */,
+				A3F341A31F8593C0003180FA /* ObjectMapperTransformerMethodInfoBuilder.swift in Sources */,
+				OBJ_211 /* NotEqualsClassMethodDescriptionBuilder.swift in Sources */,
+				OBJ_212 /* DefaultClassPropertyDescriptionBuilder.swift in Sources */,
+				OBJ_214 /* ObjectMapperClassDescriptionBuilder.swift in Sources */,
+				OBJ_215 /* ObjectMapperClassInitializerDescriptionBuilder.swift in Sources */,
+				OBJ_216 /* ObjectMapperMappingClassMethodDescriptionBuilder.swift in Sources */,
+				OBJ_217 /* ObjectMapperProtocolDescriptionBuilder.swift in Sources */,
 				OBJ_218 /* ProtocolDescriptionBuilder.swift in Sources */,
 				OBJ_219 /* ClassDefinition.swift in Sources */,
 				OBJ_220 /* ClassDefinitionFileBuilder.swift in Sources */,
-				OBJ_221 /* ClassDefaultDefinitionFileBuilder.swift in Sources */,
-				OBJ_222 /* ClassInterfaceDefinitionFileBuilder.swift in Sources */,
-				OBJ_223 /* ClassDependencyModuleFileBuilder.swift in Sources */,
+				OBJ_221 /* DefaultDefinitionClassFileBuilder.swift in Sources */,
+				OBJ_223 /* DependencyModuleClassFileBuilder.swift in Sources */,
+				A3F3419F1F85929F003180FA /* DefaultProtocolDescriptionBuilder.swift in Sources */,
 				OBJ_224 /* ClassImplementation.swift in Sources */,
-				OBJ_225 /* ClassImplementationFileBuilder.swift in Sources */,
+				OBJ_225 /* ImplementationClassFileBuilder.swift in Sources */,
 				OBJ_226 /* SwiftClassFileBuilderManager.swift in Sources */,
 				OBJ_227 /* Framework.swift in Sources */,
 				OBJ_228 /* FoundationFramework.swift in Sources */,
+				A3F341A51F859452003180FA /* ObjectMapperTransformerMethodInfoBuilderRegistry.swift in Sources */,
 				OBJ_229 /* UIKitFramework.swift in Sources */,
 				OBJ_230 /* Mapping.swift in Sources */,
 				OBJ_231 /* PolymorphSwiftGenError.swift in Sources */,
 				OBJ_232 /* SwiftPlatformGen.swift in Sources */,
+				A3F341A11F859337003180FA /* ObjectMapperTransformerClassPropertyDescriptionBuilder.swift in Sources */,
+				A37968261F8556FA00B82661 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,82 +1259,82 @@
 		OBJ_183 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphSwiftGen::PolymorphSwiftGen" /* PolymorphSwiftGen */;
-			targetProxy = A3C6CE7C1F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968121F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_185 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A3C6CE7D1F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968131F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_187 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3C6CE7E1F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968141F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_189 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
-			targetProxy = A3C6CE7F1F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968151F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_191 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A3C6CE801F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968161F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_193 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3C6CE811F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968171F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_239 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A3C6CE731F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968091F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_240 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3C6CE751F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A379680B1F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_241 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphGen::PolymorphGen" /* PolymorphGen */;
-			targetProxy = A3C6CE761F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A379680C1F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_242 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A3C6CE7A1F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968101F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_243 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3C6CE7B1F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968111F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_270 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3C6CE741F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A379680A1F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_290 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphCore::PolymorphCore" /* PolymorphCore */;
-			targetProxy = A3C6CE771F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A379680D1F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_291 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3C6CE791F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A379680F1F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_314 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StringCase::StringCase" /* StringCase */;
-			targetProxy = A3C6CE781F83D1EA00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A379680E1F85365200B82661 /* PBXContainerItemProxy */;
 		};
 		OBJ_325 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PolymorphSwiftGen::PolymorphSwiftGenTests" /* PolymorphSwiftGenTests */;
-			targetProxy = A3C6CE821F83D1EB00FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A37968181F85365200B82661 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -8,9 +8,9 @@
 import Foundation
 import PolymorphCore
 
-public struct FileDocumentationBuilder {
+public class FileDocumentationBuilder {
 
-    public static let `default` = FileDocumentationBuilder()
+    public static let shared = FileDocumentationBuilder()
 
     private let createdAt: String
 
