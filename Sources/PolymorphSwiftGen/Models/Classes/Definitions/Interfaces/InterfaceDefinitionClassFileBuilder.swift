@@ -1,5 +1,5 @@
 //
-//  ClassDefaultDefinitionFileBuilder.swift
+//  InterfaceDefinitionClassFileBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 28/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-struct ClassDefaultDefinitionFileBuilder: ClassFileBuilder {
+class InterfaceDefinitionClassFileBuilder: ClassFileBuilder {
 
-    public static let `default` = ClassDefaultDefinitionFileBuilder()
+    public static let shared = InterfaceDefinitionClassFileBuilder()
 
     private init() { }
 
@@ -20,12 +20,19 @@ struct ClassDefaultDefinitionFileBuilder: ClassFileBuilder {
         guard let project = element.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
-        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: element.name, project: project))
+        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.shared.build(file: element.name, project: project))
 
-        var classDescription = ClassDescription(name: element.name, options: .init(visibility: .public))
-        classDescription.implements.append("CustomStringConvertible")
+        var protocolDescription = ProtocolDescription(name: element.name, options: .init(visibility: .public))
+        protocolDescription.implements.append("CustomStringConvertible")
 
-        try self.classBuilders().forEach { try $0.build(element: element, to: &classDescription) }
+        if let parentUUID = element.extends,
+            let object = project.models.findObject(uuid: parentUUID)  {
+            protocolDescription.implements.append(object.name)
+        }
+
+        try self.protocolBuilders().forEach { try $0.build(element: element, to: &protocolDescription) }
+
+        fileDescription.protocols.append(protocolDescription)
 
         try self.extensionBuilders().forEach {
             if let ext = try $0.build(element: element) {
@@ -38,33 +45,30 @@ struct ClassDefaultDefinitionFileBuilder: ClassFileBuilder {
                 fileDescription.methods.append(method)
             }
         }
-        
-        fileDescription.classes.append(classDescription)
 
         let fileStr = FileWriter.default.write(description: fileDescription)
 
         return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
     }
 
-    func classBuilders() -> [ClassDescriptionBuilder] {
+    func protocolBuilders() -> [ProtocolDescriptionBuilder] {
         return [
-            ClassDefaultDescriptionBuilder.default,
-            ClassObjectMapperDescriptionBuilder.default,
-            ClassHashableDescriptionBuilder.default
+            DefaultProtocolDescriptionBuilder.shared,
+            ObjectMapperProtocolDescriptionBuilder.shared
         ]
     }
 
     func globalScopeMethodBuilders() -> [ClassMethodDescriptionBuilder] {
         return [
-            ClassEqualsMethodDescriptionBuilder.default,
-            ClassNotEqualsMethodDescriptionBuilder.default,
-            ClassArrayEqualsMethodDescriptionBuilder.default,
+            EqualsClassMethodDescriptionBuilder.shared,
+            NotEqualsClassMethodDescriptionBuilder.shared,
+            ArrayEqualsClassMethodDescriptionBuilder.shared,
         ]
     }
-    
+
     func extensionBuilders() -> [ClassExtensionDescriptionBuilder] {
         return [
-            ClassCustomStringConvertibleExtensionDescriptionBuilder.default
+            CustomStringConvertibleClassExtensionDescriptionBuilder.shared
         ]
     }
 }

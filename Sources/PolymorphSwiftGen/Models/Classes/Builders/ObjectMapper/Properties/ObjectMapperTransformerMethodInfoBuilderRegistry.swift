@@ -1,5 +1,5 @@
 //
-//  ClassObjectMapperTransformerRegistry.swift
+//  ObjectMapperTransformerMethodInfoBuilderRegistry.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 04/10/2017.
@@ -9,17 +9,20 @@ import Foundation
 import PolymorphCore
 import CodeWriter
 
-class ClassObjectMapperTransformerRegistry: ClassObjectMapperTransformerBuilder {
+class ObjectMapperTransformerMethodInfoBuilderRegistry: ObjectMapperTransformerMethodInfoBuilder {
 
-    private let registry: [String: ClassObjectMapperTransformerBuilder]
+    private let registry: [String: ObjectMapperTransformerMethodInfoBuilder]
 
-    public static let `default` = ClassObjectMapperTransformerRegistry()
+    public static let shared = ObjectMapperTransformerMethodInfoBuilderRegistry()
 
     private init() {
-        self.registry = [:]
+        self.registry = [
+            "timestamp": TimestampObjectMapperTransformerMethodInfoBuilder(),
+            "date": DateObjectMapperTransformerMethodInfoBuilder(),
+        ]
     }
 
-    func build(property: Property) throws -> ObjectMapperTransformMethod {
+    func build(property: Property) throws -> ObjectMapperTransformerMethodInfo {
         guard
             let project = property.project,
             let propertyTransformer = property.mapping?.transformer,

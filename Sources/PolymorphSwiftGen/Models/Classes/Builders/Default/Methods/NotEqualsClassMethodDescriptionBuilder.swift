@@ -1,5 +1,5 @@
 //
-//  ClassNotEqualsMethodDescriptionBuilder.swift
+//  NotEqualsClassMethodDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 04/09/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassNotEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
+class NotEqualsClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
-    public static let `default` = ClassNotEqualsMethodDescriptionBuilder()
+    public static let shared = NotEqualsClassMethodDescriptionBuilder()
 
     private init() { }
 

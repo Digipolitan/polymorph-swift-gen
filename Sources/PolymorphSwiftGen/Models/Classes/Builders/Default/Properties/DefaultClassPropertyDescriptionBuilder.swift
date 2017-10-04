@@ -1,5 +1,5 @@
 //
-//  ClassDefaultPropertyDescriptionBuilder.swift
+//  DefaultClassPropertyDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 28/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassDefaultPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
+class DefaultClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
 
-    public static let `default` = ClassDefaultPropertyDescriptionBuilder()
+    public static let shared = DefaultClassPropertyDescriptionBuilder()
 
     private init() { }
 

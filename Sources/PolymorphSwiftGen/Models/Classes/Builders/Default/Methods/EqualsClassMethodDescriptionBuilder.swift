@@ -1,5 +1,5 @@
 //
-//  ClassEqualsMethodDescriptionBuilder.swift
+//  EqualsClassMethodDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 04/09/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassEqualsMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
+class EqualsClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
-    public static let `default` = ClassEqualsMethodDescriptionBuilder()
+    public static let shared = EqualsClassMethodDescriptionBuilder()
 
     private init() { }
 

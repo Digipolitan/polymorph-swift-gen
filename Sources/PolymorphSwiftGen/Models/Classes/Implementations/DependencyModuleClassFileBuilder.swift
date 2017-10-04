@@ -10,7 +10,7 @@ import PolymorphGen
 import SwiftCodeWriter
 import CodeWriter
 
-class ClassDependencyModuleFileBuilder {
+class DependencyModuleClassFileBuilder {
 
     public private(set) var dependencies: [String: String]
 
@@ -26,7 +26,7 @@ class ClassDependencyModuleFileBuilder {
         guard let project = models.project else {
             throw PolymorphSwiftGenError.projectCannotBeNil
         }
-        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: "ModelsModule", project: project))
+        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.shared.build(file: "ModelsModule", project: project))
 
         var classDescription = ClassDescription(name: "ModelsModule", options: .init(visibility: .public), parent: "Module", modules: ["DependencyInjector", "DependencyInjectorObjectMapper"])
 

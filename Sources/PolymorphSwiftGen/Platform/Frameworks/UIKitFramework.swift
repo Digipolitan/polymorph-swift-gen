@@ -9,7 +9,7 @@ import Foundation
 
 public class UIKitFramework: Framework {
 
-    public static let `default` = UIKitFramework()
+    public static let shared = UIKitFramework()
 
     public static let name = "UIKit"
 

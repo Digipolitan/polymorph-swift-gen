@@ -9,9 +9,9 @@ import Foundation
 import PolymorphCore
 import SwiftCodeWriter
 
-struct ProtocolObjectMapperDescriptionBuilder: ProtocolDescriptionBuilder {
+class ObjectMapperProtocolDescriptionBuilder: ProtocolDescriptionBuilder {
 
-    public static let `default` = ProtocolObjectMapperDescriptionBuilder()
+    public static let shared = ObjectMapperProtocolDescriptionBuilder()
 
     private init() { }
 

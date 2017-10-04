@@ -1,5 +1,5 @@
 //
-//  ClassImplementationFileBuilder.swift
+//  ImplementationClassFileBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 21/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-struct ClassImplementationFileBuilder: ClassFileBuilder {
+class ImplementationClassFileBuilder: ClassFileBuilder {
 
-    public static let `default` = ClassImplementationFileBuilder()
+    public static let shared = ImplementationClassFileBuilder()
 
     private init() { }
 
@@ -26,7 +26,7 @@ struct ClassImplementationFileBuilder: ClassFileBuilder {
 
         let className = "\(element.name)Model"
 
-        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.default.build(file: className, project: project))
+        var fileDescription = FileDescription(documentation: FileDocumentationBuilder.shared.build(file: className, project: project))
 
         var parent: String? = nil
         if let parentUUID = element.extends,
@@ -46,8 +46,8 @@ struct ClassImplementationFileBuilder: ClassFileBuilder {
 
     func builders() -> [ClassDescriptionBuilder] {
         return [
-            ClassDefaultDescriptionBuilder.default,
-            ClassObjectMapperDescriptionBuilder.default
+            DefaultClassDescriptionBuilder.shared,
+            ObjectMapperClassDescriptionBuilder.shared
         ]
     }
 }

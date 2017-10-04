@@ -9,7 +9,7 @@ import Foundation
 import PolymorphCore
 import CodeWriter
 
-public struct ObjectMapperTransformMethod {
+struct ObjectMapperTransformerMethodInfo {
     public let type: String
     public let code: CodeBuilder
     public let modules: [String]
@@ -21,23 +21,26 @@ public struct ObjectMapperTransformMethod {
     }
 }
 
-public protocol ClassObjectMapperTransformerBuilder {
-    func build(property: Property) throws -> ObjectMapperTransformMethod
+protocol ObjectMapperTransformerMethodInfoBuilder {
+    func build(property: Property) throws -> ObjectMapperTransformerMethodInfo
 }
 
-extension ClassObjectMapperTransformerBuilder {
+extension ObjectMapperTransformerMethodInfoBuilder {
 
-    public static func mergeOptions(of property: Property) -> [Transformer.Option] {
+    public static func mergeOptions(of property: Property) -> [String: Transformer.Option] {
+        var options: [String: Transformer.Option] = [:]
         guard let project = property.project,
             let propertyTransformer = property.mapping?.transformer,
             let projectTransformer = project.transformers[propertyTransformer.id] else {
-            return []
+                return options
         }
-        return projectTransformer.options.map { option in
+        projectTransformer.options.forEach { option in
             if let propertyOption = projectTransformer.options.first(where: { $0.name == option.name }) {
-                return propertyOption
+                options[propertyOption.name] = propertyOption
+            } else {
+                options[option.name] = option
             }
-            return option
         }
+        return options
     }
 }

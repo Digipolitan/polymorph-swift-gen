@@ -1,5 +1,5 @@
 //
-//  ClassMappingMethodBuilder.swift
+//  ObjectMapperMappingClassMethodDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 29/08/2017.
@@ -11,9 +11,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassMappingMethodBuilder: ClassMethodDescriptionBuilder {
+class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
-    public static let `default` = ClassMappingMethodBuilder()
+    public static let shared = ObjectMapperMappingClassMethodDescriptionBuilder()
 
     private init() { }
 

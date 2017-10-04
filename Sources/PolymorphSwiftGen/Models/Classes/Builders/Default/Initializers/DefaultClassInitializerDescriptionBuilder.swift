@@ -1,5 +1,5 @@
 //
-//  ClassDefaultInitializerBuilder.swift
+//  DefaultClassInitializerDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 18/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassDefaultInitializerBuilder: ClassInitializerDescriptionBuilder {
+class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuilder {
 
-    public static let `default` = ClassDefaultInitializerBuilder()
+    public static let shared = DefaultClassInitializerDescriptionBuilder()
 
     private init() { }
 

@@ -11,12 +11,12 @@ import PolymorphGen
 
 class SwiftClassFileBuilderManager: ClassFileBuilderArray {
 
-    public static let `default` = SwiftClassFileBuilderManager()
+    public static let shared = SwiftClassFileBuilderManager()
 
     private init() {
         super.init(children: [
-            ClassDefinitionFileBuilder.default,
-            ClassImplementationFileBuilder.default
+            ClassDefinitionFileBuilder.shared,
+            ImplementationClassFileBuilder.shared
         ])
      }
 }

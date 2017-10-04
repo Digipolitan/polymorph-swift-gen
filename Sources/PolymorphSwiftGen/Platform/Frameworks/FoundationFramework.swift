@@ -9,7 +9,7 @@ import Foundation
 
 public class FoundationFramework: Framework {
 
-    public static let `default` = FoundationFramework()
+    public static let shared = FoundationFramework()
 
     public static let name = "Foundation"
     

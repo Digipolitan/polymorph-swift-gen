@@ -1,5 +1,5 @@
 //
-//  ClassMappableInitializerBuilder.swift
+//  ClassInitializerDescriptionBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 24/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import CodeWriter
 import SwiftCodeWriter
 
-struct ClassMappableInitializerBuilder: ClassInitializerDescriptionBuilder {
+class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuilder {
 
-    public static let `default` = ClassMappableInitializerBuilder()
+    public static let shared = ObjectMapperClassInitializerDescriptionBuilder()
 
     private init() { }
 

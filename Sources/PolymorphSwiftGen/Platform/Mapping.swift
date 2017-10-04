@@ -16,8 +16,8 @@ class Mapping {
 
     private init() {
         self.modules = [:]
-        self.register(framework: FoundationFramework.default)
-        self.register(framework: UIKitFramework.default)
+        self.register(framework: FoundationFramework.shared)
+        self.register(framework: UIKitFramework.shared)
     }
 
     public func platformType(with type: String, genericTypes: [String]? = nil) -> String {
