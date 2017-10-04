@@ -7,6 +7,7 @@
 
 import Foundation
 import PolymorphCore
+import CodeWriter
 import SwiftCodeWriter
 
 struct ClassDefaultPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
@@ -21,7 +22,11 @@ struct ClassDefaultPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
             if !property.isNonnull {
                 type += "?"
             }
-            return PropertyDescription(name: property.name, options: .init(getVisibility: .public), modules: try Mapping.shared.modules(with: property), type: type, documentation: property.documentation)
+            var defaultValue: CodeBuilder? = nil
+            if let value = property.defaultValue {
+                defaultValue = CodeBuilder.from(code: value)
+            }
+            return PropertyDescription(name: property.name, options: .init(getVisibility: .public, isConstant: property.isConst), modules: try Mapping.shared.modules(with: property), type: type, value: defaultValue, documentation: property.documentation)
         })
     }
 }

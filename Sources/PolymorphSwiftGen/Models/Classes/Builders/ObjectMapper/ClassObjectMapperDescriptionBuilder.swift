@@ -20,6 +20,8 @@ struct ClassObjectMapperDescriptionBuilder: ClassDescriptionBuilder {
             description.implements.append("Mappable")
             description.modules.append("ObjectMapper")
         }
+        let properties = try ClassTransformerPropertyBuilder.default.build(element: element)
+        description.properties.append(contentsOf: properties)
         if let initializer = try ClassMappableInitializerBuilder.default.build(element: element) {
             description.initializers.append(initializer)
         }

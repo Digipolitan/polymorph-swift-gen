@@ -12,4 +12,6 @@ public enum PolymorphSwiftGenError: Error {
     case projectCannotBeNil
 
     case malformatedProject
+
+    case missingTransformerBuilder(name: String)
 }
