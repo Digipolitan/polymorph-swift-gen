@@ -1,5 +1,5 @@
 //
-//  EnumDefinitionFileBuilder.swift
+//  DefinitionEnumFileBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 23/10/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-class EnumDefinitionFileBuilder: EnumFileBuilder {
+class DefinitionEnumFileBuilder: EnumFileBuilder {
 
-    public static let shared = EnumDefinitionFileBuilder()
+    public static let shared = DefinitionEnumFileBuilder()
 
     private init() { }
 

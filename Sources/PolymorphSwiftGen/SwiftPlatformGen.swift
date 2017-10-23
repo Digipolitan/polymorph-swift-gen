@@ -35,6 +35,9 @@ public class SwiftPlatformGen: PlatformGen {
         if classDependencyModuleFileBuilder.dependencies.count > 0 {
             files.append(try classDependencyModuleFileBuilder.build(models: models, options: options))
         }
+        try models.enums.values.forEach {
+            files.append(contentsOf: try SwiftEnumFileBuilderManager.shared.build(element: $0, options: options))
+        }
         return files
     }
 }

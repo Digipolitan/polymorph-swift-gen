@@ -1,5 +1,5 @@
 //
-//  ClassDefinitionFileBuilder.swift
+//  DefinitionClassFileBuilder.swift
 //  PolymorphSwiftGen
 //
 //  Created by Benoit BRIATTE on 21/08/2017.
@@ -10,9 +10,9 @@ import PolymorphCore
 import PolymorphGen
 import SwiftCodeWriter
 
-class ClassDefinitionFileBuilder: ClassFileBuilder {
+class DefinitionClassFileBuilder: ClassFileBuilder {
 
-    public static let shared = ClassDefinitionFileBuilder()
+    public static let shared = DefinitionClassFileBuilder()
 
     private init() { }
 

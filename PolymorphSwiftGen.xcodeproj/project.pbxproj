@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		A32540861F9E12B90026FE4F /* DefaultEnumDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32540851F9E12B90026FE4F /* DefaultEnumDescriptionBuilder.swift */; };
+		A325409A1F9E18FD0026FE4F /* SwiftClassFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32540991F9E18FD0026FE4F /* SwiftClassFileBuilderManager.swift */; };
+		A325409C1F9E19FC0026FE4F /* SwiftEnumFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A325409B1F9E19FC0026FE4F /* SwiftEnumFileBuilderManager.swift */; };
 		OBJ_152 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_158 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* Package.swift */; };
 		OBJ_164 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* Package.swift */; };
@@ -61,14 +63,13 @@
 		OBJ_235 /* DateObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* DateObjectMapperTransformerMethodInfoBuilder.swift */; };
 		OBJ_236 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift */; };
 		OBJ_237 /* ProtocolDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* ProtocolDescriptionBuilder.swift */; };
-		OBJ_238 /* ClassDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ClassDefinitionFileBuilder.swift */; };
+		OBJ_238 /* DefinitionClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* DefinitionClassFileBuilder.swift */; };
 		OBJ_239 /* DefaultDefinitionClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* DefaultDefinitionClassFileBuilder.swift */; };
 		OBJ_240 /* InterfaceDefinitionClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* InterfaceDefinitionClassFileBuilder.swift */; };
 		OBJ_241 /* DependencyModuleClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* DependencyModuleClassFileBuilder.swift */; };
 		OBJ_242 /* ImplementationClassFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* ImplementationClassFileBuilder.swift */; };
 		OBJ_243 /* EnumDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* EnumDescriptionBuilder.swift */; };
-		OBJ_244 /* EnumDefinitionFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* EnumDefinitionFileBuilder.swift */; };
-		OBJ_245 /* SwiftClassFileBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* SwiftClassFileBuilderManager.swift */; };
+		OBJ_244 /* DefinitionEnumFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* DefinitionEnumFileBuilder.swift */; };
 		OBJ_246 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Framework.swift */; };
 		OBJ_247 /* FoundationFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* FoundationFramework.swift */; };
 		OBJ_248 /* UIKitFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* UIKitFramework.swift */; };
@@ -248,6 +249,8 @@
 
 /* Begin PBXFileReference section */
 		A32540851F9E12B90026FE4F /* DefaultEnumDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEnumDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A32540991F9E18FD0026FE4F /* SwiftClassFileBuilderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftClassFileBuilderManager.swift; sourceTree = "<group>"; };
+		A325409B1F9E19FC0026FE4F /* SwiftEnumFileBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEnumFileBuilderManager.swift; sourceTree = "<group>"; };
 		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* FilePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePath.swift; sourceTree = "<group>"; };
 		OBJ_100 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/bbriatte/Development/MacOS/Libraries/PolymorphSwiftGen/.build/checkouts/swift-code-writer.git-7499395208535419347/Package.swift"; sourceTree = "<group>"; };
@@ -304,15 +307,14 @@
 		OBJ_45 /* DateObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
 		OBJ_46 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
 		OBJ_47 /* ProtocolDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescriptionBuilder.swift; sourceTree = "<group>"; };
-		OBJ_49 /* ClassDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDefinitionFileBuilder.swift; sourceTree = "<group>"; };
+		OBJ_49 /* DefinitionClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_51 /* DefaultDefinitionClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDefinitionClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_53 /* InterfaceDefinitionClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDefinitionClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_55 /* DependencyModuleClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyModuleClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_56 /* ImplementationClassFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplementationClassFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_59 /* EnumDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescriptionBuilder.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_61 /* EnumDefinitionFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDefinitionFileBuilder.swift; sourceTree = "<group>"; };
-		OBJ_62 /* SwiftClassFileBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassFileBuilderManager.swift; sourceTree = "<group>"; };
+		OBJ_61 /* DefinitionEnumFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionEnumFileBuilder.swift; sourceTree = "<group>"; };
 		OBJ_64 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		OBJ_66 /* FoundationFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationFramework.swift; sourceTree = "<group>"; };
 		OBJ_67 /* UIKitFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitFramework.swift; sourceTree = "<group>"; };
@@ -481,7 +483,6 @@
 			children = (
 				OBJ_12 /* Classes */,
 				OBJ_57 /* Enums */,
-				OBJ_62 /* SwiftClassFileBuilderManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -522,6 +523,7 @@
 		OBJ_12 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A32540991F9E18FD0026FE4F /* SwiftClassFileBuilderManager.swift */,
 				OBJ_13 /* Builders */,
 				OBJ_48 /* Definitions */,
 				OBJ_54 /* Implementations */,
@@ -675,7 +677,7 @@
 		OBJ_48 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_49 /* ClassDefinitionFileBuilder.swift */,
+				OBJ_49 /* DefinitionClassFileBuilder.swift */,
 				OBJ_50 /* Default */,
 				OBJ_52 /* Interfaces */,
 			);
@@ -723,6 +725,7 @@
 		OBJ_57 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				A325409B1F9E19FC0026FE4F /* SwiftEnumFileBuilderManager.swift */,
 				OBJ_58 /* Builders */,
 				OBJ_60 /* Definitions */,
 			);
@@ -741,7 +744,7 @@
 		OBJ_60 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_61 /* EnumDefinitionFileBuilder.swift */,
+				OBJ_61 /* DefinitionEnumFileBuilder.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -1194,6 +1197,7 @@
 				OBJ_221 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift in Sources */,
 				OBJ_222 /* HashableClassDescriptionBuilder.swift in Sources */,
 				OBJ_223 /* DefaultClassInitializerDescriptionBuilder.swift in Sources */,
+				A325409A1F9E18FD0026FE4F /* SwiftClassFileBuilderManager.swift in Sources */,
 				OBJ_224 /* ArrayEqualsClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_225 /* EqualsClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_226 /* NotEqualsClassMethodDescriptionBuilder.swift in Sources */,
@@ -1201,6 +1205,7 @@
 				OBJ_228 /* ObjectMapperClassInitializerDescriptionBuilder.swift in Sources */,
 				OBJ_229 /* ObjectMapperMappingClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_230 /* ObjectMapperClassDescriptionBuilder.swift in Sources */,
+				A325409C1F9E19FC0026FE4F /* SwiftEnumFileBuilderManager.swift in Sources */,
 				OBJ_231 /* ObjectMapperProtocolDescriptionBuilder.swift in Sources */,
 				OBJ_232 /* ObjectMapperTransformerClassPropertyDescriptionBuilder.swift in Sources */,
 				OBJ_233 /* ObjectMapperTransformerMethodInfoBuilder.swift in Sources */,
@@ -1209,14 +1214,13 @@
 				A32540861F9E12B90026FE4F /* DefaultEnumDescriptionBuilder.swift in Sources */,
 				OBJ_236 /* TimestampObjectMapperTransformerMethodInfoBuilder.swift in Sources */,
 				OBJ_237 /* ProtocolDescriptionBuilder.swift in Sources */,
-				OBJ_238 /* ClassDefinitionFileBuilder.swift in Sources */,
+				OBJ_238 /* DefinitionClassFileBuilder.swift in Sources */,
 				OBJ_239 /* DefaultDefinitionClassFileBuilder.swift in Sources */,
 				OBJ_240 /* InterfaceDefinitionClassFileBuilder.swift in Sources */,
 				OBJ_241 /* DependencyModuleClassFileBuilder.swift in Sources */,
 				OBJ_242 /* ImplementationClassFileBuilder.swift in Sources */,
 				OBJ_243 /* EnumDescriptionBuilder.swift in Sources */,
-				OBJ_244 /* EnumDefinitionFileBuilder.swift in Sources */,
-				OBJ_245 /* SwiftClassFileBuilderManager.swift in Sources */,
+				OBJ_244 /* DefinitionEnumFileBuilder.swift in Sources */,
 				OBJ_246 /* Framework.swift in Sources */,
 				OBJ_247 /* FoundationFramework.swift in Sources */,
 				OBJ_248 /* UIKitFramework.swift in Sources */,
