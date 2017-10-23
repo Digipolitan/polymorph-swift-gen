@@ -31,7 +31,7 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
             if let mapping = $0.mapping, mapping.isIgnored {
                 return false
             }
-            return $0.isNonnull
+            return $0.isNonnull || ($0.isConst && $0.defaultValue == nil)
         }
         for property in availableProperties {
             if property.mapping?.transformer != nil {

@@ -40,7 +40,7 @@ class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBu
             if property.mapping?.transformer != nil {
                 hasTransformers = true
             }
-            if property.isNonnull {
+            if property.isNonnull || property.isConst {
                 lines.append("self.\(property.name) >>> \(try self.mapProperty(property, project: project))")
             } else {
                 lines.append("self.\(property.name) <- \(try self.mapProperty(property, project: project))")

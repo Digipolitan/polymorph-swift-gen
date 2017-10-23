@@ -26,7 +26,7 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
         if parentProperties.count > 0 {
             var superArguments: [String] = []
             for property in parentProperties {
-                if property.isNonnull {
+                if property.isNonnull || (property.isConst && property.defaultValue == nil) {
                     let type = try Mapping.shared.platformType(with: property)
                     modules.formUnion(try Mapping.shared.modules(with: property))
                     arguments.append("\(property.name): \(type)")
@@ -37,7 +37,7 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
             impl.add(line: "super.init(\(superArguments.joined(separator: ", ")))")
         }
         for property in element.properties {
-            if property.isNonnull {
+            if property.isNonnull || (property.isConst && property.defaultValue == nil) {
                 let type = try Mapping.shared.platformType(with: property)
                 modules.formUnion(try Mapping.shared.modules(with: property))
                 arguments.append("\(property.name): \(type)")
