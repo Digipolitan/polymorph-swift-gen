@@ -31,13 +31,13 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
             if let mapping = $0.mapping, mapping.isIgnored {
                 return false
             }
-            return $0.isNonnull || ($0.isConst && $0.defaultValue == nil)
+            return $0.isNonnull
         }
         for property in availableProperties {
             if property.mapping?.transformer != nil {
                 hasTransformers = true
             }
-            let map = try self.mapNonnullProperty(property, project: project)
+            let map = try self.transformNonnullProperty(property, project: project)
             modules.formUnion(try Mapping.shared.modules(with: property))
             guards.append(map.0)
             assigns.append(map.1)
@@ -60,37 +60,46 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
             impl.add(line: "else {").rightTab().add(line: "return nil").leftTab().leftTab().add(line: "}")
         }
         assigns.forEach { impl.add(line: $0) }
+        for property in element.properties {
+            if property.isConst && property.defaultValue == nil {
+                impl.add(line: "self.\(property.name) = \(try self.valueMapping(property, project: project))")
+            }
+        }
         if element.extends != nil {
             impl.add(line: "super.init(map: map)")
         }
         return InitializerDescription(code: impl, options: .init(visibility: .public, isOptional: true, isRequired: true), modules: Array(modules), arguments: ["map: Map"])
     }
 
-    private func mapNonnullProperty(_ property: Property, project: Project) throws -> (String, String) {
+    private func transformNonnullProperty(_ property: Property, project: Project) throws -> (String, String) {
         let assign = "self.\(property.name) = \(property.name)"
         let platformType = try Mapping.shared.platformType(with: property)
+        return ("let \(property.name): \(platformType) = \(try self.valueMapping(property, project: project))", assign)
+    }
+
+    private func valueMapping(_ property: Property, project: Project) throws -> String {
         let type = try Mapping.model(with: property)
         if let c = type as? Class {
             if c.injectable || c.serializable {
-                return (self.valueMapping(property, platformType: platformType, injectedClass: c), assign)
+                return self.valueMapping(property, injectedClass: c)
             }
         } else if type.name == Native.DataType.array.rawValue, let gts = property.genericTypes, gts.count > 0 {
             let genericType = try Mapping.model(with: gts[0], project: project)
             if let c = genericType as? Class {
                 if c.injectable || c.serializable {
-                    return (self.valueMapping(property, platformType: platformType, injectedClass: c), assign)
+                    return self.valueMapping(property, injectedClass: c)
                 }
             }
         }
-        return (self.valueMapping(property, platformType: platformType), assign)
+        return self.defaultValueMapping(property)
     }
 
-    private func valueMapping(_ property: Property, platformType: String, injectedClass: Class) -> String {
-        return "let \(property.name): \(platformType) = try? map.injectedValue(\"\(property.mapping?.key ?? property.name)\", type: \(injectedClass.name).self)"
+    private func valueMapping(_ property: Property, injectedClass: Class) -> String {
+        return "try? map.injectedValue(\"\(property.mapping?.key ?? property.name)\", type: \(injectedClass.name).self)"
     }
 
-    private func valueMapping(_ property: Property, platformType: String) -> String {
-        var value = "let \(property.name): \(platformType) = try? map.value(\"\(property.mapping?.key ?? property.name)\""
+    private func defaultValueMapping(_ property: Property) -> String {
+        var value = "try? map.value(\"\(property.mapping?.key ?? property.name)\""
         if property.mapping?.transformer != nil {
             value += ", using: selfClass.\(property.name)Transformer"
         }

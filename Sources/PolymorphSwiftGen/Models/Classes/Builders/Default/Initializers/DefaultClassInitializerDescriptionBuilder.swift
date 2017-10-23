@@ -27,9 +27,12 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
             var superArguments: [String] = []
             for property in parentProperties {
                 if property.isNonnull || (property.isConst && property.defaultValue == nil) {
-                    let type = try Mapping.shared.platformType(with: property)
+                    var type = try Mapping.shared.platformType(with: property)
+                    if !property.isNonnull {
+                        type += "? = nil"
+                    }
                     modules.formUnion(try Mapping.shared.modules(with: property))
-                    arguments.append("\(property.name): \(type)")
+                    arguments.append("\(property.name): \(type)?")
                     superArguments.append("\(property.name): \(property.name)")
                 }
             }
@@ -38,7 +41,10 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
         }
         for property in element.properties {
             if property.isNonnull || (property.isConst && property.defaultValue == nil) {
-                let type = try Mapping.shared.platformType(with: property)
+                var type = try Mapping.shared.platformType(with: property)
+                if !property.isNonnull {
+                    type += "? = nil"
+                }
                 modules.formUnion(try Mapping.shared.modules(with: property))
                 arguments.append("\(property.name): \(type)")
                 impl.add(line: "self.\(property.name) = \(property.name)")
