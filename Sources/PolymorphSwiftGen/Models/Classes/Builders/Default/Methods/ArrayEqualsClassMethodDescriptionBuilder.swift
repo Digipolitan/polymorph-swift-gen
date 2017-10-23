@@ -20,14 +20,12 @@ class ArrayEqualsClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
         let impl = CodeBuilder()
         impl.add(line: "let count = lhs.count")
         impl.add(line: "if count == rhs.count {").rightTab()
-        impl.add(line: "for i in 0..<count {").rightTab()
-        impl.add(line: "if lhs[i] != rhs[i] {").rightTab()
+        impl.add(line: "for i in 0..<count where lhs[i] != rhs[i] {").rightTab()
         impl.add(line: "return false").leftTab()
-        impl.add(line: "}").leftTab()
         impl.add(line: "}")
         impl.add(line: "return true").leftTab()
         impl.add(line: "}")
         impl.add(line: "return false")
-        return MethodDescription(name: "==", code: impl, options: .init(visibility: .public), arguments: ["lhs: [\(element.name)]", "rhs: [\(element.name)]"], returnType: "Bool")
+        return MethodDescription(name: "== ", code: impl, options: .init(visibility: .public), arguments: ["lhs: [\(element.name)]", "rhs: [\(element.name)]"], returnType: "Bool")
     }
 }

@@ -15,7 +15,7 @@ class SwiftClassFileBuilderManager: ClassFileBuilderArray {
 
     private init() {
         super.init(children: [
-            ClassDefinitionFileBuilder.shared,
+            DefinitionClassFileBuilder.shared,
             ImplementationClassFileBuilder.shared
         ])
      }
