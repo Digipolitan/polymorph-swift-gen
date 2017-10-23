@@ -39,6 +39,6 @@ class DependencyModuleClassFileBuilder {
         fileDescription.classes.append(classDescription)
 
         let fileStr = FileWriter.default.write(description: fileDescription)
-        return File(path: ClassImplementation.absolutePath(parent: options.path) , name: "ModelsModule.swift", data: fileStr.data(using: .utf8))
+        return File(path: FilePath.implementationsPath(parent: options.path).append(child: "Models").build(), name: "ModelsModule.swift", data: fileStr.data(using: .utf8))
     }
 }

@@ -48,7 +48,9 @@ class InterfaceDefinitionClassFileBuilder: ClassFileBuilder {
 
         let fileStr = FileWriter.default.write(description: fileDescription)
 
-        return [File(path: ClassDefinition.absolutePath(parent: options.path, child: element.package.path(camelcase: true)), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
+        return [File(path: FilePath.definitionsPath(parent: options.path)
+            .append(child: element.package.path(camelcase: true))
+            .build(), name: "\(element.name).swift", data: fileStr.data(using: .utf8))]
     }
 
     func protocolBuilders() -> [ProtocolDescriptionBuilder] {
