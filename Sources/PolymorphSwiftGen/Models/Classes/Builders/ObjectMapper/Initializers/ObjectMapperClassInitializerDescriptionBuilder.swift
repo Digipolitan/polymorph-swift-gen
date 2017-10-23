@@ -27,27 +27,31 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
         var guards: [String] = []
         var assigns: [String] = []
         var hasTransformers = false
-        let availableProperties = element.properties.filter {
-            if let mapping = $0.mapping, mapping.isIgnored {
-                return false
+        for property in element.properties {
+            if let mapping = property.mapping, mapping.isIgnored {
+                continue
             }
-            return $0.isNonnull
+            if property.isNonnull {
+                if property.mapping?.transformer != nil {
+                    hasTransformers = true
+                }
+                let map = try self.transformNonnullProperty(property, project: project)
+                modules.formUnion(try Mapping.shared.modules(with: property))
+                guards.append(map.0)
+                assigns.append(map.1)
+            }
+            if property.isConst && property.defaultValue == nil {
+                if property.mapping?.transformer != nil {
+                    hasTransformers = true
+                }
+                assigns.append("self.\(property.name) = \(try self.valueMapping(property, project: project))")
+            }
         }
-        for property in availableProperties {
-            if property.mapping?.transformer != nil {
-                hasTransformers = true
-            }
-            let map = try self.transformNonnullProperty(property, project: project)
-            modules.formUnion(try Mapping.shared.modules(with: property))
-            guards.append(map.0)
-            assigns.append(map.1)
-
+        if hasTransformers {
+            impl.add(line: "let selfClass = type(of: self)")
         }
         let count = guards.count
         if count > 0 {
-            if hasTransformers {
-                impl.add(line: "let selfClass = type(of: self)")
-            }
             impl.add(line: "guard").rightTab()
             let last = count - 1
             for i in 0...last {
@@ -60,11 +64,6 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
             impl.add(line: "else {").rightTab().add(line: "return nil").leftTab().leftTab().add(line: "}")
         }
         assigns.forEach { impl.add(line: $0) }
-        for property in element.properties {
-            if property.isConst && property.defaultValue == nil {
-                impl.add(line: "self.\(property.name) = \(try self.valueMapping(property, project: project))")
-            }
-        }
         if element.extends != nil {
             impl.add(line: "super.init(map: map)")
         }
