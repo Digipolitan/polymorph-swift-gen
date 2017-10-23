@@ -16,13 +16,16 @@ class DefaultEnumDescriptionBuilder: EnumDescriptionBuilder {
     private init() { }
 
     func build(element: Enum, to description: inout EnumDescription) throws {
-        description.cases = element.values.map { EnumDescription.Case(name: $0.name, rawValue: self.rawValue(type: element.rawType, caseValue: $0.raw)) }
+        description.cases = element.values.map { EnumDescription.Case(name: $0.name, rawValue: self.rawValue(type: element.rawType, value: $0)) }
     }
 
-    fileprivate func rawValue(type: Enum.RawType, caseValue: String) -> String {
+    fileprivate func rawValue(type: Enum.RawType, value: Enum.Value) -> String? {
         if type == .string {
-            return "\"\(caseValue)\""
+            if value.name != value.raw {
+                return "\"\(value.raw)\""
+            }
+            return nil
         }
-        return caseValue
+        return value.raw
     }
 }
