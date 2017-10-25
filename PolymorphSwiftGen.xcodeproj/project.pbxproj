@@ -428,6 +428,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A347A5811FA09351001101E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A347A5821FA09351001101E2 /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A347A5821FA09351001101E2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A347A5831FA09351001101E2 /* Builders */,
+				A347A5841FA09351001101E2 /* Implementations */,
+				A347A5851FA09351001101E2 /* Definitions */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A347A5831FA09351001101E2 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		A347A5841FA09351001101E2 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		A347A5851FA09351001101E2 /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
 		OBJ_104 /* CodeWriter */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +870,7 @@
 				OBJ_9 /* FileDocumentationBuilder.swift */,
 				OBJ_10 /* FilePath.swift */,
 				OBJ_11 /* Models */,
+				A347A5811FA09351001101E2 /* Network */,
 				OBJ_66 /* Platform */,
 				OBJ_72 /* PolymorphSwiftGenError.swift */,
 				OBJ_73 /* SwiftPlatformGen.swift */,
