@@ -27,27 +27,31 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
         var guards: [String] = []
         var assigns: [String] = []
         var hasTransformers = false
-        let availableProperties = element.properties.filter {
-            if let mapping = $0.mapping, mapping.isIgnored {
-                return false
+        for property in element.properties {
+            if let mapping = property.mapping, mapping.isIgnored {
+                continue
             }
-            return $0.isNonnull
+            if property.isNonnull {
+                if property.mapping?.transformer != nil {
+                    hasTransformers = true
+                }
+                let map = try self.transformNonnullProperty(property, project: project)
+                modules.formUnion(try Mapping.shared.modules(with: property))
+                guards.append(map.0)
+                assigns.append(map.1)
+            }
+            if property.isConst && property.defaultValue == nil {
+                if property.mapping?.transformer != nil {
+                    hasTransformers = true
+                }
+                assigns.append("self.\(property.name) = \(try self.valueMapping(property, project: project))")
+            }
         }
-        for property in availableProperties {
-            if property.mapping?.transformer != nil {
-                hasTransformers = true
-            }
-            let map = try self.mapNonnullProperty(property, project: project)
-            modules.formUnion(try Mapping.shared.modules(with: property))
-            guards.append(map.0)
-            assigns.append(map.1)
-
+        if hasTransformers {
+            impl.add(line: "let selfClass = type(of: self)")
         }
         let count = guards.count
         if count > 0 {
-            if hasTransformers {
-                impl.add(line: "let selfClass = type(of: self)")
-            }
             impl.add(line: "guard").rightTab()
             let last = count - 1
             for i in 0...last {
@@ -66,31 +70,35 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
         return InitializerDescription(code: impl, options: .init(visibility: .public, isOptional: true, isRequired: true), modules: Array(modules), arguments: ["map: Map"])
     }
 
-    private func mapNonnullProperty(_ property: Property, project: Project) throws -> (String, String) {
+    private func transformNonnullProperty(_ property: Property, project: Project) throws -> (String, String) {
         let assign = "self.\(property.name) = \(property.name)"
         let platformType = try Mapping.shared.platformType(with: property)
+        return ("let \(property.name): \(platformType) = \(try self.valueMapping(property, project: project))", assign)
+    }
+
+    private func valueMapping(_ property: Property, project: Project) throws -> String {
         let type = try Mapping.model(with: property)
         if let c = type as? Class {
             if c.injectable || c.serializable {
-                return (self.valueMapping(property, platformType: platformType, injectedClass: c), assign)
+                return self.valueMapping(property, injectedClass: c)
             }
         } else if type.name == Native.DataType.array.rawValue, let gts = property.genericTypes, gts.count > 0 {
             let genericType = try Mapping.model(with: gts[0], project: project)
             if let c = genericType as? Class {
                 if c.injectable || c.serializable {
-                    return (self.valueMapping(property, platformType: platformType, injectedClass: c), assign)
+                    return self.valueMapping(property, injectedClass: c)
                 }
             }
         }
-        return (self.valueMapping(property, platformType: platformType), assign)
+        return self.defaultValueMapping(property)
     }
 
-    private func valueMapping(_ property: Property, platformType: String, injectedClass: Class) -> String {
-        return "let \(property.name): \(platformType) = try? map.injectedValue(\"\(property.mapping?.key ?? property.name)\", type: \(injectedClass.name).self)"
+    private func valueMapping(_ property: Property, injectedClass: Class) -> String {
+        return "try? map.injectedValue(\"\(property.mapping?.key ?? property.name)\", type: \(injectedClass.name).self)"
     }
 
-    private func valueMapping(_ property: Property, platformType: String) -> String {
-        var value = "let \(property.name): \(platformType) = try? map.value(\"\(property.mapping?.key ?? property.name)\""
+    private func defaultValueMapping(_ property: Property) -> String {
+        var value = "try? map.value(\"\(property.mapping?.key ?? property.name)\""
         if property.mapping?.transformer != nil {
             value += ", using: selfClass.\(property.name)Transformer"
         }

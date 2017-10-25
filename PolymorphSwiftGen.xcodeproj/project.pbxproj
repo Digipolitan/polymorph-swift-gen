@@ -354,7 +354,7 @@
 		OBJ_99 /* InitializerWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerWriter.swift; sourceTree = "<group>"; };
 		"PolymorphCore::PolymorphCore::Product" /* PolymorphCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphGen::PolymorphGen::Product" /* PolymorphGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PolymorphSwiftGen::PolymorphSwiftGen::Product" /* PolymorphSwiftGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PolymorphSwiftGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PolymorphSwiftGen::PolymorphSwiftGenTests::Product" /* PolymorphSwiftGenTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PolymorphSwiftGenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"StringCase::StringCase::Product" /* StringCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,6 +428,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A347A5811FA09351001101E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A347A5821FA09351001101E2 /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A347A5821FA09351001101E2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A347A5831FA09351001101E2 /* Builders */,
+				A347A5841FA09351001101E2 /* Implementations */,
+				A347A5851FA09351001101E2 /* Definitions */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A347A5831FA09351001101E2 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		A347A5841FA09351001101E2 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		A347A5851FA09351001101E2 /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
 		OBJ_104 /* CodeWriter */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,7 +735,7 @@
 			path = Default;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -706,7 +745,6 @@
 				OBJ_78 /* Dependencies */,
 				OBJ_146 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_52 /* Interfaces */ = {
@@ -832,6 +870,7 @@
 				OBJ_9 /* FileDocumentationBuilder.swift */,
 				OBJ_10 /* FilePath.swift */,
 				OBJ_11 /* Models */,
+				A347A5811FA09351001101E2 /* Network */,
 				OBJ_66 /* Platform */,
 				OBJ_72 /* PolymorphSwiftGenError.swift */,
 				OBJ_73 /* SwiftPlatformGen.swift */,
@@ -1113,7 +1152,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_146 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
