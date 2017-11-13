@@ -28,7 +28,7 @@ class DefinitionEnumFileBuilder: EnumFileBuilder {
         try self.enumBuilders().forEach { try $0.build(element: element, to: &enumDescription) }
 
         fileDescription.enums.append(enumDescription)
-        
+
         let fileStr = FileWriter.default.write(description: fileDescription)
 
         return [File(path: FilePath.definitionsPath(parent: options.path)
@@ -50,6 +50,4 @@ class DefinitionEnumFileBuilder: EnumFileBuilder {
         }
         return nil
     }
-
 }
-

@@ -26,7 +26,12 @@ class DefaultClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
             if let value = property.defaultValue {
                 defaultValue = CodeBuilder.from(code: value)
             }
-            return PropertyDescription(name: property.name, options: .init(getVisibility: .public, isConstant: property.isConst), modules: try Mapping.shared.modules(with: property), type: type, value: defaultValue, documentation: property.documentation)
+            return PropertyDescription(name: property.name,
+                                       options: .init(getVisibility: .public, isConstant: property.isConst),
+                                       modules: try Mapping.shared.modules(with: property),
+                                       type: type,
+                                       value: defaultValue,
+                                       documentation: property.documentation)
         })
     }
 }

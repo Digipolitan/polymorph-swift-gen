@@ -19,4 +19,3 @@ class DefaultProtocolDescriptionBuilder: ProtocolDescriptionBuilder {
         description.properties.append(contentsOf: try DefaultClassPropertyDescriptionBuilder.shared.build(element: element))
     }
 }
-

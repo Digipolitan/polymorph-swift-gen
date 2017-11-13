@@ -18,7 +18,7 @@ class ObjectMapperTransformerMethodInfoBuilderRegistry: ObjectMapperTransformerM
     private init() {
         self.registry = [
             "timestamp": TimestampObjectMapperTransformerMethodInfoBuilder(),
-            "date": DateObjectMapperTransformerMethodInfoBuilder(),
+            "date": DateObjectMapperTransformerMethodInfoBuilder()
         ]
     }
 

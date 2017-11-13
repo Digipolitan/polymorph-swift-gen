@@ -38,7 +38,7 @@ class DefaultDefinitionClassFileBuilder: ClassFileBuilder {
                 fileDescription.methods.append(method)
             }
         }
-        
+
         fileDescription.classes.append(classDescription)
 
         let fileStr = FileWriter.default.write(description: fileDescription)
@@ -60,10 +60,10 @@ class DefaultDefinitionClassFileBuilder: ClassFileBuilder {
         return [
             EqualsClassMethodDescriptionBuilder.shared,
             NotEqualsClassMethodDescriptionBuilder.shared,
-            ArrayEqualsClassMethodDescriptionBuilder.shared,
+            ArrayEqualsClassMethodDescriptionBuilder.shared
         ]
     }
-    
+
     func extensionBuilders() -> [ClassExtensionDescriptionBuilder] {
         return [
             CustomStringConvertibleClassExtensionDescriptionBuilder.shared

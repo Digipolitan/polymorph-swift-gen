@@ -21,7 +21,11 @@ class ObjectMapperTransformerClassPropertyDescriptionBuilder: ClassPropertyDescr
             let transformerMethod = try ObjectMapperTransformerMethodInfoBuilderRegistry.shared.build(property: property)
             let impl = CodeBuilder()
             impl.add(line: "{").rightTab().add(code: transformerMethod.code).leftTab().add(string: "}()", indent: true)
-            return PropertyDescription(name: "\(property.name)Transformer", options: PropertyDescription.Options(getVisibility: .private, isStatic: true, isConstant: true), modules: transformerMethod.modules, type: transformerMethod.type, value: impl)
+            return PropertyDescription(name: "\(property.name)Transformer",
+                options: PropertyDescription.Options(getVisibility: .private, isStatic: true, isConstant: true),
+                modules: transformerMethod.modules,
+                type: transformerMethod.type,
+                value: impl)
         })
     }
 }
