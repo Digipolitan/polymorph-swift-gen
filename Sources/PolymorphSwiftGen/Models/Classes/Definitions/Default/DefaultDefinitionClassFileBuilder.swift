@@ -60,7 +60,9 @@ class DefaultDefinitionClassFileBuilder: ClassFileBuilder {
         return [
             EqualsClassMethodDescriptionBuilder.shared,
             NotEqualsClassMethodDescriptionBuilder.shared,
-            ArrayEqualsClassMethodDescriptionBuilder.shared
+            ArrayEqualsClassMethodDescriptionBuilder.shared,
+            OptionalEqualsClassMethodDescriptionBuilder.shared,
+            OptionalArrayEqualsClassMethodDescriptionBuilder.shared
         ]
     }
 

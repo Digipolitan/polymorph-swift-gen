@@ -24,6 +24,8 @@
 		A340C98C1FBADFA800B1B40A /* URLObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340C98B1FBADFA800B1B40A /* URLObjectMapperTransformerMethodInfoBuilder.swift */; };
 		A340C98E1FBAE11A00B1B40A /* MultilingualStringObjectMapperTransformerMethodInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340C98D1FBAE11A00B1B40A /* MultilingualStringObjectMapperTransformerMethodInfoBuilder.swift */; };
 		A340C9901FBAE1F900B1B40A /* LocalizationToolkitFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340C98F1FBAE1F900B1B40A /* LocalizationToolkitFramework.swift */; };
+		A340C9DA1FBAEF2800B1B40A /* OptionalEqualsClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340C9D91FBAEF2800B1B40A /* OptionalEqualsClassMethodDescriptionBuilder.swift */; };
+		A340C9DC1FBAEF9300B1B40A /* OptionalArrayEqualsClassMethodDescriptionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340C9DB1FBAEF9300B1B40A /* OptionalArrayEqualsClassMethodDescriptionBuilder.swift */; };
 		OBJ_160 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_166 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* Package.swift */; };
 		OBJ_172 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* Package.swift */; };
@@ -258,6 +260,8 @@
 		A340C98B1FBADFA800B1B40A /* URLObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
 		A340C98D1FBAE11A00B1B40A /* MultilingualStringObjectMapperTransformerMethodInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilingualStringObjectMapperTransformerMethodInfoBuilder.swift; sourceTree = "<group>"; };
 		A340C98F1FBAE1F900B1B40A /* LocalizationToolkitFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationToolkitFramework.swift; sourceTree = "<group>"; };
+		A340C9D91FBAEF2800B1B40A /* OptionalEqualsClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalEqualsClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
+		A340C9DB1FBAEF9300B1B40A /* OptionalArrayEqualsClassMethodDescriptionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalArrayEqualsClassMethodDescriptionBuilder.swift; sourceTree = "<group>"; };
 		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* FilePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePath.swift; sourceTree = "<group>"; };
 		OBJ_100 /* MethodWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodWriter.swift; sourceTree = "<group>"; };
@@ -625,6 +629,8 @@
 				OBJ_28 /* ArrayEqualsClassMethodDescriptionBuilder.swift */,
 				OBJ_29 /* EqualsClassMethodDescriptionBuilder.swift */,
 				OBJ_30 /* NotEqualsClassMethodDescriptionBuilder.swift */,
+				A340C9D91FBAEF2800B1B40A /* OptionalEqualsClassMethodDescriptionBuilder.swift */,
+				A340C9DB1FBAEF9300B1B40A /* OptionalArrayEqualsClassMethodDescriptionBuilder.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -1217,7 +1223,9 @@
 				OBJ_228 /* DefaultProtocolDescriptionBuilder.swift in Sources */,
 				OBJ_229 /* CustomStringConvertibleClassExtensionDescriptionBuilder.swift in Sources */,
 				OBJ_230 /* HashableClassDescriptionBuilder.swift in Sources */,
+				A340C9DA1FBAEF2800B1B40A /* OptionalEqualsClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_231 /* DefaultClassInitializerDescriptionBuilder.swift in Sources */,
+				A340C9DC1FBAEF9300B1B40A /* OptionalArrayEqualsClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_232 /* ArrayEqualsClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_233 /* EqualsClassMethodDescriptionBuilder.swift in Sources */,
 				OBJ_234 /* NotEqualsClassMethodDescriptionBuilder.swift in Sources */,
