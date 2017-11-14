@@ -22,4 +22,3 @@ class ObjectMapperProtocolDescriptionBuilder: ProtocolDescriptionBuilder {
         }
     }
 }
-

@@ -15,8 +15,7 @@ class SwiftEnumFileBuilderManager: EnumFileBuilderArray {
 
     private init() {
         super.init(children: [
-            DefinitionEnumFileBuilder.shared,
+            DefinitionEnumFileBuilder.shared
         ])
     }
 }
-

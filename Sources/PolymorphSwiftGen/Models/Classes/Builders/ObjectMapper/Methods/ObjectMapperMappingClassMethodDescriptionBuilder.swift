@@ -84,5 +84,4 @@ class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBu
         }
         return mapping
     }
-    
 }

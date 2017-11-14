@@ -12,7 +12,7 @@ public class FoundationFramework: Framework {
     public static let shared = FoundationFramework()
 
     public static let name = "Foundation"
-    
+
     private init() {
         super.init(name: FoundationFramework.name, classes: [
             "Date",

@@ -30,14 +30,14 @@ class ImplementationClassFileBuilder: ClassFileBuilder {
 
         var parent: String? = nil
         if let parentUUID = element.extends,
-            let parentObject = project.models.findObject(uuid: parentUUID)  {
+            let parentObject = project.models.findObject(uuid: parentUUID) {
             parent = "\(parentObject.name)Model"
         }
         var classDescription = ClassDescription(name: className, options: .init(), parent: parent)
         classDescription.implements.append(element.name)
 
         try self.builders().forEach { try $0.build(element: element, to: &classDescription) }
-       
+
         fileDescription.classes.append(classDescription)
         let fileStr = FileWriter.default.write(description: fileDescription)
 

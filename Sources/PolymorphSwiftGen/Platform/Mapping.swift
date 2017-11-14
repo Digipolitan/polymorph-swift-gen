@@ -14,10 +14,20 @@ class Mapping {
 
     public private(set) var modules: [String: String]
 
+    public private(set) var platformTypes: [String: String]
+
     private init() {
         self.modules = [:]
+        self.platformTypes = [:]
+        self.registerPlatformTypes()
         self.register(framework: FoundationFramework.shared)
-        self.register(framework: UIKitFramework.shared)
+        self.register(framework: LocalizationToolkitFramework.shared)
+    }
+
+    private func registerPlatformTypes() {
+        self.platformTypes[Native.DataType.array.rawValue] = "[Any]"
+        self.platformTypes[Native.DataType.map.rawValue] = "[Hashable: Any]"
+        self.platformTypes[Native.DataType.multilingual.rawValue] = "MultilingualString"
     }
 
     public func platformType(with type: String, genericTypes: [String]? = nil) -> String {
@@ -34,12 +44,7 @@ class Mapping {
             }
             return "\(type)<\(translationGenericType.joined(separator: ", "))>"
         }
-        if type == Native.DataType.array.rawValue {
-            return "[Any]"
-        } else if type == Native.DataType.map.rawValue {
-            return "[Hashable: Any]"
-        }
-        return type
+        return self.platformTypes[type] ?? type
     }
 
     public func register(framework: Framework) {

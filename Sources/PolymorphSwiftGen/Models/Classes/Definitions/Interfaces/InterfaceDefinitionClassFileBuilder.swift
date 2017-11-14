@@ -26,7 +26,7 @@ class InterfaceDefinitionClassFileBuilder: ClassFileBuilder {
         protocolDescription.implements.append("CustomStringConvertible")
 
         if let parentUUID = element.extends,
-            let object = project.models.findObject(uuid: parentUUID)  {
+            let object = project.models.findObject(uuid: parentUUID) {
             protocolDescription.implements.append(object.name)
         }
 
@@ -65,6 +65,8 @@ class InterfaceDefinitionClassFileBuilder: ClassFileBuilder {
             EqualsClassMethodDescriptionBuilder.shared,
             NotEqualsClassMethodDescriptionBuilder.shared,
             ArrayEqualsClassMethodDescriptionBuilder.shared,
+            OptionalEqualsClassMethodDescriptionBuilder.shared,
+            OptionalArrayEqualsClassMethodDescriptionBuilder.shared
         ]
     }
 

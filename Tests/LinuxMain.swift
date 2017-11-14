@@ -2,5 +2,5 @@ import XCTest
 @testable import PolymorphSwiftGenTests
 
 XCTMain([
-    testCase(PolymorphSwiftGenTests.allTests),
+    testCase(PolymorphSwiftGenTests.allTests)
 ])

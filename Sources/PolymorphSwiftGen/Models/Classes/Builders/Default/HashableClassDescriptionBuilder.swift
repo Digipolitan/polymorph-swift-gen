@@ -26,7 +26,7 @@ class HashableClassDescriptionBuilder: ClassDescriptionBuilder {
     }
 }
 
-fileprivate class HashableClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
+private class HashableClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
 
     fileprivate static let shared = HashableClassPropertyDescriptionBuilder()
 
@@ -38,11 +38,11 @@ fileprivate class HashableClassPropertyDescriptionBuilder: ClassPropertyDescript
         let parentPrimaryProperties = element.parentProperties().filter { $0.isPrimary }
         let hasParent = element.extends != nil
         var comparisons: [String] = []
-        let propertyToHash = { (p: Property) -> String in
-            if p.isNonnull {
-                return "self.\(p.name).hashValue"
+        let propertyToHash = { (property: Property) -> String in
+            if property.isNonnull {
+                return "self.\(property.name).hashValue"
             }
-            return "(self.\(p.name)?.hashValue ?? 0)"
+            return "(self.\(property.name)?.hashValue ?? 0)"
         }
         if parentPrimaryProperties.count > 0 {
             comparisons.append("super.hashValue")
