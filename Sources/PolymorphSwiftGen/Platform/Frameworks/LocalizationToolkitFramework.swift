@@ -16,7 +16,8 @@ public class LocalizationToolkitFramework: Framework {
 
     private init() {
         super.init(name: LocalizationToolkitFramework.name, classes: [
-            "MultilingualString"
+            "MultilingualString",
+            "Multilingual" // Alias polymorph
         ])
     }
 }
