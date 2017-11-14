@@ -15,7 +15,7 @@ class URLObjectMapperTransformerMethodInfoBuilder: ObjectMapperTransformerMethod
     func build(property: Property) throws -> ObjectMapperTransformerMethodInfo {
 
         let options = URLObjectMapperTransformerMethodInfoBuilder.mergeOptions(of: property)
-        guard let encode = options["format"]?.value else {
+        guard let encode = options["encode"]?.value else {
             throw PolymorphSwiftGenError.malformatedProject
         }
         

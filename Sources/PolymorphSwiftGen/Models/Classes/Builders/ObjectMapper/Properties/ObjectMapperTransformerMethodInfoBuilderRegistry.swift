@@ -17,10 +17,10 @@ class ObjectMapperTransformerMethodInfoBuilderRegistry: ObjectMapperTransformerM
 
     private init() {
         self.registry = [
-            "timestamp": TimestampObjectMapperTransformerMethodInfoBuilder(),
-            "date": DateObjectMapperTransformerMethodInfoBuilder(),
-            "url": URLObjectMapperTransformerMethodInfoBuilder(),
-            "multilingual": MultilingualStringObjectMapperTransformerMethodInfoBuilder()
+            "Timestamp": TimestampObjectMapperTransformerMethodInfoBuilder(),
+            "Date": DateObjectMapperTransformerMethodInfoBuilder(),
+            "URL": URLObjectMapperTransformerMethodInfoBuilder(),
+            "Multilingual": MultilingualStringObjectMapperTransformerMethodInfoBuilder()
         ]
     }
 
