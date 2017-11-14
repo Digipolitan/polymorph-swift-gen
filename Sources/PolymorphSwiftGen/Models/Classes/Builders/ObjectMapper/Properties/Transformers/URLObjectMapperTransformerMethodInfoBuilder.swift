@@ -19,7 +19,7 @@ class URLObjectMapperTransformerMethodInfoBuilder: ObjectMapperTransformerMethod
             throw PolymorphSwiftGenError.malformatedProject
         }
         
-        return ObjectMapperTransformerMethodInfo(type: "URLTransform", code: CodeBuilder.from(code: "return URLTransform(shouldEncodeURLString: \(encode)"))
+        return ObjectMapperTransformerMethodInfo(type: "URLTransform", code: CodeBuilder.from(code: "return URLTransform(shouldEncodeURLString: \(encode))"))
     }
 }
 
