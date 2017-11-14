@@ -11,7 +11,7 @@ let package = Package(
             targets: ["PolymorphSwiftGen"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Digipolitan/polymorph-gen.git", .branch("develop")),
+        .package(url: "https://github.com/Digipolitan/polymorph-gen.git", from: "1.0.0"),
         .package(url: "https://github.com/Digipolitan/swift-code-writer.git", from: "1.0.0")
     ],
     targets: [
