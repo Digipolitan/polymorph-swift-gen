@@ -17,6 +17,6 @@ class OptionalArrayEqualsClassMethodDescriptionBuilder: ClassMethodDescriptionBu
     private init() { }
 
     func build(element: Class) throws -> MethodDescription? {
-        return MethodDescription(name: "== ", code: CodeBuilder.from(code: "return lhs == nil ? (rhs == nil ? true : false) : (rhs == nil ? false : lhs! == rhs!)"), options: .init(visibility: .public), arguments: ["lhs: [\(element.name)]?", "rhs: [\(element.name)]?"], returnType: "Bool")
+        return MethodDescription(name: "== ", code: CodeBuilder.from(code: "return lhs != nil ? (rhs != nil ? lhs! == rhs! : false) : (rhs != nil ? false : true)"), options: .init(visibility: .public), arguments: ["lhs: [\(element.name)]?", "rhs: [\(element.name)]?"], returnType: "Bool")
     }
 }
