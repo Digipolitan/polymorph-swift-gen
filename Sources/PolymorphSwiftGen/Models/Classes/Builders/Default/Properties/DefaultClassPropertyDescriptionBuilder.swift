@@ -21,6 +21,10 @@ class DefaultClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
             var type = try Mapping.shared.platformType(with: property)
             if !property.isNonnull {
                 type += "?"
+            } else if property.isTransient {
+                type += "!"
+            } else if let isIgnored = property.mapping?.isIgnored, isIgnored == true {
+                type += "!"
             }
             var defaultValue: CodeBuilder? = nil
             if let value = property.defaultValue {
