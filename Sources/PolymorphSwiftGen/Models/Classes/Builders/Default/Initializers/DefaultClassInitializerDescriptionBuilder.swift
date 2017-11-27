@@ -22,8 +22,10 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
 
         let parentProperties = element.parentProperties()
         var modules = Set<String>()
+        let hasParentProperties = parentProperties.count > 0
         var override = false
-        if parentProperties.count > 0 {
+        if hasParentProperties {
+            override = true
             var superArguments: [String] = []
             for property in parentProperties {
                 if property.isNonnull || (property.isConst && property.defaultValue == nil) {
@@ -32,11 +34,10 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
                         type += "? = nil"
                     }
                     modules.formUnion(try Mapping.shared.modules(with: property))
-                    arguments.append("\(property.name): \(type)?")
+                    arguments.append("\(property.name): \(type)")
                     superArguments.append("\(property.name): \(property.name)")
                 }
             }
-            override = true
             impl.add(line: "super.init(\(superArguments.joined(separator: ", ")))")
         }
         for property in element.properties {
@@ -48,6 +49,9 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
                 modules.formUnion(try Mapping.shared.modules(with: property))
                 arguments.append("\(property.name): \(type)")
                 impl.add(line: "self.\(property.name) = \(property.name)")
+                if hasParentProperties {
+                    override = false
+                }
             }
         }
         return InitializerDescription(code: impl, options: .init(visibility: .public, isOverride: override), modules: Array(modules), arguments: arguments)

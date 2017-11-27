@@ -22,8 +22,18 @@ class DefaultDefinitionClassFileBuilder: ClassFileBuilder {
         }
         var fileDescription = FileDescription(documentation: FileDocumentationBuilder.shared.build(file: element.name, project: project))
 
-        var classDescription = ClassDescription(name: element.name, options: .init(visibility: .public))
-        classDescription.implements.append("CustomStringConvertible")
+        var parent: String?
+        if let uuid = element.extends {
+            guard let parentClass = project.models.classes[uuid] else {
+                throw PolymorphSwiftGenError.malformatedProject
+            }
+            parent = parentClass.name
+        }
+        var classDescription = ClassDescription(name: element.name, options: .init(visibility: .public), parent: parent)
+
+        if parent == nil {
+            classDescription.implements.append("CustomStringConvertible")
+        }
 
         try self.classBuilders().forEach { try $0.build(element: element, to: &classDescription) }
 

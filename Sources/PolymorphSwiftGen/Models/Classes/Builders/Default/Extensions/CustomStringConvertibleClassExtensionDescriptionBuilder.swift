@@ -17,6 +17,9 @@ class CustomStringConvertibleClassExtensionDescriptionBuilder: ClassExtensionDes
     private init() { }
 
     func build(element: Class) throws -> ExtensionDescription? {
+        guard element.extends == nil else {
+            return nil
+        }
         var extensionDescription = ExtensionDescription(target: element.name, options: .init(visibility: .public))
         extensionDescription.properties.append(PropertyDescription(name: "description",
                                                                    options: .init(getVisibility: .public),
