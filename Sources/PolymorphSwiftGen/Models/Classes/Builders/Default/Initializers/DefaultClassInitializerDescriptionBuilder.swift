@@ -24,9 +24,9 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
         var modules = Set<String>()
         let hasParentProperties = parentProperties.count > 0
         var override = false
+        var superArguments: [String] = []
         if hasParentProperties {
             override = true
-            var superArguments: [String] = []
             for property in parentProperties {
                 if property.isNonnull || (property.isConst && property.defaultValue == nil) {
                     var type = try Mapping.shared.platformType(with: property)
@@ -38,7 +38,6 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
                     superArguments.append("\(property.name): \(property.name)")
                 }
             }
-            impl.add(line: "super.init(\(superArguments.joined(separator: ", ")))")
         }
         for property in element.properties {
             if property.isNonnull || (property.isConst && property.defaultValue == nil) {
@@ -53,6 +52,9 @@ class DefaultClassInitializerDescriptionBuilder: ClassInitializerDescriptionBuil
                     override = false
                 }
             }
+        }
+        if hasParentProperties {
+            impl.add(line: "super.init(\(superArguments.joined(separator: ", ")))")
         }
         return InitializerDescription(code: impl, options: .init(visibility: .public, isOverride: override), modules: Array(modules), arguments: arguments)
     }
