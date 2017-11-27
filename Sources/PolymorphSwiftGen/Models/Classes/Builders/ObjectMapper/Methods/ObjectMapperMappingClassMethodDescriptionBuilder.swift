@@ -25,7 +25,9 @@ class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBu
         var modules = Set<String>()
         modules.insert("ObjectMapper")
 
+        var override = false
         if element.extends != nil {
+            override = true
             impl.add(line: "super.mapping(map: map)")
         }
         let availableProperties = element.properties.filter {
@@ -53,7 +55,7 @@ class ObjectMapperMappingClassMethodDescriptionBuilder: ClassMethodDescriptionBu
         lines.forEach {
             impl.add(line: $0)
         }
-        return MethodDescription(name: "mapping", code: impl, options: .init(visibility: .public), modules: Array(modules), arguments: ["map: Map"])
+        return MethodDescription(name: "mapping", code: impl, options: .init(visibility: .public, isOverride: override), modules: Array(modules), arguments: ["map: Map"])
     }
 
     private func mapProperty(_ property: Property, project: Project) throws -> String {
