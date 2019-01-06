@@ -26,7 +26,7 @@ class DefaultClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
             } else if let isIgnored = property.mapping?.isIgnored, isIgnored == true {
                 type += "!"
             }
-            var defaultValue: CodeBuilder? = nil
+            var defaultValue: CodeBuilder?
             if let value = property.defaultValue {
                 defaultValue = CodeBuilder.from(code: value)
             }

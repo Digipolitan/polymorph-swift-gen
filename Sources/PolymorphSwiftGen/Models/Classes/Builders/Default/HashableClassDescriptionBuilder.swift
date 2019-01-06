@@ -21,14 +21,15 @@ class HashableClassDescriptionBuilder: ClassDescriptionBuilder {
         if element.extends == nil {
             description.implements.append("Hashable")
         }
-        let properties = try HashableClassPropertyDescriptionBuilder.shared.build(element: element)
-        description.properties.append(contentsOf: properties)
+        if let hashMethod = try HashableClassMethodDescriptionBuilder.shared.build(element: element) {
+            description.methods.append(hashMethod)
+        }
     }
 }
 
-private class HashableClassPropertyDescriptionBuilder: ClassPropertyDescriptionBuilder {
+private class HashableClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
 
-    fileprivate static let shared = HashableClassPropertyDescriptionBuilder()
+    fileprivate static let shared = HashableClassMethodDescriptionBuilder()
 
     private init() { }
 
@@ -44,40 +45,35 @@ private class HashableClassPropertyDescriptionBuilder: ClassPropertyDescriptionB
         return true
     }
     private static let hashProperty = { (property: Property) -> String in
-        if property.isNonnull {
-            return "self.\(property.name).hashValue"
-        }
-        return "(self.\(property.name)?.hashValue ?? 0)"
+        return "hasher.hash(self.\(property.name))"
     }
 
-    func build(element: Class) throws -> [PropertyDescription] {
+    func build(element: Class) throws -> MethodDescription? {
         let impl = CodeBuilder()
         let primaryProperties = element.properties
-            .filter(HashableClassPropertyDescriptionBuilder.primaryFilter)
-            .filter(HashableClassPropertyDescriptionBuilder.hashableFilter)
+            .filter(HashableClassMethodDescriptionBuilder.primaryFilter)
+            .filter(HashableClassMethodDescriptionBuilder.hashableFilter)
         let parentPrimaryProperties = element.parentProperties()
-            .filter(HashableClassPropertyDescriptionBuilder.primaryFilter)
-            .filter(HashableClassPropertyDescriptionBuilder.hashableFilter)
+            .filter(HashableClassMethodDescriptionBuilder.primaryFilter)
+            .filter(HashableClassMethodDescriptionBuilder.hashableFilter)
         let hasParent = element.extends != nil
-        var comparisons: [String] = []
         if parentPrimaryProperties.count > 0 {
-            comparisons.append("super.hashValue")
-            if primaryProperties.count > 0 {
-                comparisons.append(contentsOf: primaryProperties.map(HashableClassPropertyDescriptionBuilder.hashProperty))
+            if primaryProperties.count <= 0 {
+                return nil
             }
+            impl.add(line: "super.hash(into: &hasher)")
+            primaryProperties.map(HashableClassMethodDescriptionBuilder.hashProperty).forEach { impl.add(line: $0) }
         } else if primaryProperties.count > 0 {
-            comparisons.append(contentsOf: primaryProperties.map(HashableClassPropertyDescriptionBuilder.hashProperty))
+            primaryProperties.map(HashableClassMethodDescriptionBuilder.hashProperty).forEach { impl.add(line: $0) }
         } else {
             if hasParent {
-                comparisons.append("super.hashValue")
+                impl.add(line: "super.hash(into: &hasher)")
             }
-            comparisons.append(contentsOf: element.properties
-                .filter(HashableClassPropertyDescriptionBuilder.hashableFilter)
-                .map(HashableClassPropertyDescriptionBuilder.hashProperty))
+            element.properties
+                .filter(HashableClassMethodDescriptionBuilder.hashableFilter)
+                .map(HashableClassMethodDescriptionBuilder.hashProperty)
+                .forEach { impl.add(line: $0) }
         }
-        impl.add(line: "return \(comparisons.joined(separator: "\n^ "))")
-        return [
-            PropertyDescription(name: "hashValue", options: .init(getVisibility: .public, isOverride: hasParent), type: "Int", compute: .init(get: impl))
-        ]
+        return MethodDescription(name: "hash", code: impl, options: .init(visibility: .public, isOverride: hasParent), arguments: ["into hasher: inout Hasher"])
     }
 }

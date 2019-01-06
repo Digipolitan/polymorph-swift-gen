@@ -13,7 +13,8 @@ import SwiftCodeWriter
 class MultilingualStringObjectMapperTransformerMethodInfoBuilder: ObjectMapperTransformerMethodInfoBuilder {
 
     func build(property: Property) throws -> ObjectMapperTransformerMethodInfo {
-        return ObjectMapperTransformerMethodInfo(type: "MultilingualStringTransform", code: CodeBuilder.from(code: "return MultilingualStringTransform.shared"), modules: ["LocalizationToolkitObjectMapper"])
+        return ObjectMapperTransformerMethodInfo(type: "MultilingualStringTransform",
+                                                 code: CodeBuilder.from(code: "return MultilingualStringTransform.shared"),
+                                                 modules: ["LocalizationToolkitObjectMapper"])
     }
 }
-

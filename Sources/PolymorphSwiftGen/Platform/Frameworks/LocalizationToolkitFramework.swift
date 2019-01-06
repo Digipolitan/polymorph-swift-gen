@@ -5,7 +5,6 @@
 //  Created by Benoit BRIATTE on 14/11/2017.
 //
 
-
 import Foundation
 
 public class LocalizationToolkitFramework: Framework {
@@ -21,4 +20,3 @@ public class LocalizationToolkitFramework: Framework {
         ])
     }
 }
-

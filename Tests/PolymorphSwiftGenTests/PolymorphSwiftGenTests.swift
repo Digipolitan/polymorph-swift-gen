@@ -3,6 +3,6 @@ import XCTest
 
 class PolymorphSwiftGenTests: XCTestCase {
 
-    static var allTests: [(String, (PolymorphSwiftGenTests) -> Void -> Void)] = [
+    static var allTests: [(String, (PolymorphSwiftGenTests) -> () -> Void)] = [
     ]
 }

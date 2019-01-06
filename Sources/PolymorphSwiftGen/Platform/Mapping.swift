@@ -31,8 +31,8 @@ class Mapping {
     }
 
     public func platformType(with type: String, genericTypes: [String]? = nil) -> String {
-        if let gt = genericTypes, gt.count > 0 {
-            let translationGenericType = gt.map { self.platformType(with: $0) }
+        if let gts = genericTypes, gts.count > 0 {
+            let translationGenericType = gts.map { self.platformType(with: $0) }
             if type == Native.DataType.array.rawValue {
                 return "[\(translationGenericType[0])]"
             } else if type == Native.DataType.map.rawValue {

@@ -54,9 +54,9 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
         if count > 0 {
             impl.add(line: "guard").rightTab()
             let last = count - 1
-            for i in 0...last {
-                var line = guards[i]
-                if i != last {
+            for idx in 0...last {
+                var line = guards[idx]
+                if idx != last {
                     line += ","
                 }
                 impl.add(line: line)
@@ -78,15 +78,15 @@ class ObjectMapperClassInitializerDescriptionBuilder: ClassInitializerDescriptio
 
     private func valueMapping(_ property: Property, project: Project) throws -> String {
         let type = try Mapping.model(with: property)
-        if let c = type as? Class {
-            if c.injectable || c.serializable {
-                return self.valueMapping(property, injectedClass: c)
+        if let clazz = type as? Class {
+            if clazz.injectable || clazz.serializable {
+                return self.valueMapping(property, injectedClass: clazz)
             }
         } else if type.name == Native.DataType.array.rawValue, let gts = property.genericTypes, gts.count > 0 {
             let genericType = try Mapping.model(with: gts[0], project: project)
-            if let c = genericType as? Class {
-                if c.injectable || c.serializable {
-                    return self.valueMapping(property, injectedClass: c)
+            if let genType = genericType as? Class {
+                if genType.injectable || genType.serializable {
+                    return self.valueMapping(property, injectedClass: genType)
                 }
             }
         }
