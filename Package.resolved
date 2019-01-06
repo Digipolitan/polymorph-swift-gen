@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CodeWriter",
+        "repositoryURL": "https://github.com/Digipolitan/code-writer.git",
+        "state": {
+          "branch": null,
+          "revision": "54107bc0b32ea410385e9860143d58e1d27dde39",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "PolymorphCore",
+        "repositoryURL": "https://github.com/Digipolitan/polymorph-core.git",
+        "state": {
+          "branch": null,
+          "revision": "85790096de3dda6d5d4c7c335f9b49326441c572",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "PolymorphGen",
+        "repositoryURL": "https://github.com/Digipolitan/polymorph-gen.git",
+        "state": {
+          "branch": null,
+          "revision": "7dff24895b47726f3ed8ed2d446c20a5747dd418",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "StringCase",
+        "repositoryURL": "https://github.com/Digipolitan/string-case-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "565a596e8a511ff8995acc1b3f0167165acb2617",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "SwiftCodeWriter",
+        "repositoryURL": "https://github.com/Digipolitan/swift-code-writer.git",
+        "state": {
+          "branch": null,
+          "revision": "01ec45980cdf19a6732d4204a16ae536a2089ba5",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -20,7 +20,7 @@ class ArrayEqualsClassMethodDescriptionBuilder: ClassMethodDescriptionBuilder {
         let impl = CodeBuilder()
         impl.add(line: "let count = lhs.count")
         impl.add(line: "if count == rhs.count {").rightTab()
-        impl.add(line: "for i in 0 ..< count where lhs[i] != rhs[i] {").rightTab()
+        impl.add(line: "for idx in 0 ..< count where lhs[idx] != rhs[idx] {").rightTab()
         impl.add(line: "return false").leftTab()
         impl.add(line: "}")
         impl.add(line: "return true").leftTab()

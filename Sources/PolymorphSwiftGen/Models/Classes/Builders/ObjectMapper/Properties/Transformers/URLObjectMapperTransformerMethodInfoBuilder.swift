@@ -18,8 +18,7 @@ class URLObjectMapperTransformerMethodInfoBuilder: ObjectMapperTransformerMethod
         guard let encode = options["encode"]?.value else {
             throw PolymorphSwiftGenError.malformatedProject
         }
-        
+
         return ObjectMapperTransformerMethodInfo(type: "URLTransform", code: CodeBuilder.from(code: "return URLTransform(shouldEncodeURLString: \(encode))"))
     }
 }
-

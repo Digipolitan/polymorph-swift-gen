@@ -28,7 +28,7 @@ class ImplementationClassFileBuilder: ClassFileBuilder {
 
         var fileDescription = FileDescription(documentation: FileDocumentationBuilder.shared.build(file: className, project: project))
 
-        var parent: String? = nil
+        var parent: String?
         if let parentUUID = element.extends,
             let parentObject = project.models.findObject(uuid: parentUUID) {
             parent = "\(parentObject.name)Model"
