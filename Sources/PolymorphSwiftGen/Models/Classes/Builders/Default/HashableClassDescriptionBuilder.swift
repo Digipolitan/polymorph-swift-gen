@@ -45,7 +45,7 @@ private class HashableClassMethodDescriptionBuilder: ClassMethodDescriptionBuild
         return true
     }
     private static let hashProperty = { (property: Property) -> String in
-        return "hasher.hash(self.\(property.name))"
+        return "hasher.combine(self.\(property.name))"
     }
 
     func build(element: Class) throws -> MethodDescription? {
